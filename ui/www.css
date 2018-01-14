@@ -1,0 +1,102 @@
+body,nav,footer{max-width:750px;color:DarkGoldenRod;}
+nav,footer{height:6rem;max-width:750px;}
+nav{color:#fff;background: #ce4445;}
+input{outline:none;border:none;}
+input{line-height:6rem;}
+select{height:6rem;}
+button,input[type="submit"]{background:PaleVioletRed;/*PaleVioletRed*/}
+button:hover, input[type="submit"]:hover{background: none repeat scroll 0 0 OrangeRed;}
+button[type="button"]{color:SkyBlue;background-color:#F0FFFF;}
+
+a:link,a:visited{color:#333;}
+a:hover,a:active{color:DeepPink;}/*#CA4312*//*MistyRose*/
+.goback{width:3rem;height:3rem;display:block;background:url(goback.png) center center no-repeat;}
+.reload{width:3rem;height:3rem;display:block;background:url(reload.png) center center no-repeat;}
+
+.Box{background:LightGoldenRodYellow;}
+/*.Box:hover{background:LightGoldenRodYellow;box-shadow:0 0 1rem rgba(7, 17, 27, 0.2);}*/
+.Box>*:first-child{color:LightYellow;background:RosyBrown;}
+.Box input{border-bottom:#ccc 1px solid;}
+
+.Sheet a{color:white;}
+.Sheet{border-color:gray;}
+.Sheet>dl>*{border-color:gray;}
+.Sheet>dl:nth-child(even){background:Ivory;}
+.Sheet>dl:hover{background:Snow;}
+.Sheet>dl:first-child{color:white;background:rgb(153, 0, 0);font-weight:bold;}
+.Sheet>dl:nth-child(n+2)>*:first-child{color:#ce4445;}
+
+.List{background:LightGoldenRodYellow;}
+.List, .List dl:nth-child(n+2){border-color:#ccc;}
+.List input{text-align:right;}
+.Grid>a{border-color:#ccc;}
+
+article{border:1px solid #ccc;}
+article{margin:1rem;line-height:3rem;}
+article h1{font-size:3rem;line-height:6rem;color:#666;background:LightGoldenRodYellow;border-bottom: 1px #E5E5E5 dotted;} 
+article h2{font-weight:normal;background-color:#e0dfd5;text-align:left;text-indent:2em;}
+article h3{font-weight:normal;}
+aside{padding: 3%;font-size: 3rem;color: #333;font-weight: bold;text-align: left;}
+h1 a{color:gold;} h1 a:hover{color:#f76120;}
+/*section{text-align:left;font-size:1.6rem;color:gray;background:Azure;}*/
+
+.ITEM {
+	display: flex;flex-wrap: wrap;
+	align-content: center;justify-content: center;
+	margin:1%;width:47%;border:1px solid #ccc;
+	font-size:2rem;background: #fff;}
+.ITEM h2{font-size:1.5rem;color: #666;font-weight:normal;}
+.ITEM em{font-size:1.5rem;}
+.ITEM img{width:100%;}
+
+.laba{
+    color: #fff;font-size: 3rem;line-height: 6rem;
+    background: url(icon/laba.png) no-repeat center center;
+    background-size: auto 100%;	
+}
+
+.account{background:url(mobile.png) no-repeat left;}
+.mobile{background:url(mobile.png) no-repeat left;}
+.phone{background:url(phone.png) no-repeat left;}
+.password{background:url(password.png) no-repeat left;}
+.verify{background:url(verify.png) no-repeat left;}
+.ticketphone{background:url(clientphone.png);}
+.money{background:url(money.png) no-repeat left;}
+.bankcard{font-size:1em;}
+
+
+.zonestate{
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	background: #f5f5f5;
+}
+.zonestate li{
+	margin:5px;
+	padding:0px 5px;
+}
+.live a, .zonestate a:hover{color:#CA4312;}
+
+.gold{background:url(Z1.png);}
+.diamond{background:url(Z2.png);}
+.crown{background:url(Z3.png);}
+
+
+
+.banner li{background-size:100% 100%;}
+@media screen and (min-width: 600px) {
+.banner-queue{background:url(banner/queue600.jpg) center center no-repeat;width:99%;height:100px;}
+.banner-refund{background:url(banner/refund600.jpg) center center no-repeat;width:99%;height:100px;}
+.banner-client{background:url(banner/client600.jpg);width:99%;height:100px;}
+.banner-jifen{background:url(banner/jifen600.jpg) center center no-repeat;width:99%;height:100px;}
+.banner-myqrcode{background:url(banner/myqrcode600.jpg) center center no-repeat;width:99%;height:100px;}
+.banner-shopYue{background:url(banner/shopYue600.jpg) center center no-repeat;width:99%;height:100px;}
+}
+@media screen and (max-width: 599px) {
+.banner-queue{background:url(banner/queue300.jpg);width:99%;height:80px;}
+.banner-refund{background:url(banner/refund300.jpg);width:99%;height:80px;}
+.banner-client{background:url(banner/client300.jpg);width:99%;height:80px;}
+.banner-jifen{background:url(banner/jifen300.jpg);width:99%;height:80px;}
+.banner-myqrcode{background:url(banner/myqrcode300.jpg);width:99%;height:80px;}
+.banner-shopYue{background:url(banner/shopYue300.jpg);width:99%;height:80px;}
+}

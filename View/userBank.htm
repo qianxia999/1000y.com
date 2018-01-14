@@ -1,0 +1,53 @@
+{view head}
+<form method="post" enctype="multipart/form-data" onSubmit="return onSubmitCheck(this);" action="?$ctrl=userBankSubmit">
+<input type="hidden" name="citycode" id="citycode">
+<link href="http://$HOST/$ui/city/css/city-picker.css" rel="stylesheet" type="text/css" />
+<script src="http://$HOST/$ui/city/js/jquery.js"></script>
+<script src="http://$HOST/$ui/city/js/bootstrap.js"></script>
+<script src="http://$HOST/$ui/city/js/city-picker.data.js"></script>
+<script src="http://$HOST/$ui/city/js/city-picker.js"></script>
+<script src="http://$HOST/$ui/city/js/main.js"></script>
+
+<dl>
+	<div class="container">
+		<div style="position: relative;"><input style="min-width: 360px;" type="text" name="cityname" id="city-picker3" class="form-control" data-toggle="city-picker" readonly/></div>
+	</div>
+</dl>
+
+<div class="List">
+
+<dl>
+	<span>归属地</span>
+	<span>$Array[cityname]</span>
+</dl>
+
+<dl>
+	<span>开户行</span>
+	<span>
+	<select name='bank'><option value=''>请选择开户行</option>
+	<!--{loop $bankConfig $key $Config}--><option value="$key"<!--{if $key==$Array[bank]}--> selected<!--{/if}-->>{$Config[mean]}</option><!--{/loop}--></select>
+	</span>
+</dl>
+
+<dl>
+	<span>支行</span>
+	<span><input class="bankcard" type="text" name='branch' value="$Array[branch]"/></span>
+</dl>
+
+<dl>
+	<span>卡号</span>
+	<span><input class="bankcard" type="text" name='bankcard' value="$Array[bankcard]"/></span>
+</dl>
+
+<dl>
+	<span>户名</span>
+	<span><input type="text" name='truename' value="$Array[truename]"/></span>
+</dl>
+
+<button>保 存</button>
+
+</div>
+
+</form>
+
+{view footer}

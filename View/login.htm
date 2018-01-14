@@ -1,0 +1,21 @@
+{view head}
+
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>	 
+<script language="javascript" src="http://$HOST/$ui/ajaxtip.js"></script>	 
+
+<form method="post" name="loginform" id="loginform" onSubmit="return onSubmitCheck(this);" action="?$ctrl=loginSubmit">
+<!--{echo token();}-->
+<dl class="Box">
+
+	<dd><input class="phone" type="text" tabindex="1" name="phone" id="phone" onchange="phoneAjax('result');" placeholder="手机号"></dd>
+
+	<dd><input class="password" type="password" tabindex="2" name="password" id="password" onchange="passwordAjax('result');" placeholder="密码"></dd>
+
+	<dd><input type="submit" value="登 陆"></dd>
+
+	<dd>
+		<a href="?$ctrl=passwordForget">忘记密码</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="?$ctrl=sign">注册会员</a>
+	</dd>
+</dl>
+</form>

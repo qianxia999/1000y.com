@@ -1,0 +1,19 @@
+{view head}
+<!--{eval $mk=$Array[$primary]}-->
+
+<article>
+	<h1>$Array[title]</h1>
+
+	<!--{if $Array[summary]}-->
+	<h2>$Array[summary]</h2>
+	<!--{/if}-->
+
+	<h3>
+		<small>发布时间<!--{echo date('Y-m-d H:i',$Array[pubTime])}--></small>
+		<small>文章来源:$Array[author]</small>
+	</h3>
+
+	<section>$Array[content]</section>
+</article>
+
+<button><a href="?$ctrl=ListAdmin">返 回</a></button>

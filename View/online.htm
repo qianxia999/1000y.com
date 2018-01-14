@@ -1,0 +1,20 @@
+{view man}
+
+<h1>$AllCount</h1>
+
+<dl class="Sheet">
+
+<dd>
+	<span>ID</span>
+	<span>时间</span>
+</dd>
+<!--{loop $dataArray $mk $Array}-->
+<dd>
+	<span><a href="?user=userGet&userid=$Array[userid]">$Array[userid]</a></span>
+	<span><!--{echo date('H:i:s',$Array[lasttime])}--></span>
+</dd>
+<!--{/loop}-->
+
+<dt id="paging">{view paging}</dt>
+
+</dl>

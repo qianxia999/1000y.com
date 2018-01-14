@@ -1,0 +1,79 @@
+{view head}
+<style>
+#avatarArea{
+    padding:0 3%;height:20rem;
+    color:#fff;background-color: #e60012;
+    display:flex;display:-webkit-flex;
+	justify-content:space-between;align-items:center;
+}
+#avatarArea .touxiang{flex:1;}
+#avatarArea #avatar{
+	width: 12rem;height: 12rem;
+    border-radius: 50%;overflow: hidden;
+}
+#avatarArea .ziliao{flex:3;text-align: left;font-size:2.4rem;}
+#avatarArea p{line-height: 4rem;}
+#avatarArea strong{font-size:4rem;}
+
+.user_jifen{background:url($ui/skin/user_jifen.png) no-repeat left;padding-left:6rem !important}
+.user_ziliao{background:url($ui/skin/user_ziliao.png) no-repeat left;padding-left:6rem;}
+.user_yinhangka{background:url($ui/skin/user_yinhangka.png) no-repeat left;padding-left:6rem;}
+.user_dizhi{background:url($ui/skin/user_dizhi.png) no-repeat left;padding-left:6rem;}
+.user_tuiguang{background:url($ui/skin/user_tuiguang.png) no-repeat left;padding-left:6rem;background-size:50px 50px;}
+.user_admin{background:url($ui/skin/user_admin.png) no-repeat left;padding-left:6rem;}
+
+</style>
+
+
+<div id="avatarArea">
+	<div class="touxiang">
+		<div id="avatar"><img src="$Array[avatar]"></div>
+	</div>
+	<div class="ziliao">
+  		<p><strong>$Array[account]</strong></p>
+  		<p>正式会员<img src="http://$HOST/$ui/skin/vip.png"></p>
+	</div>
+</div>
+
+<div class="List">
+	<dl class="user_jifen">
+		<span>我的积分</span>
+		<span><em class="chengse">Array[coin]积分</em></span>
+	</dl>
+</div>
+
+
+<div class="List">
+	<dl class="user_ziliao">
+	<a href="?account=Modify">
+		<span>个人资料</span>
+	</a>
+	</dl>
+
+	<dl class="user_tuiguang">
+	<a href="?user=Myqrcode">
+		<span>我的推广</span>
+	</a>
+	</dl>
+
+	<dl class="user_yinhangka">
+	<a href="?user=Bank">
+		<span>银行卡信息</span>
+	</a>
+	</dl>
+</div>
+
+<!--{if $Array[isAdmin]}-->
+<div class="List">
+	<dl class="user_admin">
+	<a href="?admin">
+		<span>管理员</span>
+	</a>
+	</dl>
+</div>
+<!--{/if}-->
+
+<button><a href="?account=logout">退 出</a></button>
+
+
+{view footer}

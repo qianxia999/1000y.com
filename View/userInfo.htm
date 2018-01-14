@@ -1,0 +1,39 @@
+{view head}
+
+<!--{eval $mk=$$primary}-->
+<div class="List">
+
+<dl>
+	<span>ID</span>
+	<span>$Array[$primary]</span>
+</dl>
+
+<dl>
+	<span class="lh200">头像</span>
+	<span class="avatar"><img src="$Array[avatar]"></span>
+</dl>
+<dl>
+	<span>昵称</span>
+	<span>$Array[nickname]</span>
+</dl>
+<dl>
+	<span>手机号</span>
+	<span>$Array[mobile]</span>
+</dl>
+
+<dl>
+	<span>推荐人</span>
+	<span><a href="?$ctrl=Info&Arrayid=$Array[recommend]">$Array[recommender]</a></span>
+</dl>
+
+<dl>
+	<span>注册时间</span>
+	<span><!--{echo date('Y年m月d日',$Array[time])}--></span>
+
+</dl>
+
+<button><a href="?$ctrl">返回</a></button>
+
+</div>
+
+{view footer}

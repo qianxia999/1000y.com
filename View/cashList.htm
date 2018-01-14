@@ -1,0 +1,26 @@
+{view head}
+
+<dl class="Sheet">
+<dd>
+  <span>编号</span>
+  <span>金额(元)</span>
+  <span>提现日期</span>
+  <span>备注</span>
+  <span>状态</span>
+</dd>
+<!--{loop $dataArray $mk $Array}-->
+<dd>
+	<span>$Array[id]</span>
+	<span><!--{echo floor($Array[rmb])}-->元</span>
+	<span><!--{echo date('Y年n月d日H时i分',$Array[time])}--></span>
+	<span>$Array[memo]</span>
+	<span>$cashConfig[$Array[state]]</span>
+</dd>
+<!--{/loop}-->
+
+<dt id="paging">{view paging}</dt>
+
+<!--{if $cashSum}--><h3>累计提现 $cashSum 元</h3><!--{/if}-->
+</dl>
+
+{view footer}

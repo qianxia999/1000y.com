@@ -1,0 +1,45 @@
+body,nav,footer{max-width:1000px;color:OliveDrab;}
+nav{background:LightSlateGray;line-height:5rem;}
+input,select,textarea{border:1px solid SkyBlue;line-height:4rem;}
+
+a{color:Maroon;}/*a:link,a:visited*/
+a:hover,a:active{color:#CA4312;}
+a[onclick] img{cursor:pointer;}
+button,input[type="submit"]{background:DeepSkyBlue;}
+button:hover, input[type="submit"]:hover{background: none repeat scroll 0 0 Cyan;}
+::-moz-selection{background:Cyan;color:#fff;}
+::selection {background:Cyan;color:#fff;}
+.closed select, .closed input, .closed textarea{color:Gray;border:1px solid Silver;}
+.closed a, .closed font, .closed span {color:LightGrey}
+.closed img{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(100%);}
+.closed button{background: gray;}
+
+input[type="radio"]{background: red;}
+
+label{border:1px dotted #ccc;padding:1rem;margin:1rem;display:inline-block;}
+label.mark{background-color:LightGoldenRodYellow;color:#666;}
+label.marked{background-color:gold;color:Fuchsia;}
+label.mark:hover{background-color:gold;color:Fuchsia;}
+
+
+.Grid>a{border-color:#ccc;}
+.Grid>a:nth-child(even){background-color:LightCyan;}
+.Grid>a:hover{background:PapayaWhip;}
+
+
+.List{background:LightCyan;}
+.List dl:nth-child(n+2){border-color:#ccc;}
+.List dt{border-color:gray;}
+.List dd{border-color:#ccc;}
+
+.Sheet{border-color:gray;}
+.Sheet>dl>*{border-color:lightsteelblue;}
+.Sheet>dl:nth-child(even){background:LightCyan;}/*#F5F5F5*/
+.Sheet>dl:hover{background:PapayaWhip;}
+.Sheet>dl:first-child{color:DarkSlateBlue;background:SkyBlue;font-weight:bold;}
+.Sheet>dl:nth-child(n+2)>*:first-child{color:gray;}
+
+
+#ADMIN_GRID a{font-size:2rem;height:8rem;}
+#ADMIN_GRID a>em{width:100%;}
+#ADMIN_GRID a>span{width:100%;color:green;}

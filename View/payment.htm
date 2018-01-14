@@ -1,0 +1,27 @@
+{view head}
+
+<form method="post" name="ticketForm" id="ticketForm" action="?payment=paymentCreate">
+<!--{echo token();}-->
+<div class="Box">
+
+	<dl>请输入金额(100元起)</dl>
+
+	<diy class="around">
+		<span id="Money">￥ </span>
+		<input type="text" name="rmb" id="rmb" placeholder="金额(元)"/>
+	</diy>
+
+	<p>积分换算比例：1元等于10积分</p>
+
+	<dl><input type="submit" value="选择支付方式"></dl>
+
+</div>
+</form>
+
+<div class="List">
+	<a href="?payment=paymentList">
+	<dl>充值记录</dl>
+	</a>
+</div>
+
+{view footer}

@@ -1,0 +1,12 @@
+    <!-- ¼ÓÔØ±à¼­Æ÷µÄÈÝÆ÷ -->
+    <script id="container" name="content" type="text/plain">
+        <!--{echo$Array[content]
+    </script>
+    <!-- ÅäÖÃÎÄ¼þ -->
+    <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+    <!-- ±à¼­Æ÷Ô´ÂëÎÄ¼þ -->
+    <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+    <!-- ÊµÀý»¯±à¼­Æ÷ -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>

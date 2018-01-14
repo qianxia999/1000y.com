@@ -1,0 +1,32 @@
+{view man}
+<link href="http://$DOMAIN/$ui/admin.css" rel="stylesheet" type="text/css" />
+<link href="http://$DOMAIN/$ui/activeSwitch.css" rel="stylesheet" type="text/css" />
+
+<div id="BIAO">
+	<h2><form method="post" action="?$ctrl=insert">
+		<span><input type="text" name="mould"/></span>
+		<span><button name="submit">+$ctrl</button></span></form>
+	</h2>
+</div>
+
+<div id="BIAO">
+<ul>
+	<span>X</span>
+	<span>ID</span>
+	<span>key</span>
+	<span>NAME</span>
+	<span>排序</span>
+	<span>开关</span>
+</ul>
+<!--{loop $dataArray $mk $Array}-->
+<!--{eval $mk=$Array[$primary]}-->
+<ul {if !$Array[active]} class='closed'{/if} class="<!--{if $b++%2==1}-->b1<!--{else}-->b2<!--{/if}-->">
+	<span><a href="?$ctrl=delete&{$primary}=$mk">X</a></span>
+	<span><font color="gray">$Array[$primary]</font></span>
+	<span><a class='major' href="?$ctrl=mouldGet&id=$mk">$Array[key]</a></span>
+	<span><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','name',this.value)" value="$Array[name]"></span>
+	<span>{view sort}</span>
+	<span>{view active}</span>
+</ul>
+<!--{/loop}-->
+</div>

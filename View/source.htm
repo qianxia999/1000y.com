@@ -1,0 +1,41 @@
+{view man}
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>
+
+<form method="post" action="?$ctrl=insert">
+<input type="hidden" name="parent" value="$catid">
+<!--{echo token();}-->
+<diy class="center bar">
+	<span><input type="text" name="name"/></span>
+	<span><button>新增</button></span>
+</diy>
+</form>
+
+<diy class="center bar">
+	<span></span>
+</diy>
+
+
+
+<dl class="Sheet">
+<dd>
+	<span>X</span>
+	<span>NAME</span>
+	<span>+</span>
+	<span>排序</span>
+	<span>开关</span>
+</dd>
+<!--{loop $dataArray $mk $Array}-->
+<dd {if !$Array[state]} class='closed'{/if}>
+	<span title="$Array[$primary]">
+		<a href="?$ctrl=delete&{$primary}=$mk" onclick="return(confirm('是否删除？'))">X</a>
+	</span>
+	<span>
+		<input type="text" onchange="ajaxUpdate('$table','$primary','$mk','name',this.value)" value="$Array[name]">
+	</span>
+	<span><a href="$Link[base]&catid=$mk">子分类</a></span>
+	<span>{view sort}</span>
+	<span>{view active}</span>
+</dd>
+<!--{/loop}-->
+
+</dl>

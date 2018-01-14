@@ -1,0 +1,30 @@
+{view head}
+<!--{eval $mapList=cat('map');}-->
+
+<!--{loop $Offer $mapid $OfferList}-->
+<div class="Sheet">
+
+<dl>
+	<dt>$mapList[$mapid][name]</dt>
+	<g3>爆率</g3>
+</dl>
+<!--{loop $OfferList $npcid $Npc}-->
+<dl>
+	<dt>
+		<span>$Npc[name]</span>
+	</dt>
+	<g3>
+	<div class="left">
+	<!--{loop $Npc[tabOfferList] $OfferList}-->
+	<!--{loop $OfferList $id $List}-->
+	<span class="$List[style]">$List[name]</span>
+	<span>$List[qty]:$List[fqcy]；</span>
+	<!--{/loop}-->
+	<!--{/loop}-->
+	</div>
+	</g3>
+</dl>
+<!--{/loop}-->
+
+</div>
+<!--{/loop}-->

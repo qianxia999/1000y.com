@@ -1,0 +1,55 @@
+{view head}
+<!--{eval $mk=$Array[$primary]}-->
+
+<script language="javascript">
+      function sDialog() {
+           var avatarForm = document.forms['avatarForm'];
+           avatarForm.avatar.click();
+      }
+</script>
+
+
+<form class="none" method="post" enctype="multipart/form-data" action="?$ctrl=avatarSubmit">
+<input type="text" name="$primary" value="$mk">
+<input type="file" name="avatar" id="avatar" onchange="this.form.submit();"/>
+</form>
+
+<div class="List">
+	<dl>
+		<span>
+			<a href="?$ctrl=avatarRemove" onclick="return(confirm('是否删除？'))">头像</a>
+		</span>
+		<span style="cursor:pointer" onclick="document.getElementById('avatar').click();">
+			<img src="$Array[avatar]">
+		</span>
+	</dl>
+
+	<dl>
+	<a href="?account=PasswordMofify">
+		<span>修改密码</span>
+	</a>
+	</dl>
+</div>
+
+
+<form method="post" enctype="multipart/form-data" onSubmit="return onSubmitCheck(this);" action="?$ctrl=modifySubmit">
+<input type="hidden" name="$primary" value="$Array[$primary]"/>
+
+<div class="List">
+	<dl>
+		<span>昵称</span>
+		<span><input type="text" name='nickname' value="$Array[nickname]"/></span>
+	</dl>
+
+	<dl>
+		<span>手机号</span>
+		<span>$Array[mobile]<!--<a href="?$ctrl=phoneMofify">修改</a>--></span>
+	</dl>
+
+</div>
+
+<button>保 存</button>
+
+{view footer}
+</body>
+</html>

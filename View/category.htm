@@ -1,0 +1,46 @@
+{view man}
+<!--{eval $seqConfig=config('seq');}-->
+<!--{eval $styleConfig=config('style');}-->
+
+<diy class="center bar">
+	<dd>$routeHtml</dd>
+</diy>
+
+<form method="post" action="?$ctrl=insert">
+<input type="hidden" name="parent" value="$catid">
+<!--{echo token();}-->
+<diy class="center">
+	<span><input type="text" name="name"/></span>
+	<span><button>新增</button></span>
+</diy>
+</form>
+
+<div class="Sheet">
+<dl>
+	<dd>X</dd>
+	<dd>NAME</dd>
+	<dd>+</dd>
+	<dd>排序</dd>
+	<dd>颜色</dd>
+	<dd>开关</dd>
+</dl>
+<!--{loop $dataArray $mk $Array}-->
+<dl {if !$Array[state]} class='closed'{/if}>
+	<dd title="$Array[$primary]">
+		<a href="?$ctrl=delete&{$primary}=$mk" onclick="return(confirm('是否删除？'))">$mk</a>
+	</dd>
+	<dd>
+		<input type="text" onchange="ajaxUpdate('$table','$primary','$mk','name',this.value)" value="$Array[name]">
+	</dd>
+	<dd><a href="$Url[base]&catid=$mk">子分类</a></dd>
+	<dd>{view seq}</dd>
+    <dd>
+		<select onchange="ajaxUpdate('$table','$primary','$mk','style',this.value)" size='1'>
+		<!--{loop $styleConfig[color] $color $text}-->
+		<option value="$color"<!--{if $color==$Array[style]}--> selected<!--{/if}-->>{$text}</option>
+		<!--{/loop}--></select>
+    </dd>	
+	<dd>{view state}</dd>
+</dl>
+<!--{/loop}-->
+</div>

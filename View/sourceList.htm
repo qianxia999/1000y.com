@@ -1,0 +1,25 @@
+{view head}
+<!--{eval $catArray=cat($table);}-->
+
+<diy class="center">
+<!--{loop $catArray $Cat}-->
+<a href="?$ctrl=List&catid=$Cat[catid]">$Cat[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+<div class="List">
+<dt>
+	<span>$catArray[$catid][name]</span>
+</dt>
+<!--{loop $dataArray $mk $Array}-->
+<dl>
+	<a href="$Array[url]">
+	    <span class="$Array[style]">$Array[word]</span>
+	</a>
+
+</dl>
+<!--{/loop}-->
+
+<p id="paging">{view paging}</p>
+
+</div>

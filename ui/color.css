@@ -1,0 +1,75 @@
+
+.theme{color:#666;background:#eee;}
+.major{font-size:2rem;font-weight:bold;}
+#result font{color:yellow;background:red;}
+#TIP font{color:yellow;background:red;}
+.coin{color:#CA4312;}
+.disable,.disable:hover{color:white;background:gray;}
+.small{
+	font-size:1rem;
+	line-height:2rem;
+}
+
+
+
+.left left{text-align:left;}
+.right right{text-align:right;}
+.center center{text-align:center;margin:auto;}
+.middle{vertical-align:middle;display:table-cell;}
+.space{height:1rem;background:#f0f0f0;}
+.none{display:none;}
+.bold{font-weight:bold;}
+.normal{font-weight:normal}
+.cursor{cursor:pointer;}
+.inline-block{display:inline-block;}
+.clear{clear:both;}
+.vline{border-bottom:1px dashed #DFCDDE;}
+.tline{border-bottom:1px solid #DFCDDE;clear:both;}
+.tip{color:gray;}
+.text{padding:2em;}
+.tt{background: #feeeed;line-height: 3rem;}
+/*.middle{width:100%;margin:auto;}  margin-top:10%;*/
+
+
+
+
+
+
+.zihong{color:Purple;background-color:MistyRose;}
+.zise{color:Purple;background-color:LavenderBlush;}
+.zihui{color:Purple;background-color:LightGrey;}
+.zijin{color:VioletRed;background-color:Gold;}
+.fense{color:DeepPink;background-color:Thistle;}
+.fenzi{color:Fuchsia;background:Thistle;}
+.hongse{color:red;background-color:yellow;}
+.jinse{color:gold !important;background-color:red !important;}
+.jinse{color:DeepPink;background-color:Gold;}
+.huise{color:#9E660D; background-color: #F9F9F9;}
+.lanse{color:blue;background-color:LightSteelBlue;}
+.lvse{color:green;background-color:#F0FEE9;}
+.chengse{color:OrangeRed;background-color:LightGoldenRodYellow;}
+
+.blank{padding-left:50px;}
+.down{background:url(down.png) no-repeat scroll 10px center; padding-left:50px;}
+.qq{background:url(qq.png) no-repeat scroll 10px center; padding-left:50px;}
+.qun{background:url(qun.jpg) no-repeat scroll 10px center; padding-left:50px;}
+.mail{background:url(mail.png) no-repeat scroll 10px center; padding-left:50px;}
+.phone111{background:url(phone.jpg) no-repeat scroll 10px center; padding-left:50px;}
+.wang{background:url(wang.png) no-repeat scroll 10px center; padding-left:50px;}
+.error{background:url(error.png) no-repeat scroll 10px center; padding-left:50px;}
+.free{background:url(free.gif) no-repeat scroll 10px center; padding-left:50px;}
+.arrow{background:url(arrow.gif) no-repeat scroll 10px center; padding-left:50px;}
+.notice{background:url(notice.png) no-repeat scroll 10px center; padding-left:50px;}
+.warn{background:url(warn.png) no-repeat scroll 10px center; padding-left:50px;}
+.server{background:url(server4.gif) no-repeat scroll 10px center; padding-left:65px;}
+
+.darkred{border:1px solid #AC003A;color:#FFFFFF;background-color: #AC003A;}
+.white{border:1px solid #FFFFFF;color:#000000;background-color:#FFFFFF;}
+.green{border:1px solid #A5D491;color:#5E6F33;background-color:#F0FEE9;}
+.pink{border:1px solid #DE888A;color:#C31B00;background-color:#FEE9EA;}
+.yellow{border:1px solid #E6C555;color:#9E660D;background-color:#FDEBAE;}
+.gray{border:1px solid #E8E8E8;color:#9E660D;background-color:#F9F9F9;}
+.orange{border:1px solid #FF9900;color:#CC0033;background-color:#FFFFEC;}
+
+.fs1{font-size:1rem;}.fs2{font-size:2rem;}.fs3{font-size:3rem;}.fs4{font-size:4rem;}
+.lh1{line-height:1rem;}.lh2{line-height:2rem;}.lh3{line-height:3rem;}.lh4{line-height:4rem;}.lh5{line-height:5rem;}.lh6{line-height:6rem;}.lh7{line-height:7rem;}

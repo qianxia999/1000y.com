@@ -1,0 +1,79 @@
+{view head}
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+
+<!--{eval $mk=$Array[$primary]}-->
+<div id="MAIN">
+
+<ul>
+	<li class="PRE">ID</li>
+	<li class="INP">$Array[id]</li>
+</ul>
+<ul>
+	<li class="PRE">名称</li>
+	<li class="INP"><input type="text" value="$Array[name]" onchange="ajaxUpdate('$table','$primary','$mk','name',this.value)"/></li>
+</ul>
+
+<ul>
+	<li class="PRE lh200">图</li>
+	<li class="INP">
+		<div class="avatar">
+		<span><img src="$Array[photo]"></span>
+		</div>
+		<form name="avatarForm" id="avatarForm" method="post" enctype="multipart/form-data" action="?model&m=photoSubmit&id=$mk">
+		<input type="file" name="photo" value="图片" onchange="document.getElementById('avatarForm').submit();" /></form>
+	</li>
+</ul>
+
+<div id="BIAO">
+<h2><form method="post" action="?$ctrl=insertAttribute&modelid=$id">
+		<span><a href="?$ctrl">返回</a></span>
+		<span><input type="text" name="name"/></span>
+		<span><button name="submit">+属性</button></span>
+</h2></form>
+</div>
+
+<div id="BIAO">
+<ul>
+	<span><a href="?$ctrl"><font color="gray">{echo count($attributeArray);}</font></a></span>
+	<span>ID</span>
+	<span>Name</span>
+	<span>value</span>
+	<span>Unit</span>
+	<span>Sort</span>
+	<span>Active</span>
+</ul>
+<!--{loop $attributeArray $mk $Attribute}-->
+<ul {if !$Array[active]} class='closed'{/if} class="<!--{if $b++%2==1}-->b1<!--{else}-->b2<!--{/if}-->">
+	<span><a href="?$ctrl=deleteAttribute&{$primary}=$mk">X</a><font color="gray"></font></span>
+	<span>$Attribute[id]</span>
+	<span><a href="">$Attribute[name]</a></span>
+	<span>
+
+	<form method="post" action="?$ctrl=insertAttributeValue&id=$Attribute[id]">
+		<span><input type="text" name="value" size="10"/></span>
+		<span><button name="submit">+</button></span>
+
+		<!--{eval $valueArray=json_decode($Attribute[attribute],true);}-->
+		<!--{loop $valueArray $value}-->
+		<span><a href="?$ctrl=deleteAttributeValue&id=$Attribute[id]&value=$value">$value</a></span>
+		<!--{/loop}-->
+	</form>
+
+	</span>
+	<span><input type="text" value="$Attribute[unit]" onchange="ajaxUpdate('attribute','id','$mk','unit',this.value)" size="1"/></span>
+	<span>{view sort}</span>
+	<span>{view active}</span>
+</ul>
+<!--{/loop}-->
+</div>
+
+
+<ul>
+	<li class="PRE"></li>
+	<li class="INP"><a href="?$ctrl"><button>完 成</button></a></li>
+</ul>
+
+</div>
+
+{view foot}

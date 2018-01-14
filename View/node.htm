@@ -1,0 +1,50 @@
+{view man}
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>
+
+<form method="post" action="?$ctrl=add">
+<diy class="center">
+		<input id="parent" name="parent" value="$key" type="hidden"/>
+		<span><a href="?$ctrl"><font color="gray">➢All:{echo count($childArray);}</font></a></span>
+		<span><input type="text" name="$primary"/></span>
+		<span><button name="submit">+{echo $$primary}</button></span>
+</diy></form>
+
+<dl class="Sheet">
+<dd>
+	<span>X</span>
+	<span>Key</span>
+	<span>Mean</span>
+	<span>Parent</span>
+	<span>排序</span>
+	<span>开关</span>
+</dd>
+<!--{if is_array($childArray)}-->
+<!--{loop $childArray $mk $Array}-->
+<!--{eval $mk=$Array[$primary]}-->
+<dd {if !$Array[active]} class='closed'{/if}>
+	<span><a href="?$ctrl=del&{$primary}=$mk">X</a><font color="gray"></font></span>
+	<span><a class='mark' href="?node&key=$mk">$Array[key]</a></span>
+	<span><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','mean',this.value)" value="$Array[mean]"></span>
+	<span><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','parent',this.value)" value="$Array[parent]"></span>
+	<span>{view sort}</span>
+	<span>{view active}</span>
+</dd>
+<!--{/loop}--><!--{/if}-->
+<h3>
+	<span><a href="?node">/</a></span>
+	<span><a href="?node=$Node[parent]"><font color="gray">$Node[parent] ({echo count($childArray);})</font></a></span>
+	<span>{if $key} $Node[mean] $key{/if}</span>
+</h3>
+<!--{loop $parentArray $Array}-->
+<!--{eval $mk=$Array[$primary]}-->
+<dd {if !$Array[active]}class='closed'{/if}>
+	<span><a href="?$ctrl=del&{$primary}=$mk">X</a><font color="gray"></font></span>
+	<span><a href="?node&key=$mk" <!--{if $key==$Array[key]}-->class='marked'<!--{/if}-->
+>$Array[key]</a></span>
+	<span><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','mean',this.value)" value="$Array[mean]" {view readonly}></span>
+	<span><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','parent',this.value)" value="$Array[parent]" {view readonly}></span>
+	<span>{view sort}</span>
+	<span>{view active}</span>
+</dd>
+<!--{/loop}-->
+</dl>

@@ -1,0 +1,56 @@
+{view man}
+<!--{eval $mk=$Array[$primary]}-->
+
+<form method="post" enctype="multipart/form-data" action="?$ctrl=update">
+<input type="hidden" name="then" value="$REFERER"/>
+<input type="hidden" name="$primary" value="$mk"/>
+<!--{echo token();}-->
+
+<div class="List">
+
+<dt>修改</dt>
+<dl>
+	<span>ID</span>
+	<span>$mk</span>
+</dl>
+
+<dl>
+	<span>类型</span>
+	<span>
+	<select name="cat" title="选择分类"><option value=''>选择分类</option>
+	<!--{loop $catArray $key $cat}-->
+	<option value="$key"<!--{if $key==$Array[catid]}--> selected<!--{/if}-->>{$cat[name]}</option>
+	<!--{/loop}--></select>
+	</span>
+</dl>
+
+
+<dl>
+	<span>标题</span>
+	<span><input type="text" name="title" value="$Array[title]" size="50" /></span>
+</dl>
+
+<dl>
+	<span>简介</span>
+	<span><textarea name="summary" cols="50">$Array[summary]</textarea></span>
+</dl>
+
+    <!-- 加载编辑器的容器 -->
+    <script id="container" name="content" type="text/plain">
+        <!--{echo $Array[content];}-->
+    </script>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>
+
+
+<button>提 交</button>
+
+</div>
+
+</form>

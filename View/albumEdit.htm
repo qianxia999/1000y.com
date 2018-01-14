@@ -1,0 +1,69 @@
+{view man}
+<!--{eval $catArray=cat($table);}-->
+<!--{eval $albumCat=cat('album');}-->
+<!--{eval $mk=$Array[$primary]}-->
+
+<link rel="stylesheet" href="http://$HOST/$ui/zyUpload/control/css/zyUpload.css" type="text/css"><!--引用控制层插件样式-->
+<script type="text/javascript" src="http://$HOST/$ui/zyUpload/jquery-1.7.2.js"></script><!--图片弹出层样式 必要样式-->
+<script type="text/javascript" src="http://$HOST/$ui/zyUpload/core/zyFile.js"></script><!--引用核心层插件-->
+<script type="text/javascript" src="http://$HOST/$ui/zyUpload/control/js/zyUpload.js"></script><!--引用控制层插件-->
+<script type="text/javascript" src="http://$HOST/$ui/zyUpload/demo.js"></script><!--引用初始化JS-->
+
+<div id="demo" class="demo"></div>
+
+<!--{if $photoList}-->
+<script language="javascript" src="http://$HOST/$ui/js/waterfall.js"></script>
+<ul id="waterfall">
+<!--{loop $photoList $k $photo}-->
+<div class="box">
+	<div class="photodel">
+		<img src="$photo[src]">
+		<a onclick="return confirm('确定删除');" href="?$ctrl=photoRemove&{$primary}=$mk&filename=$photo[file]">X</a>
+	</div>
+</div>
+<!--{/loop}-->
+</ul>
+<!--{/if}-->
+
+<div style="clear:both"></div>
+
+<form method="post" enctype="multipart/form-data" action="?$ctrl=update">
+<input type="hidden" name="$primary" value="$Array[$primary]"/>
+<!--{echo token();}-->
+<div class="List">
+
+<dt>相册上传</dt>
+<dl>
+	<span>ID</span>
+	<span>$mk</span>
+</dl>
+
+<dl class="wrap">
+	<span>分类</span>
+	<!--{loop $albumCat $key $Cat}-->
+	<label class="<!--{if $key==$Array[catid]}-->marked<!--{else}-->mark<!--{/if}-->">
+	<input type="radio" name="catid" value="$key"<!--{if $key==$Array[catid]}--> checked<!--{/if}-->/>$Cat[name]
+	</label>
+	<!--{/loop}-->
+</dl>
+
+<dl>
+	<span>名称</span>
+	<span><input type="text" name="name" value="$Array[name]"/></span>
+</dl>
+
+<dl>
+	<span>简介</span>
+	<span><textarea name="summary" cols="50">$Array[summary]</textarea></span>
+</dl>
+
+<dl class="space"></dl>
+</div>
+
+
+<p class="space"></p>
+<footer class="center">
+	<button>提 交</button>
+</footer>
+
+</form>

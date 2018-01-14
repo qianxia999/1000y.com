@@ -1,0 +1,57 @@
+{view head}
+
+<form method="post" name="theform" id="theform" action="?cash=cashSubmit">
+<div class="Box">
+
+  <dl>请输入金额(100元起)</dl>
+
+  <p>10积分等于1元人民币</p>
+
+	<diy class="around">
+		<span id="Money">￥ </span>
+		<input type="text" name="rmb" id="rmb" placeholder="金额(元)"/>
+	</diy>
+
+  <p>提现金额必须是100的倍数</p>
+
+  <dl><span id="cashTip"></span></dl>
+
+  <dl><button>提 现</button></dl>
+
+</div>
+</form>
+
+<div class="List">
+
+  <dl>
+    <span>我的积分：</span>
+    <span class="coin">{$holdArray[coin]}积分</span>
+  </dl>
+
+  <dl>
+    <span>诚信金：</span>
+    <span class="coin">{$holdArray[coinhold]}积分</span>
+  </dl>
+
+  <dl>
+    <span>抢抢乐冻结：</span>
+    <span class="coin">{$holdArray[gameHold]}积分</span>
+  </dl>
+
+  <dl>
+    <span>可提现：</span>
+    <span class="coin">{$holdArray[ready]}积分</span>
+  </dl>
+
+  <dl>
+    <span>最大可提现：</span>
+    <span><!--{echo $holdArray[ready]/10}-->元</span>
+  </dl>
+
+  <a href="?cash=cashList">
+  <dl>提现记录</dl>
+  </a>
+
+</div>
+
+{view footer}

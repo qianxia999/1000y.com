@@ -1,0 +1,43 @@
+{view head}
+<!--{eval $mapList=cat('map');}-->
+<!--{eval $daojuKind=cat('daojuKind');}-->
+
+<diy class="center">
+<!--{loop $daojuKind $key $Cat}-->
+<a class="zihong" href="?$ctrl=List&kindid=$key">$Cat[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+<diy class="center">
+<!--{loop $mapList $key $List}-->
+<a class="zihong" href="?$ctrl=List&mapid=$key">$List[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+
+
+<!--{if $kindid}-->
+<diy class="center">
+	<span>$daojuKind[$kindid][name]</span>
+</diy>
+<!--{/if}-->
+
+<div class="Sheet">
+
+<dl>
+	<dt>名称</dt>
+	<g3>说明</g3>
+	<dd>价值</dd>
+</dl>
+
+<!--{loop $dataArray $mk $Array}-->
+<dl>
+	<dt>
+		<span><img src="$Array[avatar]"></span>
+		<b>$Array[name]</b>
+	</dt>
+	<g3>$Array[summary]</g3>
+	<dd>$Array[worth]</dd>
+</dl>
+<!--{/loop}-->
+</div>

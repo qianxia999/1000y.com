@@ -1,0 +1,34 @@
+{view head}
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>
+<script language="javascript" src="http://$HOST/$ui/ajaxtip.js"></script>
+<script language="javascript" src="http://$HOST/$ui/alert.js"></script>	 
+
+<diy class="center">
+	<span id="result">&nbsp;</span>
+</diy>
+
+<form method="post" onSubmit="return onSubmitCheck(this);return false;" action="?$ctrl=forgetSubmit">
+<!--{echo token();}-->
+<div class="Box">
+	<dl>取回密码</dl>
+	<dl>
+		<input class="mobile" tabindex="1" type="text" name="mobile"  id="mobile" onchange="inputAjax('mobile','result');" {echo placeholderInput('手机号')}>
+	</dl>
+
+	<diy class="between">
+		<g3><input class="verify" tabindex="3" type="text" name="verify" id="verify" onchange="verifyAjax('result');" {echo placeholderInput('输入验证码..')}></g3>
+		<g2><button type="button" tabindex="2" id="sendverify" onclick="countdown(this,'60');sendVerify('result','passwordForget');" >获取短信</button></g2>
+	</diy>
+	
+	<dl>
+		<input class="password" tabindex="4" type="password" name="password" id="password" onchange="inputAjax('password','result');" {echo placeholderInput('设置密码..')}>
+	</dl>
+
+	<dl>
+		<input class="password" tabindex="5" type="password" name="repassword" id="repassword" onchange="repasswordAjax('result');" {echo placeholderInput('密码确认..')}>
+	</dl>
+	
+	<dl><input type="submit" value="提 交"></dl>
+
+</div>
+</form>

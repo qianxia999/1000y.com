@@ -1,0 +1,52 @@
+{view man}
+
+<diy class="center">
+	<span><input type="text" name="searchkeyword" id="searchkeyword" value="{echo $searchkeyword ?? ''}" onchange="javascript:location.href='$Url[base]&searchkeyword='+this.value;" {echo placeholderInput('搜索用户')} ></span>
+</diy>
+
+<div class="Sheet">
+<dl>
+	<dd><a href="$Url[userid]">ID</a></dd>
+	<dd>昵称</dd>
+	<dd>手机</dd>
+	<dd>头像</dd>
+	<dd>修改</dd>
+	<dd>推荐会员</dd>
+	<dd>推荐人</dd>
+	<dd><a href="$Url[time]">注册时间</a></dd>
+	<dd><a href="$Url[state]">状态</a></dd>
+</dl>
+<!--{loop $dataArray $mk $Array}-->
+<dl>
+	<dd>$Array[userid]</dd>
+	<dd>$Array[nickname]</dd>
+	<dd>$Array[mobile]</dd>
+
+    <dd>
+		<form id="avatarForm[$mk]" method="post" enctype="multipart/form-data" action="?$ctrl=avatarSubmit">
+		<input type="hidden" name="$primary" value="$mk">
+		<input type="file" name="avatar" onchange="this.form.submit();" style="display:none"/>
+		<a onclick="document.getElementById('avatarForm[$mk]').avatar.click();">
+			<img src="$Array[avatar]">
+		</a>
+		</form>
+	</dd>
+
+    <dd><a href="?$ctrl=Edit&$primary=$mk">修改</a></dd>
+
+	<dd>
+		<!--{if $Array[count]}-->
+		<a href="$Url[base]&recommend=$Array[userid]">$Array[count]</a>
+		<!--{/if}-->
+	</dd>
+
+	<dd><!--{if $Array[recommend]}--><a href="?user=InfoAdmin&userid=$Array[recommend]">$Array[recommender]</a><!--{/if}--></dd>
+
+	<dd><!--{echo date('Y年m月d日',$Array[time])}--></dd>
+	<dd>$Array[state]</dd>
+</dl>
+<!--{/loop}-->
+
+</div>
+
+<diy class="center" id="paging">{view paging}</diy>

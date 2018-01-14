@@ -1,0 +1,50 @@
+{view man}
+<!--{eval $userState=config('userState');}-->
+<!--{eval $mk=$Array[$primary]}-->
+<div class="List">
+
+<dt>用户资料修改</dt>
+
+<dl>
+	<dd>ID</dd>
+	<dd>$mk</dd>
+</dl>
+
+<dl>
+	<dd>状态</dd>
+	<dd>
+		<select onchange="ajaxUpdate('$table','$primary','$mk','state',this.value)">
+		<!--{loop $userState $key $text}-->
+		<option value="$key"<!--{if $key==$Array[state]}--> selected<!--{/if}-->>{$text}</option>
+		<!--{/loop}--></select>
+	</dd>
+</dl>
+
+<dl>
+	<dd>手机号</dd>
+	<dd>$Array[mobile]</dd>
+</dl>
+
+<dl>
+	<dd>昵称</dd>
+	<dd><input type="text" value="$Array[nickname]" onchange="ajaxUpdate('$table','$primary','$mk','nickname',this.value)"/></dd>
+</dl>
+
+<dl>
+	<dd>推荐人</dd>
+	<dd><input type="text" value="$Array[recommend]" onchange="ajaxUpdate('$table','$primary','$mk','recommend',this.value)"/></dd>
+</dl>
+
+<dl>
+  <dd>IP</dd>
+  <dd>$Array[ip]</dd>
+</dl>
+
+<dl>
+	<dd>密码</dd>
+	<dd><input type="text" value="$Array[password]" onchange="ajaxUpdate('$table','$primary','$mk','password',this.value)" {view readonly}/></dd>
+</dl>
+
+<button><a href="?$ctrl">完 成</a></button>
+
+</div>

@@ -1,0 +1,60 @@
+{view man}
+<!--{eval $seqConfig=config('seq');}-->
+<!--{eval $styleConfig=config('style');}-->
+<!--{eval $tabConfig=config('tabConfig');}-->
+		
+<div class="List">
+<dl>
+	<dt>爆率修改</dt>
+</dl>
+<dl>
+	<span>$primary</span>
+	<span>$npcid</span>
+</dl>
+</div>
+
+<diy class="center">
+<!--{loop $tabConfig $tab $text}-->
+<a class="zihong" href="?$ctrl=Admin&mapid="></a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+
+<div class="Sheet">
+<!--{loop $tabOfferList $tab $OfferList}-->
+	<form method="post" action="?$ctrl=insert">
+	<diy class="center zihong">
+		<span>$tabConfig[$tab]</span>
+		<input type="hidden" name="npcid" value="$npcid">
+		<input type="hidden" name="tab" value="$tab">
+		<input type="hidden" name="state" value="1">
+		<span><input type="text" name="itemname"/></span>
+		<span><button>新增</button></span>
+	</diy>
+	</form>
+
+	<!--{loop $OfferList $mk $Array}-->
+	<dl {if !$Array[state]} class='closed'{/if}>
+		<span>
+			<a href="?$ctrl=delete&{$primary}=$mk" onclick="return(confirm('是否删除？'))">X</a>
+		</span>
+		<span>$Array[name]</span>
+		<span>数量</span>
+		<span><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','qty',this.value)" value="$Array[qty]"/></span>
+		<span>爆率</span>
+		<span><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','fqcy',this.value)" value="$Array[fqcy]"/></span>
+
+	    <span>
+			<select onchange="ajaxUpdate('$table','$primary','$mk','style',this.value)" size='1'>
+			<!--{loop $styleConfig[color] $color $text}-->
+			<option value="$color"<!--{if $color==$Array[style]}--> selected<!--{/if}-->>{$text}</option>
+			<!--{/loop}--></select>
+	    </span>
+
+	    <span>{view seq}</span>
+		<span>{view state}</span>
+	</dl>
+	<!--{/loop}-->
+<!--{/loop}-->
+
+</div>

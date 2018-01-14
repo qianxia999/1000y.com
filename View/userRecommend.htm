@@ -1,0 +1,23 @@
+{view head}
+
+<div class="Sheet">
+<dl>
+	<span>ID</span>
+	<span>头像</span>
+	<span>昵称</span>
+	<span>电话</span>
+	<span>注册时间</span>
+</dl>
+<!--{loop $dataArray $mk $Array}-->
+<dl>
+	<span>$Array[userid]</span>
+	<span><a href="?$ctrl=Info&userid=$mk"><img width="90px" src="$Array[avatar]"></a></span>
+	<span>$Array[nickname]</span>
+	<span>$Array[mobile]</span>
+	<span><!--{echo date('Y年m月d日',$Array[time])}--></span>
+</dl>
+<!--{/loop}-->
+<p id="paging">{view paging}</p>
+</div>
+
+{view footer}

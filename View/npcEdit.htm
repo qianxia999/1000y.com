@@ -1,0 +1,57 @@
+{view man}
+<!--{eval $npcKind=cat('npcKind');}-->
+<!--{eval $mapList=cat('map');}-->
+<!--{eval $mk=$Array[$primary]}-->
+
+<form method="post" enctype="multipart/form-data" action="?$ctrl=update">
+<input type="hidden" name="$primary" value="$Array[$primary]"/>
+<!--{echo token();}-->
+
+<div class="List">
+
+<dt>NPC修改</dt>
+<dl>
+	<span>ID</span>
+	<span>$mk</span>
+</dl>
+
+<dl class="wrap">
+	<span>地图</span>
+	<!--{loop $mapList $key $Map}-->
+	<label class="<!--{if $key==$Array[mapid]}-->marked<!--{else}-->mark<!--{/if}-->">
+	<input type="radio" name="mapid" value="$key"<!--{if $key==$Array[mapid]}--> checked<!--{/if}-->/>$Map[name]
+	</label>
+	<!--{/loop}-->
+</dl>
+
+<dl class="wrap">
+	<span>Kind</span>
+	<!--{loop $npcKind $key $Kind}-->
+	<label class="<!--{if $key==$Array[kindid]}-->marked<!--{else}-->mark<!--{/if}-->">
+	<input type="radio" name="kindid" value="$key"<!--{if $key==$Array[kindid]}--> checked<!--{/if}-->/>$Kind[name]
+	</label>
+	<!--{/loop}-->
+</dl>
+
+<dl>
+	<span>名称</span>
+	<span><input type="text" name="name" value="$Array[name]" /></span>
+</dl>
+
+<dl>
+	<span>出没地点</span>
+	<span><input type="text" name="haunt" value="$Array[haunt]"/></span>
+</dl>
+
+<dl>
+	<span>简介</span>
+	<span><textarea name="summary" cols="50">$Array[summary]</textarea></span>
+</dl>
+
+</div>
+
+<footer>
+	<button>提 交</button>
+</footer>
+
+</form>

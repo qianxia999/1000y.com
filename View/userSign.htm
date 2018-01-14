@@ -1,0 +1,62 @@
+{view head}
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>	 
+<script language="javascript" src="http://$HOST/$ui/alert.js"></script>	 
+<script language="javascript" src="http://$HOST/$ui/ajaxtip.js"></script>	 
+<script language="javascript">
+function onSubmitCheck(thisForm){
+	if(termV(thisForm.term.checked)) return false;
+	if(verifyV(thisForm.verify.value)) return false;
+	if(mobileV(thisForm.mobile.value)) return false;
+	if(passwordV(thisForm.password.value)) return false;
+	Submit(thisForm);
+}
+</script>
+
+<div id="Dialog">
+
+<form method="post" name="signform" id="signform" onSubmit="return onSubmitCheck(this);" action="?$ctrl=signSubmit">
+<!--{echo token();}-->
+<dl class="Box">
+	<dd><input class="mobile" tabindex="1" type="text" name="mobile"  id="mobile" onchange="phoneAjax('result');" {echo placeholderInput('手机号')} ></dd>
+
+	<dd><diy class="between">
+		<input class="verify" tabindex="3" type="text" name="verify" id="verify" onchange="checkVerify('result');" {echo placeholderInput('输入验证码..')}>
+		<span><button type="button" tabindex="2" id="sendverify" onclick="countdown(this,'60');sendVerify('result','userSign');">获取短信</button></span>
+	</diy></dd>
+
+	<dd><input class="password" tabindex="4" type="password" name="password" id="password" onchange="passwordAjax('result');" {echo placeholderInput('设置密码..')}></dd>
+
+	<dd><input class="password" tabindex="5" type="password" name="repassword" id="repassword" onchange="repasswordAjax('result');" {echo placeholderInput('密码确认..')}></dd>
+
+	<dd>
+	<!--{if $recommend}--><input name="recommend" value="$recommend" type="hidden"/>
+	<input type="text" name="recommendmobile" value="$mobile" readonly/>
+	<!--{else}--><input tabindex="6" type="text" name="recommendmobile" {echo placeholderInput('推荐人手机号码')}/>
+	<!--{/if}-->
+	</dd>
+	
+	<dd>
+		<label for="term"><input class='checkbox' tabindex="7" type='checkbox' name='term' id='term' checked/>
+		我已同意并阅读</label>
+		<a href="?$ctrl=userTerm">注册协议</a>
+	</dd>
+
+	<button>注 册</button>
+
+	<dd id="result"></dd>
+
+	<dd><a href="?$ctrl=login">立即登录</a></dd>
+</dl>
+</form>
+
+</div>
+
+
+
+<!--function ajaxinput(obj) {////改写此模块
+	return true;
+	//ajaxinput(this);
+	//var thevalue = document.getElementById(thisobj).value;
+	alert(shopform.phone.value);
+	alert(obj.type);
+}-->

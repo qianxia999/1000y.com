@@ -1,0 +1,99 @@
+{view man}
+<!--{eval $magicKind=cat('magicKind');}-->
+<!--{eval $magicCeng=cat('magicCeng');}-->
+<!--{eval $mk=$$primary}-->
+
+<form method="post" name="editForm" enctype="multipart/form-data" action="?$ctrl=update">
+<input type="hidden" name="then" value="$REFERER"/>
+<input type="hidden" name="$primary" value="$mk"/>
+<!--{echo token();}-->
+
+<div class="List">
+<dt>编辑</dt>
+<dl>
+	<span>ID</span>
+	<span>$mk</span>
+</dl>
+
+
+<dl class="wrap">
+	<span>层</span>
+	<!--{loop $magicCeng $key $Ceng}-->
+	<label class="<!--{if $key==$Array[cengid]}-->marked<!--{else}-->mark<!--{/if}-->">
+	<input type="radio" name="cengid" value="$key"<!--{if $key==$Array[cengid]}--> checked<!--{/if}-->/>$Ceng[name]
+	</label>
+	<!--{/loop}-->
+</dl>
+
+<dl class="wrap">
+	<span>Kind</span>
+	<!--{loop $magicKind $key $Kind}-->
+	<label class="<!--{if $key==$Array[kindid]}-->marked<!--{else}-->mark<!--{/if}-->">
+	<input type="radio" name="kindid" value="$key"<!--{if $key==$Array[kindid]}--> checked<!--{/if}-->/>$Kind[name]
+	</label>
+	<!--{/loop}-->
+</dl>
+
+<dl>
+	<span>图标</span>
+
+    <span>
+		<input type="file" id="avatar" name="avatar" style="display:none"/>
+		<a onclick="document.getElementById('avatar').click();">
+			<img src="$Array[avatar]">
+		</a>
+	</span>
+</dl>
+
+<dl>
+	<span>武功名称</span>
+	<span><input type="text" name="name" value="$Array[name]" /></span>
+</dl>
+
+<dl>
+	<span>速度</span>
+	<span><input type="text" name="sudu" value="$Array[sudu]"/></span>
+</dl>
+
+<dl>
+	<span>恢复</span>
+	<span><input type="text" name="huifu" value="$Array[huifu]"/></span>
+</dl>
+
+<dl>
+	<span>闪躲</span>
+	<span><input type="text" name="shanduo" value="$Array[shanduo]"/></span>
+</dl>
+
+
+<dl>
+	<span>攻击</span>
+	<span><input type="text" name="gongji" value="$Array[gongji]"/></span>
+</dl>
+
+<dl>
+	<span>打头/手/腿</span>
+	<span><input type="text" name="datou" value="$Array[datou]"/></span>
+	<span><input type="text" name="dashou" value="$Array[dashou]"/></span>
+	<span><input type="text" name="datui" value="$Array[datui]"/></span>
+</dl>
+
+<dl>
+	<span>防御</span>
+	<span><input type="text" name="fangyu" value="$Array[fangyu]"/></span>
+</dl>
+
+<dl>
+	<span>头/手/腿防</span>
+	<span><input type="text" name="toufang" value="$Array[toufang]"/></span>
+	<span><input type="text" name="shoufang" value="$Array[shoufang]"/></span>
+	<span><input type="text" name="tuifang" value="$Array[tuifang]"/></span>
+</dl>
+</div>
+
+<p class="space"></p>
+<footer class="center">
+	<button>提 交</button>
+</footer>
+
+</form>

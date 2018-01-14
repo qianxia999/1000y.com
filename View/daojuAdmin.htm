@@ -1,0 +1,69 @@
+{view man}
+<!--{eval $mapList=cat('map');}-->
+<!--{eval $daojuKind=cat('daojuKind');}-->
+
+<diy class="center">
+<!--{loop $mapList $key $List}-->
+<a class="zihong" href="?$ctrl=Admin&mapid=$key">$List[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+<diy class="center">
+<!--{loop $daojuKind $key $Cat}-->
+<a class="zihong" href="?$ctrl=Admin&kindid=$key">$Cat[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+
+<form method="post" action="?$ctrl=insert">
+<input type="hidden" name="mapid" value="$mapid">
+<input type="hidden" name="kindid" value="$kindid">
+<input type="hidden" name="state" value="1">
+<!--{echo token();}-->
+<diy class="center">
+	<span><input type="text" name="name"/></span>
+	<span><button>新增</button></span>
+</diy>
+</form>
+
+<div class="Sheet">
+<dl>
+	<dd><a href="$Url[$primary]">X</a></dd>
+	<dd>类型</dd>
+	<dd>名称</dd>
+	<dd>编辑</dd>
+	<dd>排序</dd>
+	<dd>激活</dd>
+</dl>
+<!--{loop $dataArray $mk $Array}-->
+<dl {if !$Array[state]} class='closed'{/if}>
+	<dd title="$Array[$primary]">
+		<a href="?$ctrl=delete&{$primary}=$mk" onclick="return(confirm('是否删除？'))">$mk</a>
+	</dd>
+	
+    <dd>
+		<select onchange="ajaxUpdate('$table','$primary','$mk','kindid',this.value)">
+		<!--{loop $daojuKind $key $Cat}-->
+		<option value="$key"{if $key==$Array[kindid]} selected{/if}>{$Cat[name]}</option>
+		<!--{/loop}-->
+		</select>
+    </dd>
+
+    <dd>
+		<form id="avatarForm[$mk]" method="post" enctype="multipart/form-data" action="?$ctrl=avatarSubmit">
+		<input type="hidden" name="$primary" value="$mk">
+		<input type="file" name="avatar" onchange="document.getElementById('avatarForm[$mk]').submit();" style="display:none"/>
+		<a onclick="document.getElementById('avatarForm[$mk]').avatar.click();">
+			<img src="$Array[avatar]">
+		</a>
+		</form>
+		<small>$Array[name]</small>
+	</dd>
+    <dd><a href="?$ctrl=Edit&$primary=$mk">修改</a></dd>
+
+	<dd>{view seq}</dd>
+	<dd>{view state}</dd>
+</dl>
+<!--{/loop}-->
+<p id="paging">{view paging}</p>
+</dl>

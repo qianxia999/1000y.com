@@ -1,0 +1,37 @@
+{view head}
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>	 
+<script language="javascript" src="http://$HOST/$ui/alert.js"></script>	 
+<script language="javascript" src="http://$HOST/$ui/ajaxtip.js"></script>	 
+
+<form method="post" name="theform" id="theform" onSubmit="return onSubmitCheck(this);return false;" action="?$ctrl=MobileBindSubmit">
+<!--{echo token();}-->
+<div class="List">
+
+	<diy class="center">
+		<span id="result">绑定手机号</span>
+	</diy>
+
+	<dl class="mobile">
+		<span>手机</span>
+		<span><input tabindex="1" type="text" name="mobile"  id="mobile" onchange="inputAjax('mobile','result');" {echo placeholderInput('请输入手机号..')} ></span>
+	</dl>
+
+	<dl class="between">
+		<g3><input tabindex="3" type="text" name="verify" id="verify" onchange="inputAjax('verify','result');" {echo placeholderInput('输入验证码..')}></g3>
+		<g2><button type="button" tabindex="2" id="sendverify" onclick="countdown(this,'60');sendVerify('result','mobileBind');">获取短信</button></g2>
+	</dl>
+
+	<dl>
+		<span>当前帐号</span>
+		<span>$account</span>
+	</dl>
+
+	<dl>
+		<span>验证密码</span>
+		<span><input tabindex="4" type="password" name="password" id="password" onchange="inputAjax('password','result');" {echo placeholderInput('密码..')}></span>
+	</dl>
+
+	<button tabindex="6">确 认 修 改</button>
+
+</div>
+</form>

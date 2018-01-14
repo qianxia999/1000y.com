@@ -1,0 +1,65 @@
+{view head}
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>	 
+<script language="javascript" src="http://$HOST/$ui/ajaxtip.js"></script>	 
+<!--{eval $recommend=get('recommend');}-->
+
+<script language="javascript">
+function onSubmitCheck(thisForm){
+	//if(phoneV(thisForm.phone.value)) return false;
+	//if(passwordV(thisForm.password.value)) return false;
+	//if(termV(thisForm.term.checked)) return false;
+	Submiting(thisForm);
+}
+</script>
+
+
+<div id="Dialog">
+
+<form method="post" name="signform" id="signform" onSubmit="return onSubmitCheck(this);return false;" action="?$ctrl=registerSubmit">
+<!--{echo token();}-->
+
+<diy class="center">
+	<span id="result">请输入注册信息</span>
+</diy>
+
+<div class="Box">
+	<diy class="between">
+		<dt></dt>
+		<dt>通行证注册</dt>
+		<dt><a href="?$ctrl=login">立即登录</a></dt>
+	</diy>
+	<dl><input class="mobile" tabindex="1" type="text" name="account"  id="account" onchange="inputAjax('account','result');" {echo placeholderInput('请输入连线名称..')} ></dl>
+
+	<dl><input class="password" tabindex="4" type="password" name="password" id="password" onchange="inputAjax('password','result');" {echo placeholderInput('请设置密码..')}></dl>
+
+	<dl><input class="password" tabindex="5" type="password" name="repassword" id="repassword" onchange="repasswordAjax('result');" {echo placeholderInput('密码确认..')}></dl>
+
+	<dl>
+	<!--{if $recommend}--><input name="recommend" value="$recommend" type="hidden"/>
+	<input type="text" name="recommendmobile" value="$recommendMobile" readonly/>
+	<!--{else}--><input class="mobile" tabindex="6" type="text" name="recommendmobile" {echo placeholderInput('推荐人手机号码')}/>
+	<!--{/if}-->
+	</dl>
+	
+	<dl>
+		<label for="term"><input class='checkbox' tabindex="7" type='checkbox' name='term' id='term' checked/>
+		我已同意并阅读</label>
+		<a href="?$ctrl=userTerm">注册协议</a>
+	</dl>
+
+	<button>注 册</button>
+
+	<dl></dl>
+</div>
+</form>
+
+</div>
+
+
+<!--function ajaxinput(obj) {////改写此模块
+	return true;
+	//ajaxinput(this);
+	//var thevalue = document.getElementById(thisobj).value;
+	alert(shopform.phone.value);
+	alert(obj.type);
+}-->

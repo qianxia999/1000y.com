@@ -1,0 +1,54 @@
+{view man}
+
+<diy class="around">
+    <span><select onchange="javascript:location.href='$Link[base]&state='+this.value;">
+		<option value=''>请选择</option>
+        <!--{loop $cashConfig $key $text}-->
+		<option value="$key" <!--{if (string)$key===@$state}--> selected<!--{/if}-->>{$text}</option>
+		<!--{/loop}--></select></span>
+    <span><input type="text" name="searchkeyword" id="searchkeyword" onchange="javascript:location.href='$Link[base]&searchkeyword='+this.value;" {echo placeholderInput('搜索')} ></span>
+</diy>
+
+<dl class="Sheet">
+<dd>
+	<span>编号</span>
+	<span>日期</span>
+	<span>手机号</span>
+	<span>区域</span>
+	<span>银行</span>
+	<span>支行</span>
+	<span>卡号</span>
+	<span>户名</span>
+	<span>金额</span>
+	<span>打款</span>
+</dd>
+<!--{loop $dataArray $Array}-->
+<!--{eval $mk=$Array[$primary];}-->
+<!--{eval @$cashSum+=$Array[cash];}-->
+
+<dd>
+	<span>$Array[id]</span>
+	<span title="<!--{echo date('Y年m月d日H时i分',$Array[time])}-->"><!--{echo date('n月d日H:i',$Array[time])}--></span>
+	<span>$Array[phone]</span>
+
+	<span>$Array[Snapshot][cityname]</span>
+	<span>$Array[Snapshot][bankname]</span>
+	<span>$Array[Snapshot][branch]</span>
+	<span><font onclick="this.select();">$Array[Snapshot][bankcard]</font></span>
+	<span>$Array[Snapshot][truename]</span>
+
+	<span>{$Array[rmb]}元</span>
+	<span><!--{if $Array[state]==1}-->已打款<!--{else}-->
+		<select onchange="ajaxUpdate('$table','$primary','$mk','state',this.value)">
+		<!--{loop $cashConfig $state $text}-->
+		<option value="$state"<!--{if $state==$Array[state]}--> selected<!--{/if}-->>{$text}</option>
+		<!--{/loop}--></select>
+	<!--{/if}--></span>
+</dd>
+<!--{/loop}-->
+
+<dt id="paging">{view paging}</dt>
+
+</dl>
+
+	<!--<span><a href="?$ctrl=cashSuccess"><button>打款成功</button></a></span>-->

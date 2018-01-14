@@ -1,0 +1,17 @@
+{view man}
+
+<form method="post" enctype="multipart/form-data" action="?$ctrl=insert">
+<div class="List">
+
+	<dt>分类目录</dt>
+
+	<!--{loop $catArray $key $cat}-->
+	<dl>
+	<a href="?$ctrl=Admin&catid=$cat[catid]">
+		<span>$cat[name]</span>
+	</a>
+	</dl>
+	<!--{/loop}-->
+
+</div>
+</form>

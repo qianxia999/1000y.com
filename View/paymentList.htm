@@ -1,0 +1,26 @@
+{view head}
+
+<dl class="Sheet">
+<dd>
+  <span>订单编号</span>
+  <span>积分</span>
+  <span>充值方式</span>
+  <span><a href="$Link[time]">订单日期</a></span>
+  <span>操作</span>
+</dd>
+<!--{loop $dataArray $mk $Array}-->
+<dd>
+	<span><!--{echo $Array[orderid]}--></span>
+	<span>$Array[coin]</span>
+	<span>$Array[way]</span>
+	<span><!--{echo date('Y年n月d日H时i分',$Array[time])}--></span>
+	<span>$Array[op]</span>
+</dd>
+<!--{/loop}-->
+
+<dt id="paging">{view paging}</dt>
+<!--{if $paymentSum}--><h3>累计充值 ：$paymentSum 积分</h3><!--{/if}-->
+
+</dl>
+
+{view footer}

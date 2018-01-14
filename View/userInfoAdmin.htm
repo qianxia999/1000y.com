@@ -1,0 +1,53 @@
+{view man}
+<!--{eval $mk=$User[$primary]}-->
+
+<div class="List">
+
+<dt>个人资料</dt>
+<dl>
+	<dd>ID</dd>
+	<dd>$User[$primary]</dd>
+</dl>
+
+<dl>
+	<dd>头像</dd>
+	<span class="avatar"><img src="$User[avatar]"></dd>
+</dl>
+
+<dl>
+	<dd>昵称</dd>
+	<dd>$User[nickname]</dd>
+</dl>
+
+<dl>
+	<dd>手机号</dd>
+	<dd>$User[mobile]</dd>
+</dl>
+
+<dl>
+	<dd>推荐人</dd>
+	<dd><a href="?$ctrl=InfoAdmin&userid=$User[recommend]">$User[recommender]</a></dd>
+</dl>
+
+<dl>
+  <dd>积分</dd>
+  <span class="coin">$User[coin]</dd>
+</dl>
+
+<dl>
+  <dd>注册IP</dd>
+  <dd>$User[ip]</dd>
+</dl>
+
+
+<a href="?payment=paymentList&userid=$User[$primary]">
+	<dl>充值记录</dl>
+</a>
+
+<a href="?$ctrl=ModifyAdmin&userid=$User[$primary]">
+	<dl>修改</dl>
+</a>
+
+<button><a href="?$ctrl=ListAdmin">返 回</a></button>
+
+</div>

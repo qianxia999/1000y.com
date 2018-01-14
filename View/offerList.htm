@@ -1,0 +1,37 @@
+{view head}
+<!--{eval $mapList=cat('map');}-->
+
+<diy class="center">
+<!--{loop $mapList $key $List}-->
+<a class="zihong" href="?$ctrl=List&mapid=$key">$List[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+<diy class="center">
+	<span>$mapList[$mapid][name]</span>
+</diy>
+
+<div class="Sheet">
+<dl>
+	<dt>名称</dt>
+	<g3>爆率</g3>
+</dl>
+<!--{loop $OfferList $npcid $Npc}-->
+<dl>
+	<dt>
+		<span>$Npc[name]</span>
+	</dt>
+	<g3>
+	<div class="left">
+	<!--{loop $Npc[tabOfferList] $OfferList}-->
+	<!--{loop $OfferList $id $List}-->
+	<span class="$List[style]">$List[name]</span>
+	<span>$List[qty]:$List[fqcy]；</span>
+	<!--{/loop}-->
+	<!--{/loop}-->
+	</div>
+	</g3>
+</dl>
+<!--{/loop}-->
+
+</div>

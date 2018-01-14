@@ -1,0 +1,34 @@
+{view man}
+<link href="http://$HOST/$ui/activeSwitch.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>	 
+
+<diy class="center bar">
+<a href="?$ctrl">根</a>
+ ➢ $class
+<!--{loop $Methods $method}-->
+<a href="?$ctrl=insert&class=$class&method=$method">$method</a>
+<!--{/loop}-->
+</diy>
+
+<div class="Sheet">
+<dl>
+	<dd>$primary</dd>
+	<dd>Method</dd>
+	<dd>标题</dd>
+	<dd>回退</dd>
+	<dd>状态</dd>
+</dl>
+
+<!--{loop $dataList $mk $Array}-->
+<dl>
+	<dd><a href="?$ctrl=delete&$primary=$mk">$mk</a></dd>
+	<dd><a href="?$ctrl=Modify&class=$class&$primary=$mk">$Array[method]</a></dd>
+	<dd><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','title',this.value)" value="$Array[title]"></dd>
+	<dd><input type="text" onchange="ajaxUpdate('$table','$primary','$mk','back',this.value)" value="$Array[back]"></dd>
+	<dd>{view state}</dd>
+</dl>
+<!--{/loop}-->
+
+<dt id="result"></dt>
+
+</div>

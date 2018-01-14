@@ -1,0 +1,46 @@
+{view head}
+<!--{eval $magicKind=cat('magicKind');}-->
+<!--{eval $magicCeng=cat('magicCeng');}-->
+
+<diy class="center">
+<!--{loop $magicKind $key $Kind}-->
+<a class="zihong" href="?$ctrl=List&kindid=$key">$Kind[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+
+<div class="Sheet">
+<dl>
+	<dt>
+		<!--{if $kindid}-->
+		$magicKind[$kindid][name]
+		<!--{else}-->
+		武功
+		<!--{/if}-->
+	</dt>
+	<dd><a href="$Url[sudu]">速度</a></dd>
+	<dd><a href="$Url[huifu]">恢复</a></dd>
+	<dt><a href="$Url[shanduo]">闪躲</a></dt>
+	<g3>
+		<span><a href="$Url[gongji]">破坏</a> <a href="$Url[fangyu]">防御</a></span>
+	</g3>
+</dl>
+<!--{loop $dataArray $mk $Array}-->
+<dl>
+	<dt>
+		<span><img src="$Array[avatar]" width="80px"></span>
+		<span>$Array[name]</span>
+	</dt>
+	<dd>$Array[sudu]</dd>
+	<dd>$Array[huifu]</dd>
+	<dd>$Array[shanduo]</dd>
+	<g3>
+	    <!--{if $Array[gongji]}--><p>破坏力:$Array[gongji] / $Array[datou] / $Array[dashou] / $Array[datui]</p><!--{/if}-->
+
+	    <!--{if $Array[fangyu] || $Array[toufang] || $Array[shoufang] || $Array[tuifang]}-->
+	    <p>防御力:$Array[fangyu] / $Array[toufang] / $Array[shoufang] / $Array[tuifang]</p>
+	    <!--{/if}-->
+	</g3>
+</dl>
+<!--{/loop}-->
+</div>

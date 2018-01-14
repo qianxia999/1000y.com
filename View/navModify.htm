@@ -1,0 +1,18 @@
+{view man}
+<!--{eval $mk=$Array[$primary]}-->
+
+<div id="Tab">
+
+<form method="post" enctype="multipart/form-data" onSubmit="return onSubmitCheck(this);" action="$_SERVER[REQUEST_URI]">
+
+<dl>
+	<dt>昵称</dt>
+	<dd><input type="text" name='nickname' value="$Array[title]"/></dd>
+</dl>
+<dl>
+	<dt></dt>
+	<dd><button>保 存</button></dd>
+</dl>
+</form>
+
+</div>

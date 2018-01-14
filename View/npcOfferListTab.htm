@@ -1,0 +1,24 @@
+{view man}
+
+<diy class="center">
+<!--{loop $mapList $key $List}-->
+<a class="zihong" href="?$ctrl=OfferList&mapid=$key">$List[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+<dl class="Tab">
+	<dt>
+		<span>$mapList[$mapid][name]</span>
+	</dt>
+<!--{loop $OfferList $npcid $Npc}-->
+	<dd>
+		<span><img src="$Npc[avatar]"><br>$Npc[name]</span>
+		<!--{loop $Npc[tabOfferList] $OfferList}-->
+		<!--{loop $OfferList $id $List}-->
+		<span class="$List[style]">$List[name] $List[qty]:$List[fqcy]</span>
+		<!--{/loop}-->
+		<!--{/loop}-->
+	</dd>
+<!--{/loop}-->
+
+</dl>

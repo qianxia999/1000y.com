@@ -1,0 +1,28 @@
+{view head}
+<!--{eval $albumCat=cat('album');}-->
+<script language="javascript" src="http://$HOST/$ui/js/waterfall.js"></script>
+
+<diy class="center">
+<!--{loop $albumCat $key $Cat}-->
+<a class="zihong" href="?$ctrl=List&catid=$key">$Cat[name]</a>&nbsp;
+<!--{/loop}-->
+</diy>
+
+<!--{if $kindid}-->
+<diy class="center">
+	<span>$daojuKind[$kindid][name]</span>
+</diy>
+<!--{/if}-->
+
+<div id="waterfall">
+
+<!--{loop $dataArray $mk $Array}-->
+<div class="box">
+	<a href="?$ctrl=Info&albumid=$Array[albumid]">
+		<span title="$Array[name]"><img src="$Array[avatar]"></span>
+	</a>
+</div>
+<!--{/loop}-->
+</div>
+
+

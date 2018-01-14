@@ -1,0 +1,35 @@
+{view head}
+<script language="javascript" src="http://$HOST/$ui/ajax.js"></script>	 
+<script language="javascript" src="http://$HOST/$ui/ajaxtip.js"></script>	 
+<!--{eval $REGISTER=config('url','register');}-->
+<!--{eval $FORGET=config('url','forget');}-->
+
+<diy class="center">
+	<span id="result">&nbsp;</span>
+</diy>
+
+<form method="post" name="loginform" id="loginform" onSubmit="return onSubmitCheck(this);" action="?$ctrl=loginSubmit">
+<!--{echo token();}-->
+<div class="Box">
+	<dl>登录</dl>
+
+	<dl>
+		<input class="account" type="text" tabindex="1" name="account" id="account" onchange="inputAjax('account','result');" placeholder="连线名称">
+	</dl>
+
+	<dl>
+		<input class="password" type="password" tabindex="2" name="password" id="password" onchange="inputAjax('password','result');" placeholder="密码">
+	</dl>
+
+	<dl>
+		<input type="submit" value="登 陆">
+	</dl>
+
+	<dl><span id="result"></span></dl>
+
+	<dl>
+		<a href="$FORGET">忘记密码</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="$REGISTER">注册会员</a>
+	</dl>
+</div>
+</form>

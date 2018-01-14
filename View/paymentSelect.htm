@@ -1,0 +1,31 @@
+﻿{view head}
+
+<dl class="Box">
+
+	<dd>订单编号：$orderid</dd>
+
+	<dd>充值金额$Payment[rmb]</dd>
+
+	<dd class="space"></dd>
+
+	<!--{if $HTTPUSERAGENT=='weixin'}-->
+	<button class="disable" >支付宝(微信环境内不支持)</button>
+	<!--{else}-->
+	<form method="post" name="alipayForm" id="alipayForm" action="http://pay.mbyl999.com/alipay/wappay/pay.php?orderid=$orderid">
+	<dd>
+		<input name="imgbtn" type="image" src="/ui/alipay.png" width="260px">
+		<input type="hidden" name="WIDout_trade_no" value="$WID[WIDout_trade_no]">
+		<input type="hidden" name="WIDsubject" value="$WID[WIDsubject]">
+		<input type="hidden" name="WIDtotal_amount" value="$WID[WIDtotal_amount]">
+		<input type="hidden" name="WIDbody" value="">
+		</a>
+	</dd>
+	</form>
+	<!--{/if}-->
+
+	<dd><a href="http://pay.mbyl999.com/upacp_demo_b2c/unionpay.php?orderid=$orderid">
+	<input name="imgbtn" type="image" src="/ui/union.png" width="260px">
+	</a></dd>
+</dl>
+
+{view footer}

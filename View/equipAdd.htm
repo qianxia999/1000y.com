@@ -1,0 +1,25 @@
+{view man}
+
+<form method="post" enctype="multipart/form-data" action="?$ctrl=insert">
+<!--{echo token();}-->
+<dl class="List">
+
+<dt>装备新增</dt>
+
+<dd>
+	<span>类型</span>
+	<!--{loop $catArray $key $cat}-->
+	<label><input type="radio" name="catid" value="$key" />$cat[name]</label>
+	<!--{/loop}-->
+</dd>
+
+<dd>
+	<span>装备名称</span>
+	<span><input type="text" name="name"/></span>
+</dd>
+
+
+<button>确 定</button>
+
+</dl>
+</form>

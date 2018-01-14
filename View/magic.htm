@@ -1,0 +1,100 @@
+{view man}
+
+<form method="post" enctype="multipart/form-data" action="?$ctrl=Save">
+<dl class="Tab">
+<input type="hidden" name="id" value="$Array[id]"/>
+
+<!--{eval $mk=$Array[$primary]}-->
+
+<dt>商品编辑修改</dt>
+<dd>
+	<span>ID</span>
+	<span>$mk</span>
+</dd>
+
+<dd>
+	<span>分类</span>
+	<span>
+	<select name="catid" title="选择分类"><option value=''>选择分类</option>
+	<!--{loop $catArray $key $cat}--><option value="$key"<!--{if $key==$cat[catid]}--> selected<!--{/if}-->>{$cat[name]}</option><!--{/loop}--></select>
+	</span>
+</dd>
+
+<dd>
+	<span>图</span>
+	<span>
+	<div class="avatar"><img src="$Array[avatar]"></div>
+	<input type="file" name="avatar"/>
+	</span>
+</dd>
+
+<dd>
+	<span>武功名称</span>
+	<span><input type="text" name="name" value="$Array[name]" /></span>
+</dd>
+
+<dd>
+	<span>类型</span>
+	<span><input type="text" name="kind" value="$Array[kind]"/></span>
+</dd>
+
+<dd>
+	<span>层</span>
+	<span><input type="text" name="ceng" value="$Array[ceng]"/></span>
+</dd>
+
+<dd>
+	<span>速度</span>
+	<span><input type="text" name="sudu" value="$Array[sudu]"/></span>
+</dd>
+
+<dd>
+	<span>恢复</span>
+	<span><input type="text" name="huifu" value="$Array[huifu]"/></span>
+</dd>
+
+<dd>
+	<span>闪躲</span>
+	<span><input type="text" name="shanduo" value="$Array[shanduo]"/></span>
+</dd>
+
+<dd>
+	<span>命中</span>
+	<span><input type="text" name="mingzhong" value="$Array[mingzhong]"/></span>
+</dd>
+
+<dd>
+	<span>维持</span>
+	<span><input type="text" name="weichi" value="$Array[weichi]"/></span>
+</dd>
+
+<dd>
+	<span>攻击</span>
+	<span><input type="text" name="gongji" value="$Array[gongji]"/></span>
+</dd>
+
+<dd>
+	<span>打头/手/腿</span>
+	<span><input type="text" name="datou" value="$Array[datou]"/></span>
+	<span><input type="text" name="dashou" value="$Array[dashou]"/></span>
+	<span><input type="text" name="datui" value="$Array[datui]"/></span>
+</dd>
+
+<dd>
+	<span>防御</span>
+	<span><input type="text" name="fangyu" value="$Array[fangyu]"/></span>
+</dd>
+
+<dd>
+	<span>头/手/腿防</span>
+	<span><input type="text" name="toufang" value="$Array[toufang]"/></span>
+	<span><input type="text" name="shoufang" value="$Array[shoufang]"/></span>
+	<span><input type="text" name="tuifang" value="$Array[tuifang]"/></span>
+</dd>
+
+
+
+<button>提 交</button>
+
+</dl>
+</form>
