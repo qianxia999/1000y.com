@@ -1,7 +1,7 @@
 <?php
 
 $index='home';
-$login='?login';
+#$login='?login';
 
 define('AUTHKEY','USERAUTH');
 #define('USER',66);
