@@ -16,6 +16,8 @@ class Daoju extends \core\base{
 		$L=new \core\Link();
 		$this->Url=$L->URL('sudu','gongji');
 		$COND=$L->COND();
+		$COND['AND']['state']=1;
+		unset($COND['LIMIT']);
 
 	    $dataArray=$this->M->LIST($COND);
 	    $dataArray=$this->M->format($dataArray);

@@ -8,7 +8,9 @@ class Cell extends \core\base{
 
 		$xinshouArray=$this->M->documentArray(53);
 
-		return compact('renwuArray','xinshouArray');
+		$dituAlbumList=$this->M->albumArray(155);
+
+		return compact('renwuArray','xinshouArray','dituAlbumList');
 	}
 
 

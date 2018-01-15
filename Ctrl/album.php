@@ -29,6 +29,8 @@ class Album extends \core\base{
 
 		$Array=$this->M->ONE($mk);
 
+		$Array['summary']=nl2br($Array['summary']);
+
 	    $avatarDir=config('avatar','album');
 
 		$photoList=\core\Common::photoList($avatarDir,$mk);#dump($photoList);exit;

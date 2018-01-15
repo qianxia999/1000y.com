@@ -34,7 +34,7 @@ class Offer extends \core\DB{
 		$npcList = $this->select('npc',[
 			'npcid','name','avatar',
 		],[
-			'AND'=>['mapid'=>$mapid,'state'=>true],
+			'AND'=>['mapid'=>$mapid,'offer'=>true,'state'=>true],
 			'ORDER'=>['seq'=>'DESC'],
 		]);
 

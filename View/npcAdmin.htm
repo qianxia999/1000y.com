@@ -59,7 +59,12 @@
 	</dd>
 
 	<dd><a href="?$ctrl=Edit&$primary=$mk">修改</a></dd>
-	<dd><a href="?offer=Edit&$primary=$mk">爆率</a></dd>
+	<dd>
+
+		<label><input type="checkbox" onchange="ajaxUpdate('$table','$primary','$mk','offer',this.value);activeSwitch(this);" class="activeSwitch"<!--{if $Array[offer]}--> value='0' checked<!--{else}--> value='1'<!--{/if}-->/><div><div></div></div></label>
+
+		<a href="?offer=Edit&$primary=$mk">爆率</a>
+	</dd>
 
 	<dd>{view seq}</dd>
 	<dd>{view state}</dd>

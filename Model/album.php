@@ -13,5 +13,15 @@ class Album extends \core\DB{
 
    		return $dataArray;
 	}
+
+	public function ITEM($COND){
+
+		$dataArray=$this->select($this->table,[
+			'albumid','catid','name','style'
+		],$COND);
+
+		return $dataArray;
+	}
+
 	
 }
