@@ -11,19 +11,6 @@
 <link href="http://$HOST/$ui/www.css" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]><script src="http://$HOST/$ui/css3-mediaqueries.js"></script><![endif]-->
 </head>
+<body>
 
-
-<!--{if isset($Nav['state']) && $Nav['state']==1}-->
-<nav class="between">
-	<span><a class="goback" href="$Nav['back']"></a></span>
-	<span>$Nav['title']&nbsp;</span>
-	<span></span>
-</nav>
-<!--{/if}-->
-<!--<a class="reload" href="javascript:document.location.reload()"></a>-->
-
-
-<nav class="between">
-	<span><a href="?home">home</a></span>
-</nav>
-<div style="height:6rem;"></div>
+{view head_pc}

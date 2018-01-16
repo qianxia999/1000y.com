@@ -1,5 +1,5 @@
-body,nav,footer{max-width:750px;color:DarkGoldenRod;}
-nav,footer{height:6rem;max-width:750px;}
+body,nav,footer{max-width:900px;color:DarkGoldenRod;}
+nav,footer{height:6rem;}
 nav{color:#fff;background: #ce4445;}
 input{outline:none;border:none;}
 input{line-height:6rem;}

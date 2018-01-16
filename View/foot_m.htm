@@ -1,0 +1,28 @@
+<style>
+footer a:nth-child(1) h1{ background:url(/ui/skin/footer1.png) no-repeat center center; background-size:auto 80%;}
+footer a:nth-child(2) h1{ background:url(/ui/skin/footer2.png) no-repeat center center; background-size:auto 80%;}
+footer a:nth-child(3) h1{ background:url(/ui/skin/footer3.png) no-repeat center center; background-size:auto 80%;}
+footer a:nth-child(4) h1{ background:url(/ui/skin/footer4.png) no-repeat center center; background-size:auto 80%;}
+footer a:nth-child(1).act03 h1{ background:url(/ui/skin/footer11.png) no-repeat center center; background-size:auto 80%;}
+footer a:nth-child(2).act03 h1{ background:url(/ui/skin/footer22.png) no-repeat center center; background-size:auto 80%;}
+footer a:nth-child(3).act03 h1{ background:url(/ui/skin/footer33.png) no-repeat center center; background-size:auto 80%;}
+footer a:nth-child(4).act03 h1{ background:url(/ui/skin/footer44.png) no-repeat center center; background-size:auto 80%;}
+footer a p{ font-size:1.8rem; color:#808080;}
+footer a.act03 p{ color:#e60012;}
+</style>
+
+<div style="height:8rem"></div>
+<footer class="around" style="border-top: #b3b3b3 1px solid;">
+	<a class="<!--{if $ctrl=='home'}-->act03<!--{/if}-->" href="/">
+		<h1></h1>
+		<p>首页</p>
+	</a>
+	<a class="<!--{if $ctrl=='goods'}-->act03<!--{/if}-->" href="?goods=goodsList">
+		<h1></h1>
+		<p></p>
+	</a>
+	<a class="<!--{if $ctrl=='user'}-->act03<!--{/if}-->" href="?user">
+		<h1></h1>
+		<p>我的</p>
+	</a>
+</footer>
