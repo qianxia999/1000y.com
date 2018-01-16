@@ -36,19 +36,23 @@
 		<b>$Array[name]</b>
 	</g2>
 	<dd>$Array[rank]</dd>
-	<g3>
-	    <p>
+	<g3 class="left">
+		<p>$Array[summary]</p>
+
+	    <p><span class="hongse">
 	    <!--{if $Array[sudu]}-->速度：$Array[sudu] <!--{/if}-->
 	    <!--{if $Array[huifu]}-->恢复：$Array[huifu] <!--{/if}-->
 	    <!--{if $Array[shanduo]}-->闪躲：$Array[shanduo] <!--{/if}-->
 	    <!--{if $Array[mingzhong]}-->命中：$Array[mingzhong] <!--{/if}-->
-	    </p>
+	    </span></p>
 	    
-	    <!--{if $Array[gongji]}--><p>破坏力:$Array[gongji] / $Array[datou] / $Array[dashou] / $Array[datui]</p><!--{/if}-->
+	    <!--{if $Array[gongji]}--><p>
+	    <span class="fense">破坏力:$Array[gongji] / $Array[datou] / $Array[dashou] / $Array[datui]</span>
+	    </p><!--{/if}-->
 
-	    <!--{if $Array[fangyu] || $Array[toufang] || $Array[shoufang] || $Array[tuifang]}-->
-	    <p>防御力:$Array[fangyu] / $Array[toufang] / $Array[shoufang] / $Array[tuifang]</p>
-	    <!--{/if}-->
+	    <!--{if $Array[fangyu] || $Array[toufang] || $Array[shoufang] || $Array[tuifang]}--><p>
+	    <span class="chengse">防御力:$Array[fangyu] / $Array[toufang] / $Array[shoufang] / $Array[tuifang]</span>
+	    </p><!--{/if}-->
 	</g3>
 </dl>
 <!--{/loop}-->

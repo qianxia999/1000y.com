@@ -13,7 +13,7 @@ class Daoju extends \core\base{
 		$this->kindid=get('kindid');
 		$this->mapid=get('mapid');
 
-		$L=new \core\Link();
+		$L=new \core\Link('seq','DESC');
 		$this->Url=$L->URL('sudu','gongji');
 		$COND=$L->COND();
 		$COND['AND']['state']=1;
@@ -29,7 +29,7 @@ class Daoju extends \core\base{
 		$this->mapid=get('mapid');
 
 		$L=new \core\Link();
-		$this->Url=$L->URL();
+		$this->Url=$L->URL('seq');
 		$COND=$L->COND();
 
 		$count=$this->M->count($this->table,$COND['AND']);

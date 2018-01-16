@@ -30,6 +30,7 @@
 	<dd>标题</dd>
 	<dd>颜色</dd>
 	<dd>打开</dd>
+	<dd>排序</dd>
 	<dd>状态</dd>
 </dl>
 <!--{loop $dataArray $mk $Array}-->
@@ -48,7 +49,9 @@
 		<!--{/loop}--></select>
     </dd>
     <dd><a href="?$ctrl=Info&$primary=$mk">浏览</a></dd>
+	<dd>{view seq}</dd>
 	<dd>{view state}</dd>
 </dl>
 <!--{/loop}-->
+<p id="paging">{view paging}</p>
 </div>

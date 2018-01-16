@@ -11,9 +11,10 @@ class Category extends \core\base{
 		
 		$this->routeHtml = $this->M->categoryRoute($catid);
 
-		$this->dataArray=$this->M->categoryList($catid);#当前目录
+		$dataArray=$this->M->categoryList($catid);#当前目录
+	    $dataArray=$this->M->format($dataArray);
 
-		return compact('catid');
+	    return compact('dataArray','catid');
 	}
 
 	public function insert(){
@@ -32,6 +33,19 @@ class Category extends \core\base{
 		$result=$this->M->DEL($_GET);
 
 		if($result) Go(); else show('DELETE_FAILED');
+	}
+
+	public function avatarSubmit(){
+		
+	    $avatarDir=config('avatar','category');
+
+		$mk=post($this->primary);
+		
+		$_POST['avatar']=\core\Common::avatarUpload($avatarDir,$mk);
+
+		$result=$this->M->SAVE($_POST);
+
+		if($result) Go(); else msg('UPDATE_FAILD');
 	}
 
 	public function photoSubmit(){

@@ -17,6 +17,7 @@ class Equip extends \core\base{
 		$this->Url=$L->URL('rank','gongji');
 		$COND=$L->COND();
 		$COND['AND']['state']=1;
+		$COND['ORDER']['seq']='DESC';
 		unset($COND['LIMIT']);
 
 	    $dataArray=$this->M->LIST($COND);
@@ -30,7 +31,7 @@ class Equip extends \core\base{
 		$this->brandid=get('brandid');
 
 		$L=new \core\Link();
-		$this->Url=$L->URL('eid','sudu','gongji');
+		$this->Url=$L->URL('eid','sudu','gongji','rank');
 		$COND=$L->COND();
 
 		$count=$this->M->count($this->table,$COND['AND']);

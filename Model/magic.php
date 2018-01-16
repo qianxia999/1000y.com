@@ -21,7 +21,18 @@ class Magic extends \core\DB{
 
    		foreach ($dataArray as $key => $Array) {
 
-   			$dataArray[$key]['avatar'] = \core\Common::httpAvatar($Array['avatar'],$avatarDir);
+   			if(!$Array['avatar']) {
+
+	   			$categoryDir=config('avatar','category');
+
+	   			$Cat=new \Model\Category;
+
+	   			$CatAvatarField=$Cat->K2V('avatar',$Array['kindid']);
+
+	   			$CatAvatarDefault = \core\Common::httpAvatar($CatAvatarField,$categoryDir);
+	   		}
+
+   			$dataArray[$key]['avatar'] = \core\Common::httpAvatar($Array['avatar'],$avatarDir,$CatAvatarDefault);
 
    			$dataArray[$key]['kind']=\core\Common::catid2name($magicKind,$Array['kindid']);
 

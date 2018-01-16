@@ -14,5 +14,6 @@ return [
 'daoju'			=>'daoju',
 'album'			=>'album',
 'source'		=>'source',
+'category'		=>'category',
 'avatarDefault'	=>'avatar.png',
 ];

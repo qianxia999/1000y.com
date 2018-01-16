@@ -6,6 +6,7 @@ class Cell extends \core\DB{
 
 		$COND['AND']['catid']=$catid;
 		$COND['AND']['state']=true;/*1*/
+		$COND['ORDER']['seq']='DESC';
 
 		$M=new Document;
 

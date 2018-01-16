@@ -3,6 +3,18 @@
 class Category extends \core\DB{
 	public $table='category';
 
+	public function format($dataArray){
+
+	    $avatarDir=config('avatar','category');
+
+   		foreach ($dataArray as $key => $Array) {
+
+   			$dataArray[$key]['avatar'] = \core\Common::httpAvatar($Array['avatar'],$avatarDir);
+   		}
+
+   		return $dataArray;
+	}
+
 	public function childCount($catid){
 
 		return $this->count($this->table, ['parent'=>$catid]);#判断子分类条数
@@ -66,7 +78,7 @@ class Category extends \core\DB{
 		if($state) $AND['state']=1;
 
 		$dataArray=$this->select($this->table,[
-			'catid','parent','name','photo','style','seq','state'
+			'catid','parent','name','avatar','style','seq','state'
 		],[
 			'AND'	=>$AND,
 		    'ORDER'	=> ['seq'=>'DESC'],

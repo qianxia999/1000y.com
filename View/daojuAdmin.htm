@@ -1,6 +1,7 @@
 {view man}
 <!--{eval $mapList=cat('map');}-->
 <!--{eval $daojuKind=cat('daojuKind');}-->
+<!--{eval $seqConfig=config('seq');}-->
 
 <diy class="center">
 <!--{loop $mapList $key $List}-->
@@ -32,7 +33,7 @@
 	<dd>类型</dd>
 	<dd>名称</dd>
 	<dd>编辑</dd>
-	<dd>排序</dd>
+	<dd><a href="$Url[seq]">排序</a></dd>
 	<dd>激活</dd>
 </dl>
 <!--{loop $dataArray $mk $Array}-->

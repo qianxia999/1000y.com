@@ -2,6 +2,7 @@
 <!--{eval $rankConfig=config('rank');}-->
 <!--{eval $equipBrand=cat('equipBrand');}-->
 <!--{eval $equipKind=cat('equipKind');}-->
+<!--{eval $seqConfig=config('seq');}-->
 
 <diy class="center">
 <!--{loop $equipKind $key $Kind}-->
@@ -32,7 +33,7 @@
 	<dd><a href="$Url[$primary]">X</a></dd>
 	<dd>系列</dd>
 	<dd>类型</dd>
-	<dd>品级</dd>
+	<dd><a href="$Url[rank]">品级</a></dd>
 	<dd>名称</dd>
 	<dd>编辑</dd>
 	<dd><a href="$Url[sudu]">速度</a></dd>
