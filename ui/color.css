@@ -50,18 +50,16 @@
 .chengse{color:OrangeRed;background-color:LightGoldenRodYellow;}
 
 .blank{padding-left:50px;}
-.down{background:url(down.png) no-repeat scroll 10px center; padding-left:50px;}
-.qq{background:url(qq.png) no-repeat scroll 10px center; padding-left:50px;}
-.qun{background:url(qun.jpg) no-repeat scroll 10px center; padding-left:50px;}
-.mail{background:url(mail.png) no-repeat scroll 10px center; padding-left:50px;}
-.phone111{background:url(phone.jpg) no-repeat scroll 10px center; padding-left:50px;}
-.wang{background:url(wang.png) no-repeat scroll 10px center; padding-left:50px;}
-.error{background:url(error.png) no-repeat scroll 10px center; padding-left:50px;}
-.free{background:url(free.gif) no-repeat scroll 10px center; padding-left:50px;}
-.arrow{background:url(arrow.gif) no-repeat scroll 10px center; padding-left:50px;}
-.notice{background:url(notice.png) no-repeat scroll 10px center; padding-left:50px;}
-.warn{background:url(warn.png) no-repeat scroll 10px center; padding-left:50px;}
-.server{background:url(server4.gif) no-repeat scroll 10px center; padding-left:65px;}
+.qun{background:url(/ui/icon/qun.jpg) no-repeat;width:32px;height:32px;}
+.down{background:url(/ui/icon/down.png) no-repeat;width:32px;height:32px;}
+.qq{background:url(/ui/icon/qq.png) no-repeat;width:32px;height:32px;}
+.mail{background:url(/ui/icon/mail.png) no-repeat;width:32px;height:32px;}
+.wang{background:url(/ui/icon/wang.png) no-repeat;width:32px;height:32px;}
+.error{background:url(/ui/icon/error.png) no-repeat;width:32px;height:32px;}
+.free{background:url(/ui/icon/free.gif) no-repeat;width:32px;height:32px;}
+.arrow{background:url(/ui/icon/arrow.gif) no-repeat;width:32px;height:32px;}
+.notice{background:url(/ui/icon/notice.png) no-repeat;width:32px;height:32px;}
+.warn{background:url(/ui/icon/warn.png) no-repeat;width:32px;height:32px;}
 
 .darkred{border:1px solid #AC003A;color:#FFFFFF;background-color: #AC003A;}
 .white{border:1px solid #FFFFFF;color:#000000;background-color:#FFFFFF;}

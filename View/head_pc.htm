@@ -7,31 +7,41 @@ body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 .Guide{background: gray;font-size:3rem;line-height:6rem;}
 
 .Side{
-	background:LightGoldenRodYellow;
+    background-color: #14171b;
 	font-size:1.6rem;line-height:3rem;
 	margin-bottom:1rem;
 }
-.Side dt{font-size:2.2rem;color:#c01000;border-bottom:1px solid #ccc;}
+.Side dt{font-size:2.2rem;line-height:4rem;color:#c01000;border-bottom:1px solid #2b3036;margin-left:2rem;}
 .Side dd{padding:1rem;}
-.Side1{background:url($ui/skin/side1.jpg);width:100%;height:100%;}
-
-
-.download{display:block;width:221px;height:135px;background: url($ui/skin/btn_down.jpg) no-repeat center top;margin:auto;}
 
 .Side a{
     display: block;
-    padding-top: 20px;
     width: 100%;
-    height: 54px;
-    background-color: #14171b;
     color: #c9cccf;
     text-align: center;
+    font-size:22px;
+    line-height:80px;
+}
+.quick a:hover{background-color: #5c0d0d;}
+.Side dl{display:flex;justify-content:center;align-items:center;}
+.Side dl span{display:inline-block;margin:0 1rem;}
+.zhuce{background:url(/ui/icon/zhuce.png) no-repeat;width:32px;height:32px;}
+.download{display:block;width:221px;height:135px;background: url($ui/skin/btn_down.jpg) no-repeat center top;margin:auto;}
+
+
+#POSITION{
+    height: 8rem;
+    overflow: hidden;
+    background: url($ui/skin/position.png) repeat-x center;
     font-family: "微软雅黑";	
 }
-.Side a:hover{background-color: #5c0d0d;}
-
-.Side a .jindu{position: absolute;left: 0;bottom:0;height:3px;background-color: #beab71;}
-
+#POSITION strong{
+    float: left;
+    padding-left: 3rem;
+    font-size: 2.6rem;
+    line-height:8rem;
+    color: #fff;
+}
 </style>
 
 <div id="HEAD">
@@ -48,14 +58,31 @@ body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 
 <div id="SIDE">
 
-	<a class="download" href="download.html"></a>
-
 	<div class="Side">
-		<a class="register" href="?account">注册
-			<div class="jindu2" style="overflow: hidden; width: 0px;"></div>
+		<a class="download" href="download.html"></a>
+	</div>
+
+	<div class="Side quick">
+		<a href="?account">
+		<dl>
+			<span class="zhuce"></span>
+			<span>注册</span>
+		</dl>
 		</a>
-		<a class="login" href="?account=Login">登录</a>
-		<a class="payment" href="?payment">充值</a>
+
+		<a href="?account=Login">
+		<dl>
+			<span class="arrow"></span>
+			<span>登录</span>
+		</dl>
+		</a>
+
+		<a href="?payment">
+		<dl>
+			<span class="notice"></span>
+			<span>充值</span>
+		</dl>
+		</a>
 	</div>
 	
 	<div class="Side">
@@ -92,3 +119,8 @@ body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 </div>
 
 <div id="MAIN">
+
+	<div id="POSITION">
+		<strong>$Nav['title']</strong>
+		<span></span>
+	</div>
