@@ -1,18 +1,94 @@
 <style>
 body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 #HEAD{height:500px;}
-#HAED{}
-.Guide{background: gray;font-size:3rem;line-height:6rem;}
-</style>
+#SIDE{width:24%;float:left;text-align:left;color:#7d7068;}
+#MAIN{width:75%;float:right;background:white;}
 
+.Guide{background: gray;font-size:3rem;line-height:6rem;}
+
+.Side{
+	background:LightGoldenRodYellow;
+	font-size:1.6rem;line-height:3rem;
+	margin-bottom:1rem;
+}
+.Side dt{font-size:2.2rem;color:#c01000;border-bottom:1px solid #ccc;}
+.Side dd{padding:1rem;}
+.Side1{background:url($ui/skin/side1.jpg);width:100%;height:100%;}
+
+
+.download{display:block;width:221px;height:135px;background: url($ui/skin/btn_down.jpg) no-repeat center top;margin:auto;}
+
+.Side a{
+    display: block;
+    padding-top: 20px;
+    width: 100%;
+    height: 54px;
+    background-color: #14171b;
+    color: #c9cccf;
+    text-align: center;
+    font-family: "微软雅黑";	
+}
+.Side a:hover{background-color: #5c0d0d;}
+
+.Side a .jindu{position: absolute;left: 0;bottom:0;height:3px;background-color: #beab71;}
+
+</style>
 
 <div id="HEAD">
 	<div class="Guide">
 		<a href="/">官方网站</a>
-		<a href="">新闻资讯</a>
+		<a href="?document=List">新闻资讯</a>
 		<a href="">下载中心</a>
 		<a href="?cell=Guide">游戏资料</a>
 		<a href="">游戏充值</a>
 		<a href="">客服中心</a>
 	</div>
 </div>
+
+
+<div id="SIDE">
+
+	<a class="download" href="download.html"></a>
+
+	<div class="Side">
+		<a class="register" href="?account">注册
+			<div class="jindu2" style="overflow: hidden; width: 0px;"></div>
+		</a>
+		<a class="login" href="?account=Login">登录</a>
+		<a class="payment" href="?payment">充值</a>
+	</div>
+	
+	<div class="Side">
+		<dt>客服中心</dt>
+		<dd>
+			<p>工作时间：09:30--18:00</p>
+			<p>每周一到周六上班 周日休息</p>
+			<p>投诉及建议请邮件至：</p>
+			<p>gm@1000y.com</p>
+		</dd>
+	</div>
+
+	<div class="Side">
+		<img src="$ui/skin/side1.jpg">
+	</div>
+
+	<div class="Side">
+		<dt>仙侠千年郑重承诺</dt>
+		<dd>
+			<p class="symbol">独家源码版本，官方品质运营</p>
+			<p class="symbol">千年正统续作，原汁原味设计</p>
+			<p class="symbol">正规公司运营，长期公平稳定</p>
+			<p class="symbol">游戏设置合理，版本持续更新</p>
+			<p class="symbol">长期投放广告，保证人气火爆</p>
+		</dd>
+	</div>
+
+	<div class="Side1"></div>
+
+	<div class="Side">
+		<img src="$ui/skin/side2.jpg">
+	</div>
+
+</div>
+
+<div id="MAIN">

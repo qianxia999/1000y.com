@@ -1,4 +1,4 @@
-body,nav,footer{max-width:900px;color:DarkGoldenRod;}
+body,nav,footer{max-width:1000px;color:DarkGoldenRod;}
 nav,footer{height:6rem;}
 nav{color:#fff;background: #ce4445;}
 input{outline:none;border:none;}
