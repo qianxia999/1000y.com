@@ -1,7 +1,8 @@
 <style>
-body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
+body{background:url($ui/skin/bg.jpg) center top no-repeat}
 #HEAD{height:500px;}
 #SIDE{width:24%;float:left;text-align:left;color:#7d7068;}
+#POSITION{width:75%;float:right;}
 #MAIN{width:75%;float:right;background:white;}
 
 .Guide{background: gray;font-size:3rem;line-height:6rem;}
@@ -32,8 +33,8 @@ body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 #POSITION{
     height: 8rem;
     overflow: hidden;
-    background: url($ui/skin/position.png) repeat-x center;
-    font-family: "微软雅黑";	
+    background: url(/ui/skin/position.png) repeat-x center;
+    font-family: "微软雅黑";
 }
 #POSITION strong{
     float: left;
@@ -48,10 +49,10 @@ body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 	<div class="Guide">
 		<a href="/">官方网站</a>
 		<a href="?document=List">新闻资讯</a>
-		<a href="">下载中心</a>
+		<a href="#">下载中心</a>
 		<a href="?cell=Guide">游戏资料</a>
-		<a href="">游戏充值</a>
-		<a href="">客服中心</a>
+		<a href="#">游戏充值</a>
+		<a href="#">客服中心</a>
 	</div>
 </div>
 
@@ -59,7 +60,7 @@ body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 <div id="SIDE">
 
 	<div class="Side">
-		<a class="download" href="download.html"></a>
+		<a class="download" href="#"></a>
 	</div>
 
 	<div class="Side quick">
@@ -118,9 +119,10 @@ body{background:#7b6854 url($ui/skin/back.jpg) center top no-repeat}
 
 </div>
 
-<div id="MAIN">
+<div id="POSITION">
+	<strong>$Nav['title']</strong>
+	<span></span>
+</div>
 
-	<div id="POSITION">
-		<strong>$Nav['title']</strong>
-		<span></span>
-	</div>
+
+<div id="MAIN">
