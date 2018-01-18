@@ -5,7 +5,7 @@ $passLogin=\core\Route::match($whiteList);
 
 if(!$passLogin) {
 
-	#\core\Common::AUTH();
+	\core\Common::AUTH();
 /*
 	$isAdmin=in_array($USER,$adminArray);
 	if($isAdmin) define('ADMIN',true);
