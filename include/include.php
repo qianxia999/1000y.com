@@ -6,12 +6,16 @@ $passLogin=\core\Route::match($whiteList);
 if(!$passLogin) {
 
 	\core\Common::AUTH();
-/*
-	$isAdmin=in_array($USER,$adminArray);
-	if($isAdmin) define('ADMIN',true);
 
+	$adminList=config('adminList');
+
+	$isAdmin=in_array(USER,$adminList);
+	
+	if($isAdmin) define('ADMIN',true);
+}
+
+/*
 	\Ctrl\Pool::userOnline($USER);
 
     $needVip=\core\Route::match($vipList);
     if($needVip) \Ctrl\Pool::userVip($USER);*/
-}
