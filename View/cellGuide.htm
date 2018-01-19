@@ -94,19 +94,27 @@ section h3{color:#d9b766;border-color:#7d7068;}
 <h3>任务攻略</h3>
 <dl>
 <!--{loop $renwuArray $key $List}-->
-<a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
+<a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>
 <!--{/loop}-->
 </dl>
 </section>
-
-
 
 <section>
 <h3>相册</h3>
 <dl>
 <!--{loop $albumCat $key $List}-->
-<a class="$List[style]" href="?album=List&catid=$key">$List[name]</a>&nbsp;
+<a class="$List[style]" href="?album=List&catid=$key">$List[name]</a>
 <!--{/loop}-->
+</dl>
+</section>
+
+<section>
+<h3>帐号管理</h3>
+<dl>
+<a href="<!--{echo config('url','register')}-->">注册</a>
+<a href="<!--{echo config('url','login')}-->">登录</a>
+<a href="<!--{echo config('url','forget')}-->">找回密码</a>
+<a href="<!--{echo config('url','user')}-->">个人中心</a>
 </dl>
 </section>
 

@@ -12,14 +12,17 @@ class Document extends \core\base{
 	public function List(){
 		$this->catid=get('catid');
 		$L=new \core\Link($this->primary);
+		$this->Url=$L->URL();
 		$COND=$L->COND();
 		$COND['AND']['state']=1;
 
 		$count=$this->M->count($this->table,$COND['AND']);
-		$this->Paging=$L->PAGING($count);
-		$this->dataArray=$this->M->LIST($COND);
-		$this->dataArray=$this->M->format($this->dataArray);
+		$Paging=$L->PAGING($count);
+		$dataArray=$this->M->LIST($COND);
+		$dataArray=$this->M->format($dataArray);
 		#dump($this->dataArray);exit;
+		
+		return compact('dataArray','Paging');
 	}
 
 	public function Info(){
