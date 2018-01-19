@@ -1,0 +1,29 @@
+<style type="text/css">
+#FOUR{display:flex;justify-content:space-between;}
+#FOUR dl{
+    float: left;
+    height: 151px;
+    width: 272px;
+    margin-right: 5px;
+    margin-left: 5px;
+    position: relative;
+}
+#FOUR .txt{
+    line-height: 33px;
+    text-align: left;
+    text-indent: 10px;
+    position: absolute;
+    top: 118px;
+    height: 33px;
+    width: 100px;	
+}
+</style>
+
+<div id="FOUR">
+<!--{loop $FourArray $key $List}-->
+<dl>
+	<a href="$List[url]"><img src="$List[avatar]"></a>
+	<div class="txt">$List[word]</div>
+</dl>
+<!--{/loop}-->
+</div>

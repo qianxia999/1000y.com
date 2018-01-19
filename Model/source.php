@@ -14,4 +14,15 @@ class Source extends \core\DB{
    		return $dataArray;
 	}
 
+	public function ITEM($COND){
+
+		$dataArray=$this->select($this->table,[
+			'sid','catid','word','url','avatar','style',
+		],$COND);
+
+		$dataArray=$this->format($dataArray);
+
+		return $dataArray;
+	}
+
 }

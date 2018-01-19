@@ -28,7 +28,7 @@
 <!--{loop $dataArray $mk $Array}-->
 <dl {if !$Array[state]} class='closed'{/if}>
 	<dd title="$Array[$primary]">
-		<a href="?$ctrl=delete&{$primary}=$mk" onclick="return(confirm('是否删除？'))">$mk</a>
+		<a href="?$ctrl=del&{$primary}=$mk" onclick="return(confirm('是否删除？'))">$mk</a>
 	</dd>
 
     <dd>
