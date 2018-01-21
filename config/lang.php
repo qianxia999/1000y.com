@@ -41,4 +41,5 @@ return [
 
 	'ITEM_NOT_EXIST'		=>'此项目不存在',
 
+	'PLEASE_LOGIN'			=>'请登录',
 ];

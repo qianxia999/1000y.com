@@ -14,13 +14,12 @@ label{cursor:pointer;line-height:initial;}
 .left{text-align:left;}
 .none{display:none}
 
+/*html{-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;}*/
 html{font-size:62.5%;line-height:2.4em;}/*任何浏览器的默认字体大小都是px*/
 html{height:100%;width:100%;margin:auto;overflow: auto;}/*overflow:auto;overflow:-moz-scrollbars-vertical;*/
-/*html{-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;}*/
-body{text-align:center;background:#f2f2f2;height:100%;}
-body{width:100%;position:relative;margin:auto;margin-bottom:8rem;}
+body{width:100%;height:100%;text-align:center;background:#f2f2f2;}
+body{position:relative;margin-bottom:8rem;}
 body{font-family:"Microsoft Yahei","sans-serif";color:#999;}/* #C70039 橙色#CA4312  F7FBFC 青色background:#E3FADC;*/
-/*#result{margin:auto;color:red;text-align:center;font-size:22px;font-weight:bold;}*/
 #result{color:red;background:white;font-weight:bold;text-align:center;}
 #debug{color:#cce8cf;position:fixed;}
 
