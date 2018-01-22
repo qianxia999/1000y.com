@@ -3,7 +3,7 @@
 class Document extends \core\base{
 
 	public function document(){
-		
+
 		$this->catArray=cat($this->table);
 
 		$this->view='cat';
@@ -20,7 +20,6 @@ class Document extends \core\base{
 		$Paging=$L->PAGING($count);
 		$dataArray=$this->M->LIST($COND);
 		$dataArray=$this->M->format($dataArray);
-		#dump($this->dataArray);exit;
 		
 		return compact('dataArray','Paging');
 	}

@@ -12,6 +12,8 @@
     opacity: 0.5;
     color:white;
 }
+#PHOTO a{float:left;width:20%;padding:1rem;}
+#PHOTO img{height:200px;width:200px;}
 </style>
 
 <script type="text/javascript">
@@ -27,16 +29,16 @@ function jsNav(name,cursel){
 </script>
 
 
-<div id="FUWUQI" class="Side">
+<div id="FUWUQI" class="box">
     <dt>推荐新区</dt>
-    <!--{loop $SourceArray['fuwuqi'] $key $List}-->
+    <!--{loop $SourceList['fuwuqi'] $key $List}-->
     <dl>
     <a href="$List[url]">$List[word]</a>
     </dl>
     <!--{/loop}-->
 </div>
 
-<div id="NEWS">
+<div id="NEWS" class="box">
 
     <span id="nav1" onmouseover="jsNav('nav',1)">新闻公告</span>
     <span id="nav2" onmouseover="jsNav('nav',2)">情感故事</span>
@@ -44,20 +46,24 @@ function jsNav(name,cursel){
     <span id="nav4" onmouseover="jsNav('nav',4)"></span>
     <span id="nav5" onmouseover="jsNav('nav',5)">美文</span>
     <div id="nav_1">
-    <!--{loop $renwuArray $key $List}-->
-    <dl>
-    <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
-    </dl>
+    <!--{loop $DocumentList['renwu'] $key $List}-->
+    <dl><a class="$List[style]" href="?document=Info&did=$key">$List[name]</a></dl>
     <!--{/loop}-->
     </div>
     <div id="nav_2" style="display:none">
-    <!--{loop $qingganArray $key $List}-->
+    <!--{loop $DocumentList['qinggan'] $key $List}-->
     <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
     <!--{/loop}-->
     </div>
+    <div id="nav_3" style="display:none">
+    <!--{loop $DocumentList['jingyan'] $key $List}-->
+    <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
+    <!--{/loop}-->
+    </div>
+</div>
 
-<div id="FOUR">
-<!--{loop $FourArray $key $List}-->
+<div id="FOUR" class="box">
+<!--{loop $SourceList['Four'] $key $List}-->
 <a href="$List[url]">
 <dl>
     <img src="$List[avatar]">
@@ -67,15 +73,16 @@ function jsNav(name,cursel){
 <!--{/loop}-->
 </div>
 
-<div id="FOUR">
-<!--{loop $AlbumArray['youxi'] $key $List}-->
-<a href="?$ctrl=Info&albumid=$Array[albumid]">
+<div id="PHOTO" class="box">
+<dt>游戏截图</dt>
 <dl>
+<!--{loop $AlbumList['youxi'] $key $List}-->
+<a href="?$ctrl=Info&albumid=$List[albumid]">
     <img src="$List[avatar]">
     <div class="txt">$List[name]</div>
-</dl>
 </a>
 <!--{/loop}-->
+</dl>
 </div>
 
 </div>

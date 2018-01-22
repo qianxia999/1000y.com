@@ -21,7 +21,7 @@ section h3{color:#d9b766;border-color:#7d7068;}
 <section>
 <h3>新手指南</h3>
 <dl>
-<!--{loop $xinshouArray $key $List}-->
+<!--{loop $DocumentList['xinshou'] $key $List}-->
 <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
 <!--{/loop}-->
 </dl>
@@ -84,7 +84,7 @@ section h3{color:#d9b766;border-color:#7d7068;}
 <section>
 <h3>地图介绍</h3>
 <dl>
-<!--{loop $dituAlbumList $key $List}-->
+<!--{loop $AlbumList['ditu'] $key $List}-->
 <dd><a href="?album=Info&albumid=$key">$List[name]</a></dd>
 <!--{/loop}-->
 </dl>
@@ -93,7 +93,7 @@ section h3{color:#d9b766;border-color:#7d7068;}
 <section>
 <h3>任务攻略</h3>
 <dl>
-<!--{loop $renwuArray $key $List}-->
+<!--{loop $DocumentList['renwu'] $key $List}-->
 <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>
 <!--{/loop}-->
 </dl>

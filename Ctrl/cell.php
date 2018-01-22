@@ -3,14 +3,15 @@
 class Cell extends \core\base{
 	
 	public function Guide(){
+		$Mcell=new \Model\Cell;
 
-		$renwuArray=$this->M->documentArray(54);
+		$DocumentList['renwu']=$Mcell->DocumentList(54);
+		
+		$DocumentList['xinshou']=$Mcell->DocumentList(53);
 
-		$xinshouArray=$this->M->documentArray(53);
+		$AlbumList['ditu']=$Mcell->AlbumList(155);
 
-		$dituAlbumList=$this->M->albumArray(155);
-
-		return compact('renwuArray','xinshouArray','dituAlbumList');
+		return compact('AlbumList','DocumentList');
 	}
 
 

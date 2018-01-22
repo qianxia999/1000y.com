@@ -3,21 +3,20 @@
 class Home extends \core\base{
 
 	public function home(){
-
 		$Mcell=new \Model\Cell;
 
-		$FocusArray=$Mcell->Source(160);
-		$FourArray=$Mcell->Source(161);
-		$SourceArray['fuwuqi']=$Mcell->Source(163);
+		$SourceList['Focus']=$Mcell->SourceList(160);
+		$SourceList['Four']=$Mcell->SourceList(161);
+		$SourceList['fuwuqi']=$Mcell->SourceList(163);
 
-		$renwuArray=$Mcell->documentArray(54);
-		$jingyanArray=$Mcell->documentArray(55);
-		$qingganArray=$Mcell->documentArray(57);
+		$DocumentList['renwu']=$Mcell->DocumentList(54);
+		$DocumentList['jingyan']=$Mcell->DocumentList(55);
+		$DocumentList['qinggan']=$Mcell->DocumentList(57);
 
-		$AlbumArray['youxi']=$Mcell->albumArray(151);
-		$AlbumArray['wanjia']=$Mcell->albumArray(150);
+		$AlbumList['youxi']=$Mcell->AlbumList(151);
+		$AlbumList['wanjia']=$Mcell->AlbumList(150);
 
 
-		return compact('FocusArray','FourArray','renwuArray','jingyanArray','qingganArray','SourceArray','AlbumArray');
+		return compact('DocumentList','SourceList','AlbumList');
 	}
 }

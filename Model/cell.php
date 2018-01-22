@@ -2,7 +2,7 @@
 
 class Cell extends \core\DB{
 	
-	public function Source($catid){
+	public function SourceList($catid){
 
 		$COND['AND']['catid']=$catid;
 		$COND['AND']['state']=true;/*1*/
@@ -15,7 +15,7 @@ class Cell extends \core\DB{
 		return $dataArray;
 	}
 
-	public function documentArray($catid){
+	public function DocumentList($catid){
 
 		$COND['AND']['catid']=$catid;
 		$COND['AND']['state']=true;/*1*/
@@ -28,7 +28,7 @@ class Cell extends \core\DB{
 		return $dataArray;
 	}
 
-	public function albumArray($catid){
+	public function AlbumList($catid){
 
 		$COND['AND']['catid']=$catid;
 		$COND['AND']['state']=true;/*1*/
@@ -38,10 +38,5 @@ class Cell extends \core\DB{
 		$dataArray=$M->ITEM($COND);
 
 		return $dataArray;
-
 	}
-
-
-
-
 }
