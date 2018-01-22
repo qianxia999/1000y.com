@@ -1,29 +1,81 @@
 <style type="text/css">
 #FOUR{display:flex;justify-content:space-between;}
 #FOUR dl{
-    float: left;
-    height: 151px;
-    width: 272px;
-    margin-right: 5px;
-    margin-left: 5px;
     position: relative;
+    margin:1rem;
 }
 #FOUR .txt{
-    line-height: 33px;
-    text-align: left;
-    text-indent: 10px;
     position: absolute;
-    top: 118px;
-    height: 33px;
-    width: 100px;	
+    bottom:0;
+    width:100%;
+    background-color: #000000;
+    opacity: 0.5;
+    color:white;
 }
 </style>
 
+<script type="text/javascript">
+function jsNav(name,cursel){
+    for(i=1;i<=5;i++){
+    var menufr=document.getElementById(name+i);
+    var confr=document.getElementById(name+'_'+i);
+    //document.getElementById(name+"1"+i).style.display= i==cursel ?'':'none';
+    menufr.className=i==cursel?"hover":"";
+    confr.style.display=i==cursel?"block":"none";
+    }
+}
+</script>
+
+
+<div id="FUWUQI" class="Side">
+    <dt>推荐新区</dt>
+    <!--{loop $SourceArray['fuwuqi'] $key $List}-->
+    <dl>
+    <a href="$List[url]">$List[word]</a>
+    </dl>
+    <!--{/loop}-->
+</div>
+
+<div id="NEWS">
+
+    <span id="nav1" onmouseover="jsNav('nav',1)">新闻公告</span>
+    <span id="nav2" onmouseover="jsNav('nav',2)">情感故事</span>
+    <span id="nav3" onmouseover="jsNav('nav',3)"></span>
+    <span id="nav4" onmouseover="jsNav('nav',4)"></span>
+    <span id="nav5" onmouseover="jsNav('nav',5)">美文</span>
+    <div id="nav_1">
+    <!--{loop $renwuArray $key $List}-->
+    <dl>
+    <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
+    </dl>
+    <!--{/loop}-->
+    </div>
+    <div id="nav_2" style="display:none">
+    <!--{loop $qingganArray $key $List}-->
+    <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
+    <!--{/loop}-->
+    </div>
+
 <div id="FOUR">
 <!--{loop $FourArray $key $List}-->
+<a href="$List[url]">
 <dl>
-	<a href="$List[url]"><img src="$List[avatar]"></a>
+    <img src="$List[avatar]">
 	<div class="txt">$List[word]</div>
 </dl>
+</a>
 <!--{/loop}-->
+</div>
+
+<div id="FOUR">
+<!--{loop $AlbumArray['youxi'] $key $List}-->
+<a href="?$ctrl=Info&albumid=$Array[albumid]">
+<dl>
+    <img src="$List[avatar]">
+    <div class="txt">$List[name]</div>
+</dl>
+</a>
+<!--{/loop}-->
+</div>
+
 </div>

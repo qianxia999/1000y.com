@@ -1,4 +1,5 @@
-body,nav,footer{max-width:1000px;color:OliveDrab;}
+body{color:OliveDrab;}
+#BODY,nav,footer{max-width:1000px;}
 nav{background:LightSlateGray;line-height:5rem;}
 input,select,textarea{border:1px solid SkyBlue;line-height:4rem;}
 
