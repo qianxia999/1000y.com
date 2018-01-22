@@ -1,14 +1,15 @@
 <style>
+MAIN{clear:both;}
 body{background:#ccc url($ui/skin/banner.jpg) center top no-repeat}
 #TOP{width:100%;background:rgba(255,255,255,.5);}
 .top{font-size:3rem;line-height:7rem;display:flex;justify-content:space-between;}
 .top a{padding:0 1rem;}
 .top a:hover{background:gray;}
-#HEAD{height:570px;}
-#SIDE{width:24%;float:left;text-align:left;color:#7d7068;}
-#SIDE .box{background-color: #14171b;}
-#POSITION{width:75%;float:right;}
+#BANNER{height:570px;}
+SIDE{width:24%;float:left;text-align:left;color:#7d7068;}
 #MAIN{width:75%;float:right;}
+#POSITION{width:75%;float:right;}
+SIDE .box{background-color: #14171b;}
 
 #PHOTO dl{display:flex;justify-content:space-between;}
 
@@ -62,71 +63,23 @@ body{background:#ccc url($ui/skin/banner.jpg) center top no-repeat}
 	</div>
 </div>
 
-<div id="BODY">
+<MAIN>
 
-<div id="HEAD">
-</div>
+<div id="BANNER"></div>
+
 
 <!--{if $ctrl!='home'}-->
-<div id="SIDE">
-
-	<div class="box">
-		<a class="download" href="#"></a>
-	</div>
-
-	<div class="box Line quick">
-		<a href="?account">
-		<dl>
-			<span class="zhuce"></span>
-			<span>注册</span>
-		</dl>
-		</a>
-
-		<a href="?account=Login">
-		<dl>
-			<span class="arrow"></span>
-			<span>登录</span>
-		</dl>
-		</a>
-
-		<a href="?payment">
-		<dl>
-			<span class="notice"></span>
-			<span>充值</span>
-		</dl>
-		</a>
-	</div>
+<SIDE>
+	{view _download}
 	
-	<div class="box">
-		<dt>客服中心</dt>
-		<dd>
-			<p>工作时间：09:30--18:00</p>
-			<p>每周一到周六上班 周日休息</p>
-			<p>投诉及建议请邮件至：</p>
-			<p>gm@1000y.com</p>
-		</dd>
-	</div>
+	{view _kefu}
 
-	<div class="box">
-		<img src="$ui/skin/side1.jpg">
-	</div>
+	{view _ad1}
 
-	<div class="box">
-		<dt>仙侠千年郑重承诺</dt>
-		<dd>
-			<p class="symbol">独家源码版本，官方品质运营</p>
-			<p class="symbol">千年正统续作，原汁原味设计</p>
-			<p class="symbol">正规公司运营，长期公平稳定</p>
-			<p class="symbol">游戏设置合理，版本持续更新</p>
-			<p class="symbol">长期投放广告，保证人气火爆</p>
-		</dd>
-	</div>
+	{view _chengnuo}
 
-	<div class="box">
-		<img src="$ui/skin/side2.jpg">
-	</div>
-
-</div>
+	{view _ad2}
+</SIDE>
 
 <div id="POSITION">
 	<strong>$Nav['title']</strong>
