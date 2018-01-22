@@ -110,9 +110,9 @@ dl.Sheet>dd>span:nth-child(n+2){border-color:gray;}*/
 	line-height:7rem;font-size:3rem;
 }
 
-.f1,f1{flex:1;}
-.f2,f3{flex:2;}
-.f3,f3{flex:3;}
+.f1,F1{flex:1;}
+.f2,F2{flex:2;}
+.f3,F3{flex:3;}
 .g1,g1{flex-grow:1 !important;}
 .g2,g2{flex-grow:2 !important;}
 .g3,g3{flex-grow:3 !important;}

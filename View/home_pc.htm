@@ -1,3 +1,36 @@
+</WRAP>
+
+<WRAP>
+    <SIDE>
+        {view _download}
+    </SIDE>
+
+    <MAIN>
+
+        {view _news}
+
+    </MAIN>
+</WRAP>
+
+<WRAP>
+    {view _four}
+</WRAP>
+
+<WRAP>
+    <SIDE>
+        {view _kefu}
+        {view _ad1}
+        {view _chengnuo}
+    </SIDE>
+
+    <MAIN>
+        {view _guide}
+
+        {view _photo}
+    </MAIN>
+</WRAP>
+
+
 <style type="text/css">
 #FOUR{display:flex;justify-content:space-between;}
 #FOUR dl{
@@ -12,6 +45,7 @@
     opacity: 0.5;
     color:white;
 }
+#PHOTO dl{display:flex;justify-content:space-between;}
 #PHOTO a{float:left;width:20%;padding:1rem;}
 #PHOTO img{height:200px;width:200px;}
 </style>
@@ -27,35 +61,3 @@ function jsNav(name,cursel){
     }
 }
 </script>
-
-</MAIN>
-
-<MAIN>
-
-<SIDE>
-    {view _download}
-    {view _kaiqu}
-</SIDE>
-
-<div id="MAIN">
-    {view _news}
-</div>
-
-</MAIN>
-
-<MAIN>
-{view _four}
-</MAIN>
-
-<MAIN>
-    <SIDE>
-        {view _kefu}
-    </SIDE>
-
-    <div id="MAIN">
-        {view _photo}
-    </div>
-</MAIN>
-
-
-</div>

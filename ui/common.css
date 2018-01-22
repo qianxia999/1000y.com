@@ -22,7 +22,6 @@ body{position:relative;margin-bottom:8rem;}
 body{font-family:"Microsoft Yahei","sans-serif";color:#999;}/* #C70039 橙色#CA4312  F7FBFC 青色background:#E3FADC;*/
 #result{color:red;background:white;font-weight:bold;text-align:center;}
 #debug{color:#cce8cf;position:fixed;}
-MAIN{margin:auto;}
 
 :focus{-moz-outline-style:none;} /* for Firefox */
 ::-moz-selection{background:MediumVioletRed;color:#fff;}

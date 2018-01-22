@@ -1,30 +1,26 @@
 <style>
-MAIN{clear:both;}
-body{background:#ccc url($ui/skin/banner.jpg) center top no-repeat}
+body{background:#725027 url($ui/skin/banner.jpg) center top no-repeat}
 #TOP{width:100%;background:rgba(255,255,255,.5);}
-.top{font-size:3rem;line-height:7rem;display:flex;justify-content:space-between;}
-.top a{padding:0 1rem;}
-.top a:hover{background:gray;}
+#TOP .top{font-size:3rem;line-height:7rem;display:flex;justify-content:space-between;}
+#TOP .top a{padding:0 1rem;}
+#TOP .top a:hover{background:gray;}
 #BANNER{height:570px;}
 SIDE{width:24%;float:left;text-align:left;color:#7d7068;}
-#MAIN{width:75%;float:right;}
-#POSITION{width:75%;float:right;}
+MAIN{width:75%;float:right;background:white;}
 SIDE .box{background-color: #14171b;}
-
-#PHOTO dl{display:flex;justify-content:space-between;}
+FOOT{font-size:2rem;color:#120e0b;}
 
 .box{
 	background:white;
 	font-size:1.6rem;line-height:3rem;
-	margin-bottom:1rem;
+	margin-bottom:0.5rem;
 }
-.box dt{color:#c01000;font-size:2rem;line-height:4rem;font-weight: bold;
-	text-align:left;margin-left:3rem;border-bottom:1px solid #2b3036;
-}
-.box dd{padding:1rem;}
+.box>dt{color:#c01000;font-size:2rem;line-height:4rem;font-weight: bold;
+	text-align:left;padding-left:3rem;border-bottom:1px solid #ccc;}
+.box p{padding:0 1rem;}
 
-.Line dl{display:flex;justify-content:center;align-items:center;}
-.Line dl span{display:inline-block;margin:0 1rem;}
+.Line p{display:flex;justify-content:center;align-items:center;}
+.Line p span{display:inline-block;margin:0 1rem;}
 .Line a{
     display: block;
     width: 100%;
@@ -34,7 +30,7 @@ SIDE .box{background-color: #14171b;}
     line-height:7rem;
 }
 .zhuce{background:url(/ui/icon/zhuce.png) no-repeat;width:32px;height:32px;}
-.download{display:block;width:221px;height:135px;background: url($ui/skin/btn_down.jpg) no-repeat center top;margin:auto;}
+.download{display:block;height:135px;background: url($ui/skin/btn_down.jpg) no-repeat center top;margin:auto;}
 .quick a:hover{background-color: #5c0d0d;}
 
 #POSITION{
@@ -53,39 +49,32 @@ SIDE .box{background-color: #14171b;}
 </style>
 
 <div id="TOP">
-	<div id="BODY" class="top">
+	<WRAP class="top">
 		<a href="/">官方网站</a>
 		<a href="?document=List">新闻资讯</a>
 		<span></span>
 		<span></span>
 		<a href="?cell=Guide">游戏资料</a>
 		<a href="#">客服中心</a>
-	</div>
+	</WRAP>
 </div>
 
-<MAIN>
+<WRAP>
+	<div id="BANNER"></div>
 
-<div id="BANNER"></div>
+	<!--{if $ctrl!='home'}-->
+	<SIDE>
+		{view _download}
+		{view _kefu}
+		{view _ad1}
+		{view _chengnuo}
+		{view _ad2}
+	</SIDE>
 
+	<MAIN id="POSITION">
+		<strong>$Nav['title']</strong>
+		<span></span>
+	</MAIN>
 
-<!--{if $ctrl!='home'}-->
-<SIDE>
-	{view _download}
-	
-	{view _kefu}
-
-	{view _ad1}
-
-	{view _chengnuo}
-
-	{view _ad2}
-</SIDE>
-
-<div id="POSITION">
-	<strong>$Nav['title']</strong>
-	<span></span>
-</div>
-
-<div id="MAIN">
-
-<!--{/if}-->
+	<MAIN>
+	<!--{/if}-->

@@ -1,7 +1,8 @@
 body{color:DarkGoldenRod;}
-MAIN,nav,footer{max-width:1000px;}
+WRAP{margin:auto;clear:both;display:block;}
+WRAP,nav,footer{max-width:900px;}
 nav,footer{height:6rem;}
-nav{color:#fff;background: #ce4445;}
+nav{color:#fff;background:#ce4445;}
 input{outline:none;border:none;}
 input{line-height:6rem;}
 select{height:6rem;}
@@ -40,6 +41,14 @@ article h3{font-weight:normal;}
 aside{padding: 3%;font-size: 3rem;color: #333;font-weight: bold;text-align: left;}
 h1 a{color:gold;} h1 a:hover{color:#f76120;}
 /*section{text-align:left;font-size:1.6rem;color:gray;background:Azure;}*/
+
+
+#Guide section {text-align:left;padding:1rem 2rem;}
+#Guide section h3{font-size:3rem;line-height:4rem;border-bottom:1px dashed;}
+#Guide section dl{display:flex;font-size:1.8rem;flex-wrap:wrap;}
+#Guide section dl>*{margin:1rem;}
+#Guide section{background:Ivory;}
+#Guide section h3{color:#d9b766;border-color:#7d7068;}
 
 .ITEM {
 	display: flex;flex-wrap: wrap;
