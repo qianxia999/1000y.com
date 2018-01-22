@@ -1,6 +1,6 @@
 body{color:DarkGoldenRod;}
-WRAP{margin:auto;clear:both;display:block;}
-WRAP,nav,footer{max-width:900px;}
+WRAP{margin:auto;clear:both;display:block;max-width:1280px;}
+nav,footer{max-width:750px;}
 nav,footer{height:6rem;}
 nav{color:#fff;background:#ce4445;}
 input{outline:none;border:none;}
