@@ -1,24 +1,52 @@
 
-    <div id="NEWS" class="box">
+<style type="text/css">
+#NEWS .title{
+    display:flex;justify-content:space-around;
+    font-size:2rem;
+    border-bottom: 1px solid #b2b2b2;
+}
+#NEWS p{text-align:left;}
 
+</style>
+
+<div id="NEWS" class="box">
+    <p class="title">
         <span id="nav1" onmouseover="jsNav('nav',1)">新手指南</span>
         <span id="nav2" onmouseover="jsNav('nav',2)">情感故事</span>
         <span id="nav3" onmouseover="jsNav('nav',3)">新闻公告</span>
         <span id="nav4" onmouseover="jsNav('nav',4)"></span>
         <span id="nav5" onmouseover="jsNav('nav',5)">美文</span>
-        <div id="nav_1">
+    </p>
+
+    <div id="nav_1">
         <!--{loop $DocumentList['xinshou'] $key $List}-->
-        <dl><a class="$List[style]" href="?document=Info&did=$key">$List[name]</a></dl>
+        <p>
+            <span>$List[time]</span>
+            <span>$List[cat]</span>
+            <a class="$List[style]" href="?document=Info&did=$key">$List[title]</a>
+        </p>
         <!--{/loop}-->
-        </div>
-        <div id="nav_2" style="display:none">
-        <!--{loop $DocumentList['qinggan'] $key $List}-->
-        <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
-        <!--{/loop}-->
-        </div>
-        <div id="nav_3" style="display:none">
-        <!--{loop $DocumentList['jingyan'] $key $List}-->
-        <a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
-        <!--{/loop}-->
-        </div>
     </div>
+    <div id="nav_2" style="display:none">
+        <!--{loop $DocumentList['qinggan'] $key $List}-->
+        <a class="$List[style]" href="?document=Info&did=$key">$List[title]</a>&nbsp;
+        <!--{/loop}-->
+    </div>
+    <div id="nav_3" style="display:none">
+        <!--{loop $DocumentList['jingyan'] $key $List}-->
+        <a class="$List[style]" href="?document=Info&did=$key">$List[title]</a>&nbsp;
+        <!--{/loop}-->
+    </div>
+</div>
+
+<script type="text/javascript">
+function jsNav(name,cursel){
+    for(i=1;i<=5;i++){
+    var menufr=document.getElementById(name+i);
+    var confr=document.getElementById(name+'_'+i);
+    //document.getElementById(name+"1"+i).style.display= i==cursel ?'':'none';
+    menufr.className=i==cursel?"hover":"";
+    confr.style.display=i==cursel?"block":"none";
+    }
+}
+</script>

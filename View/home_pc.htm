@@ -1,15 +1,17 @@
 </WRAP>
 
 <WRAP>
-    <SIDE>
+    <F1>
         {view _download}
-    </SIDE>
+    </F1>
 
-    <MAIN>
-
+    <F2>
         {view _news}
+    </F2>
 
-    </MAIN>
+    <F1>
+        {view _kaiqu}
+    </F1>
 </WRAP>
 
 <WRAP>
@@ -17,17 +19,17 @@
 </WRAP>
 
 <WRAP>
-    <SIDE>
+    <F1>
         {view _kefu}
         {view _ad1}
         {view _chengnuo}
-    </SIDE>
+    </F1>
 
-    <MAIN>
+    <F3>
         {view _guide}
 
         {view _photo}
-    </MAIN>
+    </F3>
 </WRAP>
 
 
@@ -49,15 +51,3 @@
 #PHOTO a{float:left;width:20%;padding:1rem;}
 #PHOTO img{height:200px;width:200px;}
 </style>
-
-<script type="text/javascript">
-function jsNav(name,cursel){
-    for(i=1;i<=5;i++){
-    var menufr=document.getElementById(name+i);
-    var confr=document.getElementById(name+'_'+i);
-    //document.getElementById(name+"1"+i).style.display= i==cursel ?'':'none';
-    menufr.className=i==cursel?"hover":"";
-    confr.style.display=i==cursel?"block":"none";
-    }
-}
-</script>

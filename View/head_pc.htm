@@ -5,6 +5,7 @@ body{background:#725027 url($ui/skin/banner.jpg) center top no-repeat}
 #TOP .top a{padding:0 1rem;}
 #TOP .top a:hover{background:gray;}
 #BANNER{height:570px;}
+#FOOT{font-size:2rem;color:#120e0b;}
 
 .box{
 	background:white;
@@ -43,11 +44,11 @@ body{background:#725027 url($ui/skin/banner.jpg) center top no-repeat}
     line-height:8rem;
     color: #fff;
 }
-
-WRAP{margin:auto;clear:both;display:flex;max-width:1280px;}
-SIDE{width:24%;float:left;text-align:left;color:#7d7068;}
-MAIN{width:75%;float:right;background:white;}
-FOOT{font-size:2rem;color:#120e0b;}
+MAIN{background:Ivory;}
+WRAP{margin:auto;display:flex;max-width:900px;justify-content: center;}
+F1{background:#7d7068;}
+F2{margin:0 1rem;}
+F3{margin-left:1rem;}
 
 </style>
 
@@ -62,22 +63,23 @@ FOOT{font-size:2rem;color:#120e0b;}
 	</WRAP>
 </div>
 
-<WRAP>
-	<div id="BANNER"></div>
+<div id="BANNER"></div>
 
+<WRAP>
 	<!--{if $ctrl!='home'}-->
-	<SIDE>
+	<F1>
 		{view _download}
 		{view _kefu}
 		{view _ad1}
 		{view _chengnuo}
 		{view _ad2}
-	</SIDE>
+	</F1>
 
-	<MAIN id="POSITION">
+	<F3>
+
+	<div id="POSITION">
 		<strong>$Nav['title']</strong>
 		<span></span>
-	</MAIN>
+	</div>
 
-	<MAIN>
 	<!--{/if}-->

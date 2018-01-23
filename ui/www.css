@@ -46,7 +46,6 @@ h1 a{color:gold;} h1 a:hover{color:#f76120;}
 #Guide section h3{font-size:3rem;line-height:4rem;border-bottom:1px dashed;}
 #Guide section dl{display:flex;font-size:1.8rem;flex-wrap:wrap;}
 #Guide section dl>*{margin:1rem;}
-#Guide section{background:Ivory;}
 #Guide section h3{color:#d9b766;border-color:#7d7068;}
 
 .ITEM {
