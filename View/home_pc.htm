@@ -6,11 +6,25 @@
     </F1>
 
     <F2>
-        {view _news}
+        {view _slide}
     </F2>
 
     <F1>
         {view _kaiqu}
+    </F1>
+</WRAP>
+
+<WRAP>
+    <F1>
+        {view _chengnuo}
+    </F1>
+
+    <F2>
+        {view _news}
+    </F2>
+
+    <F1>
+        {view _ad2}
     </F1>
 </WRAP>
 
@@ -34,6 +48,37 @@
 
 
 <style type="text/css">
+
+
+.Line p{display:flex;justify-content:center;align-items:center;}
+.Line p span{display:inline-block;margin:0 1rem;}
+.Line a{
+    display: block;
+    width: 100%;
+    color: #c9cccf;
+    text-align: center;
+    font-size:22px;
+    line-height:7rem;
+}
+.zhuce{background:url(/ui/icon/zhuce.png) no-repeat;width:32px;height:32px;}
+.download{display:block;height:135px;background: url($ui/skin/btn_down.jpg) no-repeat center top;margin:auto;}
+#ACCOUNT a:hover{background-color: #5c0d0d;}
+#ACCOUNT {background-color: #14171b;}
+
+
+
+#NEWS .nav{
+    display:flex;justify-content:space-around;
+    font-size:2rem;
+    border-bottom: 1px solid #b2b2b2;
+    background:#14171b;
+    padding: 1rem 2rem;
+}
+#NEWS .nav span{cursor:pointer;padding:0 0.5rem;transition: all 0.5s;border-radius:2px;}
+#NEWS .nav span:hover,.current{background:#5c0d0d;color:white;}
+#NEWS p{text-align:left;}
+
+
 #FOUR{display:flex;justify-content:space-between;}
 #FOUR dl{
     position: relative;
@@ -47,7 +92,9 @@
     opacity: 0.5;
     color:white;
 }
+
 #PHOTO dl{display:flex;justify-content:space-between;}
-#PHOTO a{float:left;width:20%;padding:1rem;}
+#PHOTO a{margin:0.5rem;padding:0.2rem;border:1px solid #ccc;border-radius:0.5rem;}
+#PHOTO a:hover{border-color:#CA4321;box-shadow:0 0 1rem #CA4321;}
 #PHOTO img{height:200px;width:200px;}
 </style>

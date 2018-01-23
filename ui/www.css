@@ -10,7 +10,7 @@ button:hover, input[type="submit"]:hover{background: none repeat scroll 0 0 Oran
 button[type="button"]{color:SkyBlue;background-color:#F0FFFF;}
 
 a:link,a:visited{color:#333;}
-a:hover,a:active{color:#CA4312;}/*#CA4312*//*MistyRose*/
+a:hover,a:active{color:#CA4321;}/*#CA4312*//*MistyRose*/
 .goback{width:3rem;height:3rem;display:block;background:url(goback.png) center center no-repeat;}
 .reload{width:3rem;height:3rem;display:block;background:url(reload.png) center center no-repeat;}
 

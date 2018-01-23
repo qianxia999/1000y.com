@@ -5,6 +5,7 @@ class Home extends \core\base{
 	public function home(){
 		$Mcell=new \Model\Cell;
 
+		$SourceList['Slide']=$Mcell->SourceList(160);
 		$SourceList['Focus']=$Mcell->SourceList(160);
 		$SourceList['Four']=$Mcell->SourceList(161);
 		$SourceList['fuwuqi']=$Mcell->SourceList(163);

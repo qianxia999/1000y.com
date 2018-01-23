@@ -8,7 +8,7 @@ class Document extends \core\DB{
 
 		foreach ($dataArray as $key => $Array) {
 
-            $dataArray[$key]['time']=date("y/m/d",$Array['updateTime']);
+            $dataArray[$key]['time']=date("Y/m/d",$Array['updateTime']);
             $dataArray[$key]['cat']=$catArray[$Array['catid']]['name'] ?? null;
 
 		}
