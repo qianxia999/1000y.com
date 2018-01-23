@@ -14,7 +14,7 @@
 	<h3>新手指南</h3>
 	<dl>
 	<!--{loop $DocumentList['xinshou'] $key $List}-->
-	<a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>&nbsp;
+	<a class="$List[style]" href="?document=Info&did=$key">$List[title]</a>&nbsp;
 	<!--{/loop}-->
 	</dl>
 	</section>
@@ -86,7 +86,7 @@
 	<h3>任务攻略</h3>
 	<dl>
 	<!--{loop $DocumentList['renwu'] $key $List}-->
-	<a class="$List[style]" href="?document=Info&did=$key">$List[name]</a>
+	<a class="$List[style]" href="?document=Info&did=$key">$List[title]</a>
 	<!--{/loop}-->
 	</dl>
 	</section>

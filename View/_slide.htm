@@ -1,33 +1,35 @@
-
 <script type="text/javascript" src="$ui/skin/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="$ui/skin/slide.js"></script>
 
 <style type="text/css">
-/* show_box */
-.show_box{width:400px;height:300px;margin:auto;position:relative;overflow:hidden;}
-ul.pic_list{width:100%;height:300px;position:relative}
-ul.pic_list li{float:left;width:100%;height:300px;position:absolute;top:0px;left:0px}
-.title_nav{width:100%;position:absolute;bottom:0;display:flex;justify-content:space-between;}
-.title_nav a{background:#444;padding:0.5rem;color:#fff;flex:1;}
-.title_nav a.select{background:#5c0d0d url($ui/skin/sanj.gif) no-repeat center 47px}
+#SLIDE{width:600px;}
+.show_box{margin:auto;position:relative;overflow:hidden;padding:1rem 0;
+	width:600px;height: 300px;}
+.show_box .pic_list img{width:600px;height:300px;}
+.pic_list{position:relative}
+.pic_list li:first-child{display:block;}
+.slideNav{width:100%;position:absolute;bottom:0;background:#444;
+	display:flex;justify-content:space-around;white-space:nowrap;}
+.slideNav a{padding:0.5rem;color:#fff;}
+.slideNav a.select{background:#5c0d0d;}
 </style>
 
-</head>
-<body>
-
-<div class="show_box">
-	<ul class="pic_list">
-		<li style="display:block"><a href="#" title=""><img alt="1" src="$ui/skin/1.jpg"/></a></li>
-		<li><a href="#" title=""><img alt="" src="$ui/skin/2.jpg"/></a></li>
-		<li><a href="#" title=""><img alt="" src="$ui/skin/3.jpg"/></a></li>
-	</ul>
-	<div class="title_nav">
-		<!--{loop $SourceList['Slide'] $key $List}-->
-		<a href="$List[url]" class="select">$List[word]</a>
-		<!--{/loop}-->
+<div id="SLIDE">
+	<div class="show_box">
+		<ul class="pic_list">
+			<!--{loop $SourceList['Slide'] $key $List}-->
+			<li><a href="$List[url]"><img alt="$List[word]" src="$List[avatar]"/></a></li>
+			<!--{/loop}-->
+		</ul>
+		<div class="slideNav">
+			<!--{loop $SourceList['Slide'] $key $List}-->
+			<a href="$List[url]" class="select">$List[word]</a>
+			<!--{/loop}-->
+		</div>
 	</div>
 </div>
- 
+<p class="clear"></p>
+
 <script type="text/javascript">
 $(function(){
 	$(".show_box").turnPic();
