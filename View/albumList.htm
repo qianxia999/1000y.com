@@ -14,15 +14,14 @@
 </diy>
 <!--{/if}-->
 
+
 <div id="waterfall">
-
-<!--{loop $dataArray $mk $Array}-->
-<div class="box">
-	<a href="?$ctrl=Info&albumid=$Array[albumid]">
-		<span title="$Array[name]"><img src="$Array[avatar]"></span>
-	</a>
-</div>
-<!--{/loop}-->
+	<!--{loop $dataArray $Array}-->
+	<div class="box">
+		<div class="photo"><img src="$Array[avatar]"></div>
+	</div>
+	<!--{/loop}-->
 </div>
 
 
+{view foot}

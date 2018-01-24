@@ -64,12 +64,18 @@ figure figcaption{color:#e60012;}
 	width:20%;max-width:80px;line-height: 3rem;height:3rem;
 }
 
-
-#waterfall{position:relative;}
-#waterfall .box{float:left;padding:5px;width:46%;max-width:240px;}
 .photodel{position:relative;padding:3px;border:1px solid #ccc;border-radius:5px;box-shadow:0 0 5px #ccc;}
 .photodel a{position:absolute;top:2px;right:2px;background:#eee;color:gray;line-height:1em;}
+
+#waterfall{position:relative;}
+
+#waterfall .box{float:left;padding:5px;width:46%;max-width:240px;}
+#waterfall .photo{position:relative;line-height:1em;}
+#waterfall .photo a{position:absolute;top:0;right:2px;background:#eee;color:gray;}
+.photo{padding:3px;border:1px solid #ccc;border-radius:5px;box-shadow:0 0 5px #ccc;overflow:hidden;}
 .photo img{width:100%;}
+
+
 
 .blur{
 	filter: blur(5px);

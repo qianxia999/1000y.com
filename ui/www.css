@@ -34,12 +34,13 @@ a:hover,a:active{color:#CA4321;}/*#CA4312*//*MistyRose*/
 
 article{border:1px solid #ccc;}
 article{margin:1rem;line-height:3rem;}
-article h1{font-size:3rem;line-height:6rem;color:#666;background:LightGoldenRodYellow;border-bottom: 1px #E5E5E5 dotted;} 
+article h1{font-size:3rem;line-height:4rem;color:#666;background:LightGoldenRodYellow;border-bottom: 1px #E5E5E5 dotted;} 
 article h2{font-weight:normal;background-color:#e0dfd5;text-align:left;text-indent:2em;}
 article h3{font-weight:normal;}
 aside{padding: 3%;font-size: 3rem;color: #333;font-weight: bold;text-align: left;}
 h1 a{color:gold;} h1 a:hover{color:#f76120;}
 /*section{text-align:left;font-size:1.6rem;color:gray;background:Azure;}*/
+article section{color:#333;text-align:left;padding:1rem;}
 
 
 #Guide section {text-align:left;padding:1rem 2rem;}
