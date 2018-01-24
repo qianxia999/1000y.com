@@ -1,18 +1,50 @@
-<style>
-body{background:#725027 url($ui/skin/banner.jpg) center top no-repeat}
+<div id="TOP">
+	<WRAP class="top">
+		<a href="/">官方网站</a>
+		<a href="?document=List">新闻资讯</a>
+		<span></span>
+		<span></span>
+		<a href="?cell=Guide">游戏资料</a>
+		<a href="#">客服中心</a>
+	</WRAP>
+</div>
+
+<div id="BANNER"></div>
+
+<!--{if $ctrl!='home'}-->
+<WRAP>
+	<F1>
+		{view _download}
+		{view _kefu}
+		{view _ad1}
+		{view _chengnuo}
+		{view _ad2}
+	</F1>
+
+	<F3>
+
+	<div id="POSITION">
+		<strong>$Nav['title']</strong>
+		<span></span>
+	</div>
+<!--{/if}-->
+
+
+<style type="text/css">
+body{background:#49331C url($ui/skin/banner.jpg) center top no-repeat}
 #TOP{width:100%;background:rgba(255,255,255,.5);}
 #TOP .top{font-size:3rem;line-height:7rem;display:flex;justify-content:space-between;}
 #TOP .top a{padding:0 1rem;}
 #TOP .top a:hover{background:gray;}
-#BANNER{height:570px;}
+#BANNER{height:500px;}
 #FOOT{font-size:2rem;color:#120e0b;}
 
 .box{
-	background:PapayaWhip;
+	background:#533f22;
 	font-size:1.6rem;line-height:3rem;
 	margin-bottom:0.5rem;
 }
-.box>dt{color:#c01000;font-size:2rem;line-height:4rem;font-weight: bold;
+.box>dt{color:#E7BB74;font-size:2rem;line-height:4rem;font-weight: bold;
 	text-align:left;padding-left:3rem;border-bottom:1px solid #ccc;}
 .box p{padding:0 1rem;}
 
@@ -44,42 +76,9 @@ body{background:#725027 url($ui/skin/banner.jpg) center top no-repeat}
     line-height:8rem;
     color: #fff;
 }
-MAIN{background:Ivory;}
-WRAP{margin:auto;display:flex;max-width:1100px;justify-content: center;}
-F1{background:#7d7068;}
+MAIN{background:white;}
+WRAP{margin:auto;display:flex;max-width:1200px;justify-content: center;}
+
 F2{margin:0 1rem;}
 F3{margin-left:1rem;}
-
 </style>
-
-<div id="TOP">
-	<WRAP class="top">
-		<a href="/">官方网站</a>
-		<a href="?document=List">新闻资讯</a>
-		<span></span>
-		<span></span>
-		<a href="?cell=Guide">游戏资料</a>
-		<a href="#">客服中心</a>
-	</WRAP>
-</div>
-
-<div id="BANNER"></div>
-
-<WRAP>
-	<!--{if $ctrl!='home'}-->
-	<F1>
-		{view _download}
-		{view _kefu}
-		{view _ad1}
-		{view _chengnuo}
-		{view _ad2}
-	</F1>
-
-	<F3>
-
-	<div id="POSITION">
-		<strong>$Nav['title']</strong>
-		<span></span>
-	</div>
-
-	<!--{/if}-->

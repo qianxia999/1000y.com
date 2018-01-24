@@ -1,8 +1,9 @@
+<!--{eval if(!defined('ADMIN')) msg('无管理员权限','/'); }-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=$charset" />
-<title>千年</title>
+<title>管理员</title>
 <base href="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="http://$HOST/$ui/common.css" rel="stylesheet" type="text/css" />
@@ -11,13 +12,9 @@
 <link href="http://$HOST/$ui/admin.css" rel="stylesheet" type="text/css">
 <link href="http://$HOST/$ui/activeSwitch.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="http://$HOST/$ui/ajax.js"></script>
-<!--[if lt IE 9]><script src="http://$HOST/$ui/css3-mediaqueries.js"></script><![endif]-->
 </head>
 <!--<a class="reload" href="javascript:document.location.reload()"></a>-->
 <body>
-<div id="BODY">
-<!--{eval if(!defined('ADMIN')) msg('无管理员权限','/'); }-->
-
 <nav class='between'>
 	<span>
 		<a class="goback" href="$Nav['back']"></a>
@@ -28,3 +25,5 @@
 	<span id="result"></span>
 </nav>
 <p class="space"></p>
+
+<MAIN>

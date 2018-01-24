@@ -19,39 +19,39 @@
 </form>
 
 <div class="Sheet">
-<dl>
-	<dd>X</dd>
-	<dd>
-	<select title="选择分类" onchange="javascript:location.href='$Link[base]&catid='+this.value;">
-	<!--{loop $catArray $key $Cat}-->
-	<option value="$key"<!--{if $key==$catid}--> selected<!--{/if}-->>{$Cat[name]}</option>
-	<!--{/loop}--></select>
-	</dd>
-	<dd>标题</dd>
-	<dd>颜色</dd>
-	<dd>打开</dd>
-	<dd>排序</dd>
-	<dd>状态</dd>
-</dl>
-<!--{loop $dataArray $mk $Array}-->
-<dl {if !$Array[state]} class='closed'{/if}>
-	<dd title="$Array[$primary]">
-		<a href="?$ctrl=delete&{$primary}=$mk" onclick="return(confirm('是否删除？'))">X</a>
-	</dd>
-    <dd>$catArray[$catid][name]</dd>
-    <dd>
-    	<a href="?$ctrl=Edit&$primary=$mk">$Array[title]</a>
-    </dd>
-    <dd>
-		<select onchange="ajaxUpdate('$table','$primary','$mk','style',this.value)" size='1'>
-		<!--{loop $styleConfig[color] $color $text}-->
-		<option value="$color"<!--{if $color==$Array[style]}--> selected<!--{/if}-->>{$text}</option>
+	<dl>
+		<dd>X</dd>
+		<dd>
+		<select title="选择分类" onchange="javascript:location.href='$Link[base]&catid='+this.value;">
+		<!--{loop $catArray $key $Cat}-->
+		<option value="$key"<!--{if $key==$catid}--> selected<!--{/if}-->>{$Cat[name]}</option>
 		<!--{/loop}--></select>
-    </dd>
-    <dd><a href="?$ctrl=Info&$primary=$mk">浏览</a></dd>
-	<dd>{view seq}</dd>
-	<dd>{view state}</dd>
-</dl>
-<!--{/loop}-->
-<p id="paging">{view paging}</p>
+		</dd>
+		<dd>标题</dd>
+		<dd>颜色</dd>
+		<dd>打开</dd>
+		<dd>排序</dd>
+		<dd>状态</dd>
+	</dl>
+	<!--{loop $dataArray $mk $Array}-->
+	<dl {if !$Array[state]} class='closed'{/if}>
+		<dd title="$Array[$primary]">
+			<a href="?$ctrl=delete&{$primary}=$mk" onclick="return(confirm('是否删除？'))">X</a>
+		</dd>
+	    <dd>$catArray[$catid][name]</dd>
+	    <dd>
+	    	<a href="?$ctrl=Edit&$primary=$mk">$Array[title]</a>
+	    </dd>
+	    <dd>
+			<select onchange="ajaxUpdate('$table','$primary','$mk','style',this.value)" size='1'>
+			<!--{loop $styleConfig[color] $color $text}-->
+			<option value="$color"<!--{if $color==$Array[style]}--> selected<!--{/if}-->>{$text}</option>
+			<!--{/loop}--></select>
+	    </dd>
+	    <dd><a href="?$ctrl=Info&$primary=$mk">浏览</a></dd>
+		<dd>{view seq}</dd>
+		<dd>{view state}</dd>
+	</dl>
+	<!--{/loop}-->
+	<diy class="center" id="paging">{view paging}</diy>
 </div>

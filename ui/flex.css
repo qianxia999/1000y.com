@@ -42,7 +42,7 @@ footer a h1{ height:3rem; width:100%;}
 .List dl{padding-right:3rem;padding-left:3rem;border-bottom:1px solid;}
 .List dl>*{white-space:nowrap;}*/
 
-.List{font-size:1.6rem;line-height:6rem;margin:1.5rem 0;}
+.List{font-size:1.6rem;line-height:6rem;margin:1rem 0;}
 .List{border-bottom:1px solid;border-top:1px solid;}
 .List>dl{display:flex;justify-content:space-between;align-items:center;}
 .List>dl{margin-left:2rem;margin-right:2rem;}
@@ -64,7 +64,7 @@ footer a h1{ height:3rem; width:100%;}
 .Sheet>dl{display:flex;}
 .Sheet>dl>*{flex:1;overflow:hidden;padding:1rem;}
 .Sheet>dl>*{display:flex;flex-direction:column;justify-content:center;}
-#paging{background:SeaShell;}
+#paging{border-top:1px solid;}/*background:SeaShell;*/
 #paging span a{color:#CA4312;padding:0 1rem;white-space:nowrap;text-overflow:ellipsis;}
 #paging span a:hover{background-color:#FFDEC9;}
 .current{background-color:#FFDEC9;}

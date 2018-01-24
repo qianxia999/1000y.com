@@ -18,6 +18,7 @@ class Home extends \core\base{
 
 		$AlbumList['youxi']=$Mcell->AlbumList(151);
 		$AlbumList['wanjia']=$Mcell->AlbumList(150);
+		$AlbumList['ditu']=$Mcell->AlbumList(155);
 
 
 		return compact('DocumentList','SourceList','AlbumList');

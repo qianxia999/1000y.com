@@ -1,54 +1,89 @@
 <!--{eval $mapList=cat('map');}-->
 <!--{eval $daojuKind=cat('daojuKind');}-->
+<!--{eval $npcKind=cat('npcKind');}-->
 <!--{eval $magicKind=cat('magicKind');}-->
 <!--{eval $equipKind=cat('equipKind');}-->
 <!--{eval $equipBrand=cat('equipBrand');}-->
+<!--{eval $albumCat=cat('album');}-->
 <style type="text/css">
+#Youxi {text-align:left;padding:1rem 2rem;}
+#Youxi dl{display:flex;}
+#Youxi dt{color:#d9b766;border-bottom:1px solid #BD9C3F;
+	width:100px;text-align: center;}
+#Youxi dd{border-bottom:1px solid #5F5F5F;flex:1;white-space:nowrap;}
+#Youxi a{color:#FFFEFF;margin:0 0.5rem;}
 </style>
 
-<div class="box" id="Guide">
+<div class="box" id="Youxi">
+	<dl>
+		<dt>新手指南</dt>
+		<dd>
+			<!--{loop $DocumentList['xinshou'] $key $List}-->
+			<a class="$List[style]" href="?document=Info&did=$key">$List[title]</a>
+			<!--{/loop}-->
+		</dd>
+	</dl>
 
-	<section>
-	<h3>道具介绍</h3>
 	<dl>
-	<!--{loop $daojuKind $key $Cat}-->
-	<dd><a href="?daoju=List&kindid=$key">$Cat[name]</a></dd>
-	<!--{/loop}-->
+		<dt>任务介绍</dt>
+		<dd>
+		<!--{loop $DocumentList['renwu'] $key $List}-->
+			<a class="$List[style]" href="?document=Info&did=$key">$List[title]</a>
+		<!--{/loop}-->
+		</dd>
 	</dl>
-	</section>
 
-	<section>
-	<h3>武功介绍</h3>
 	<dl>
-	<!--{loop $magicKind $key $Kind}-->
-	<dd><a href="?magic=List&kindid=$key">$Kind[name]</a></dd>
-	<!--{/loop}-->
+		<dt>武功介绍</dt>
+		<dd>
+			<!--{loop $magicKind $key $Kind}-->
+			<a href="?magic=List&kindid=$key">$Kind[name]</a>
+			<!--{/loop}-->
+		</dd>
 	</dl>
-	</section>
-	
-	<section>
-	<h3>装备</h3>
-	<dl>
-	<dt>系列</dt>
-	<!--{loop $equipBrand $key $Brand}-->
-	<dd class="$Brand[style]"><a href="?equip=List&brandid=$key">$Brand[name]</a></dd>
-	<!--{/loop}-->
-	</dl>
-	<dl>
-	<dt>类型</dt>
-	<!--{loop $equipKind $key $Kind}-->
-	<dd><a href="?equip=List&kindid=$key">$Kind[name]</a></dd>
-	<!--{/loop}-->
-	</dl>
-	</section>
 
-	<section>
-	<h3>怪物NPC</h3>
 	<dl>
-	<!--{loop $mapList $key $List}-->
-	<a href="?npc=List&mapid=$key">$List[name]</a>&nbsp;
-	<!--{/loop}-->
+		<dt>地图介绍</dt>
+		<dd>
+		<!--{loop $AlbumList['ditu'] $key $List}-->
+		<a href="?album=Info&albumid=$key">$List[name]</a>
+		<!--{/loop}-->
+		</dd>
+	</dl>	
+
+	<dl>
+		<dt>装备系列</dt>
+		<dd>
+			<!--{loop $equipBrand $key $Brand}-->
+			<a href="?equip=List&brandid=$key">$Brand[name]</a>
+			<!--{/loop}-->
+		</dd>
 	</dl>
-	</section>
+	<dl>
+		<dt>装备类型</dt>
+		<dd>
+			<!--{loop $equipKind $key $Kind}-->
+			<a href="?equip=List&kindid=$key">$Kind[name]</a>
+			<!--{/loop}-->
+		</dd>
+	</dl>
+
+	<dl>
+		<dt>怪物NPC</dt>
+		<dd>
+			<!--{loop $mapList $key $List}-->
+			<a href="?npc=List&mapid=$key">$List[name]</a>
+			<!--{/loop}-->
+		</dd>
+	</dl>
+
+	<dl>
+		<dt>道具介绍</dt>
+		<dd>
+			<!--{loop $daojuKind $key $Cat}-->
+			<a href="?daoju=List&kindid=$key">$Cat[name]</a>
+			<!--{/loop}-->
+		</dd>
+	</dl>
 
 </div>

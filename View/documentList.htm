@@ -8,23 +8,22 @@
 </diy>
 
 <div class="List">
-<!--{if $catid}-->
-<dt>
-	<span>$catArray[$catid][name]</span>
-</dt>
-<!--{/if}-->
-<!--{loop $dataArray $mk $Array}-->
-<dl>
-	<span>
-		【$Array[cat]】
-		<a class="$Array[style]" href="?$ctrl=Info&$primary=$mk">$Array[title]</a>
-	</span>
+	<!--{if $catid}-->
+	<dt>
+		<span>$catArray[$catid][name]</span>
+	</dt>
+	<!--{/if}-->
+	<!--{loop $dataArray $mk $Array}-->
+	<dl>
+		<span>
+			【$Array[cat]】
+			<a class="$Array[style]" href="?$ctrl=Info&$primary=$mk">$Array[title]</a>
+		</span>
 
-	<span><!--{echo date('m/d',$Array[pubTime])}--></span>
-</dl>
-<!--{/loop}-->
+		<span><!--{echo date('m/d',$Array[pubTime])}--></span>
+	</dl>
+	<!--{/loop}-->
+	<diy class="center" id="paging">{view paging}</diy>
 </div>
-
-<diy class="center" id="paging">{view paging}</diy>
 
 {view foot}
