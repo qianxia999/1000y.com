@@ -1,0 +1,114 @@
+{view head}
+
+<!--{eval $mapList=cat('map');}-->
+<!--{eval $daojuKind=cat('daojuKind');}-->
+<!--{eval $npcKind=cat('npcKind');}-->
+<!--{eval $magicKind=cat('magicKind');}-->
+<!--{eval $equipKind=cat('equipKind');}-->
+<!--{eval $equipBrand=cat('equipBrand');}-->
+<!--{eval $albumCat=cat('album');}-->
+
+
+<!--游戏资料-->
+<div class="gamezl">
+
+
+   		    <div class="hnavs">
+			  <div class="hs1">游戏资料</div>
+			  <div class="hs2">
+			    <div class="more1"><a href="#"></a></div>
+			  </div>
+   		    </div>
+
+
+	<div class="zllist">
+		<div class="zla">新手指南</div>
+		<!--{loop $DocumentList['xinshou'] $key $List}-->
+		<div class="zlc"><a href="?document=Info&did=$key" target="_blank">$List[title]</a></div>
+		<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+		<div class="zla">任务介绍</div>
+		<!--{loop $DocumentList['renwu'] $key $List}-->
+		<div class="zlc"><a href="?document=Info&did=$key" target="_blank">$List[title]</a></div>
+		<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+		<div class="zla">武功介绍</div>
+		<!--{loop $magicKind $key $Kind}-->
+		<div class="zlc"><a href="?magic=List&kindid=$key" target="_blank">$Kind[name]</a></div>
+		<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+		<div class="zla">真实爆率</div>
+		<!--{loop $mapList $key $List}-->
+		<div class="zlc"><a href="?offer=List&mapid=$key" target="_blank">$List[name]</a></div>
+		<!--{/loop}-->
+		<div class="zlc"><a href="?offer" target="_blank">完整爆率</a></div>
+	</div>
+
+
+	<div class="zllist">
+	<div class="zla">地图介绍</div>
+	<!--{loop $AlbumList['ditu'] $key $List}-->
+	<div class="zlc"><a href="?album=Info&albumid=$key" target="_blank">$List[name]</a></div>
+	<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+	<div class="zla">装备系列</div>
+	<!--{loop $equipBrand $key $Brand}-->
+	<div class="zlc"><a href="?equip=List&brandid=$key" target="_blank">$Brand[name]</a></div>
+	<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+	<div class="zla">装备类型</div>
+	<!--{loop $equipKind $key $Kind}-->
+	<div class="zlc"><a href="?equip=List&kindid=$key" target="_blank">$Kind[name]</a></div>
+	<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+	<div class="zla">怪物NPC</div>
+	<!--{loop $mapList $key $List}-->
+	<div class="zlc"><a href="?npc=List&mapid=$key" target="_blank">$List[name]</a></div>
+	<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+	<div class="zla">道具介绍</div>
+	<!--{loop $daojuKind $key $Cat}-->
+	<div class="zlc"><a href="?daoju=List&kindid=$key" target="_blank">$Cat[name]</a></div>
+	<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+	<div class="zla">任务攻略</div>
+	<!--{loop $DocumentList['renwu'] $key $List}-->
+	<div class="zlc"><a href="?document=Info&did=$key" target="_blank">$List[title]</a></div>
+	<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+	<div class="zla">相册</div>
+	<!--{loop $albumCat $key $List}-->
+	<div class="zlc"><a href="?album=List&catid=$key" target="_blank">$List[name]</a></div>
+	<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+	<div class="zla">帐号管理</div>
+	<div class="zlc"><a href="<!--{echo config('url','register')}-->" target="_blank">注册</a></div>
+	<div class="zlc"><a href="<!--{echo config('url','login')}-->" target="_blank">登录</a></div>
+	<div class="zlc"><a href="<!--{echo config('url','forget')}-->" target="_blank">找回密码</a></div>
+	<div class="zlc"><a href="<!--{echo config('url','user')}-->" target="_blank">个人中心</a></div>
+	</div>
+
+</div>
+
+
+{view foot}

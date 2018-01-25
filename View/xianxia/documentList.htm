@@ -1,0 +1,9 @@
+{view head}
+
+<!--{loop $dataArray $mk $Array}-->
+	<div class="newlistsx"><s><a href="?$ctrl=Info&$primary=$mk" target="_blank">【$Array[cat]】</a><a href="?$ctrl=Info&$primary=$mk" title="$Array[title]" target="_blank">$Array[title]</a></s><u><!--{echo date('m/d',$Array[pubTime])}--></u></div>  
+<!--{/loop}-->
+
+<div class="page">{view paging}</div>
+
+{view foot}

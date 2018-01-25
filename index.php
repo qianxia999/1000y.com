@@ -2,7 +2,7 @@
 
 define('INDEX','home');
 
-define('THEME','default');
+define('THEME','xianxia');
 
 define('AUTHKEY','USERAUTH');#define('USER',66);
 

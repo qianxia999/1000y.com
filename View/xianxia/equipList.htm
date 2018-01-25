@@ -1,0 +1,61 @@
+{view head}
+<!--{eval $equipBrand=cat('equipBrand');}-->
+<!--{eval $equipKind=cat('equipKind');}-->
+
+<div class="diy">
+<!--{loop $equipKind $key $Kind}-->
+<a class="zihong" href="?$ctrl=List&kindid=$key">$Kind[name]</a>
+<!--{/loop}-->
+</div>
+
+<div class="diy">
+<!--{loop $equipBrand $key $Brand}-->
+<a class="zihong" href="?$ctrl=List&brandid=$key">$Brand[name]</a>
+<!--{/loop}-->
+</div>
+
+
+<!--{if $brandid}-->
+<td>
+	<span>$equipBrand[$brandid][name]</span>
+</td>
+<!--{/if}-->
+
+
+
+<table class="Sheet">
+<tr>
+	<td class="g2">名称</td>
+	<td class="g1"><a href="$Url[rank]">品级</a></td>
+	<td class="g3">属性</td>
+</tr>
+<!--{loop $dataArray $mk $Array}-->
+<tr>
+	<td>
+		<p><img src="$Array[avatar]" width="80px"></p>
+		<p>$Array[name]</p>
+	</td>
+	<td>$Array[rank]</td>
+	<td>
+		<p>$Array[summary]</p>
+
+	    <p><span class="hongse">
+	    <!--{if $Array[sudu]}-->速度：$Array[sudu] <!--{/if}-->
+	    <!--{if $Array[huifu]}-->恢复：$Array[huifu] <!--{/if}-->
+	    <!--{if $Array[shanduo]}-->闪躲：$Array[shanduo] <!--{/if}-->
+	    <!--{if $Array[mingzhong]}-->命中：$Array[mingzhong] <!--{/if}-->
+	    </span></p>
+	    
+	    <!--{if $Array[gongji]}--><p>
+	    <span class="fense">破坏力:$Array[gongji] / $Array[datou] / $Array[dashou] / $Array[datui]</span>
+	    </p><!--{/if}-->
+
+	    <!--{if $Array[fangyu] || $Array[toufang] || $Array[shoufang] || $Array[tuifang]}--><p>
+	    <span class="chengse">防御力:$Array[fangyu] / $Array[toufang] / $Array[shoufang] / $Array[tuifang]</span>
+	    </p><!--{/if}-->
+	</td>
+</tr>
+<!--{/loop}-->
+</table>
+
+{view foot}

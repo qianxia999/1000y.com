@@ -1,0 +1,28 @@
+{view head}
+<script src="http://$HOST/$ui/echo/echo.js"></script>
+<style type="text/css">
+.echo img{width:100%;margin-top:0.5rem;
+	background: #FFF url($ui/echo/echo.gif) no-repeat center center;}
+</style>
+<!--{eval $mk=$Array[$primary]}-->
+
+<div id="article">
+	<h1>$Array[name]</h1>
+
+	<h3>
+		<small>发布时间<!--{echo date('Y-m-d H:i',$Array[time])}--></small>
+	</h3>
+
+	<!--{if $Array[summary]}-->
+	<h2>$Array[summary]</h2>
+	<!--{/if}-->
+
+	<div class="echo">
+	<!--{loop $photoList $k $photo}-->
+	<img src="http://$HOST/$ui/echo/blank.gif" data-echo="$photo[src]">
+	<!--{/loop}-->
+	</div>
+
+</div>
+
+{view foot}

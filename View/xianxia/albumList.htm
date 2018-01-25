@@ -1,0 +1,38 @@
+{view head}
+<!--{eval $albumCat=cat('album');}-->
+
+<div class="diy">
+<!--{loop $albumCat $key $Cat}-->
+<a class="zihong" href="?$ctrl=List&catid=$key">$Cat[name]</a>
+<!--{/loop}-->
+</div>
+
+<!--{if $kindid}-->
+<div class="diy">
+	<span>$daojuKind[$kindid][name]</span>
+</div>
+<!--{/if}-->
+
+
+<!--游戏截图-->
+<div class="gamezl">
+	<div class="hnavs">
+		<div class="hs1">游戏截图</div>
+		<div class="hs2">
+		<div class="more1"><a href="#"></a></div>
+		</div>
+	</div>
+
+	<div class="PHOTO">
+	<!--{loop $dataArray $Array}-->
+	<a href="?album=Info&albumid=$Array[albumid]">
+	    <img src="$Array[avatar]">
+	    <div class="txt">$Array[name]</div>
+	</a>
+	<!--{/loop}-->
+	</div>
+
+</div>
+
+
+{view foot}

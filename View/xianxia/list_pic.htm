@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link type="text/css" href="{dede:global.cfg_cmspath/}/images/home.css" rel="stylesheet">
+<script type="text/javascript">
+    function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+        }
+    }
+</script>
+</head>
+<body>
+  {dede:include filename="head.htm"/}
+  <div class="main">
+    <div class="submain1">
+	    <div class="subnav1"></div>
+	    <div class="mainadv-r1">
+	      <div class="rr"><a href="#"></a></div>
+	    </div>
+		<div class="clear"></div>
+		  <div class="m-lef m-lefn"> 
+		    <div class="m-lefl">
+			  <!--右侧1-->
+			  {dede:include filename="left.htm"/}
+		    </div>
+			<div class="m-cen m-cen1">
+			  <div class="hnavs1">
+			      <div class="newsnavx">
+   			           <div class="local_name">{dede:field name='typename' function=”GetTypeName(@me)”/}</div>
+   			           <div class="local">
+    			            当前位置： {dede:field name='position'/}
+   			           </div>
+			      </div>
+			  </div>
+
+        <div class="ind_news_title">
+           	<div class="items">
+{dede:field name='typeid' runphp='yes'}
+global $dsql;
+/*获取当前栏目信息*/
+$typeid = @me;
+$rs = $dsql->GetOne("SELECT reid FROM dede_arctype where id = $typeid");
+$reid = $rs['reid'];//获取到栏目的上级栏目
+/*获取上级栏目信息*/
+$row = $dsql->GetOne("SELECT * FROM dede_arctype where id = $reid");
+/*打印栏目上级栏目链接信息*/
+$link = GetTypeUrl($row['typeid'],MfTypedir($row['typedir']),$row['isdefault'],$row['defaultname'],$row['ispart'],$row['namerule2'],$row['moresite'],$row['siteurl'],$row['sitepath']);
+if($typeid=="1" || $typeid=="5" || $typeid=="9"){
+  @me = "<a href='{$link}' class='listf'>全部</a>";
+} else {
+  @me = "<a href='{$link}'>全部</a>";
+}
+{/dede:field}
+           	    {dede:channel type='son' row='7' currentstyle="<a href='~typelink~' class='listf'>~typename~</a>"}
+           	    <a href="[field:typelink/]">[field:typename/]</a> 
+           	    {/dede:channel}
+           	</div>
+        </div>
+
+			  <ul style="display:block;">
+        <div class="wallpaper">
+           	<ul>
+           	 {dede:list pagesize='20' titlelen = '80'}
+           	     <li>
+				     <a href="[field:arcurl/]" target="_blank" title="[field:fulltitle/]">
+				     <img src="[field:litpic/]" />
+				     <p>[field:fulltitle/]</p>
+				     </a>
+				 </li>
+           	 {/dede:list}
+           	</ul>
+        </div>
+			  </ul>
+		
+			  <!--新闻列表-->
+			</div>
+		  </div>
+    </div>
+  </div>
+  {dede:include filename="footer.htm"/}
+  
+</body>
+</html>

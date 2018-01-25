@@ -1,0 +1,48 @@
+{view head}
+<!--{eval $npcKind=cat('npcKind');}-->
+<!--{eval $mapList=cat('map');}-->
+<!--{eval $seqConfig=config('seq');}-->
+
+<div class="diy">
+<!--{loop $mapList $key $List}-->
+<a class="zihong" href="?$ctrl=List&mapid=$key">$List[name]</a>
+<!--{/loop}-->
+</div>
+
+<!--{if $mapid}-->
+<div class="diy">
+<!--{loop $npcKind $key $Kind}-->
+<a class="zihong" href="?$ctrl=List&kindid=$key&mapid=$mapid">$Kind[name]</a>
+<!--{/loop}-->
+</div>
+<!--{/if}-->
+
+<table class="Sheet">
+<tr>
+	<td class="g1"><a href="$Url[name]">名称</a></td>
+	<td class="g1">出没地点</td>
+	<td class="g1">类型</td>
+	<td class="g2">掉落</td>
+</tr>
+<!--{loop $dataArray $mk $Array}-->
+<tr>
+	<td>
+		<p><img src="$Array[avatar]"></p>
+		<p>$Array[name]</p>
+	</td>
+	<td>$Array[haunt]</td>
+	<td>$Array[kind]</td>
+	<td>
+		<!--{loop $Array[tabOfferList] $tab $OfferList}-->
+		<!--{eval $fenge=0}-->
+		<div>
+		<!--{loop $OfferList $id $List}-->
+		<!--{if $fenge++}-->、<!--{/if}-->
+		<span class="$List[style] nowrap">$List[name]</span>
+		<!--{/loop}-->
+		</div>
+		<!--{/loop}-->
+	</td>
+</tr>
+<!--{/loop}-->
+</table>

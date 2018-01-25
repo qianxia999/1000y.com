@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$Nav['title']</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link type="text/css" href="$theme/images/home.css" rel="stylesheet">
+<style type="text/css">
+    #owl-demo {
+        position: relative;
+        width: 638px;
+        height: 270px;
+    }
+
+        #owl-demo .item {
+            position: relative;
+            display: block;
+        }
+
+        #owl-demo img {
+            display: block;
+            width: 638px;
+            height: 270px;
+        }
+
+        #owl-demo span {
+            position: absolute;
+            left: 0;
+            bottom: 37px;
+            width: 100%;
+            font: 18px/32px "微软雅黑","黑体";
+            color: #fff;
+            text-align: center;
+        }
+
+    .owl-pagination {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        height: 22px;
+        text-align: center;
+    }
+
+    .owl-page {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-image: url($theme/images/bg15.png);
+        *display: inline;
+        *zoom: 1;
+    }
+
+    .owl-pagination .active {
+        width: 25px;
+        background-image: url($theme/images/bg16.png);
+    }
+
+    .owl-buttons {
+        display: none;
+    }
+
+        .owl-buttons div {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 80px;
+            margin-top: -40px;
+            text-indent: -9999px;
+        }
+
+    .owl-prev {
+        left: 0;
+        background-image: url($theme/images/bg17.png);
+    }
+
+    .owl-next {
+        right: 0;
+        background-image: url($theme/images/bg18.png);
+    }
+
+    .owl-prev:hover {
+        background-image: url($theme/images/bg19.png);
+    }
+
+    .owl-next:hover {
+        background-image: url($theme/images/bg20.png);
+    }
+	.fHide{ text-indent:-9999px; overflow:hidden; z-index:999999; }
+.cq_flow { width:939px; height:541px; position:absolute;  z-index:999; }
+	.cq_flow a.close { width:37px; height:37px; position:absolute; top:0; right:0; display:block; background:url(http://jhx.zugame.com/close1.png) no-repeat; }
+	.cq_inner { width:939px; height:541px;  background:url(http://jhx.zugame.com/caiqi.jpg) no-repeat; }
+	.cq_inner a { width:939px; height:541px; display:block; overflow:hidden; text-indent:-9999px; position:absolute; left:3px; top:3px; }
+	.p6{display:none;}
+</style>
+<link rel="stylesheet" href="$theme/images/owl.carousel.css" />
+<script src="$theme/images/jquery.min.js"></script>
+<script type="text/javascript">
+    function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+        }
+    }
+
+    function MM_swapImgRestore() { //v3.0
+        var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+
+    function MM_findObj(n, d) { //v4.01
+        var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+            d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2) ; i += 3)
+            if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+    }
+</script>
+</head>
+<body onload="MM_preloadImages('$theme/images/game01.jpg','$theme/images/game02.jpg','$theme/images/game03.jpg','$theme/images/game04.jpg')">
+  {view top}
+  <div class="main">
+    <div class="submain1">
+	    <div class="subnav1"></div>
+	    <div class="mainadv-r1">
+	      <div class="rr"><a href="#"></a></div>
+	    </div>
+		<div class="clear"></div>
+		<div class="m-left">
+		  <div class="m-lef">
+		    <div class="m-lefl">
+			  <!--右侧1-->
+ 			  <div class="download"><a href="/html/down/" target="_blank"></a></div>
+			  <div class="backhome"><a href="javascript:"></a></div>
+			  <div class="zc"><a href="javascript:"></a></div>
+			  <div class="cz"><a href="javascript:"></a></div>
+		      <div class="quicknav">
+		        <div class="htitle">快速导航</div>
+		        <div class="qk1">
+				  <a href="javascript:"><img src="$theme/images/qk01.png" width="33" height="17" /><br />新手指南</a>
+				</div>
+		        <div class="qk2">
+				  <a href="javascript:"><img src="$theme/images/qk02.png" width="20" height="20" /><br />修改资料</a>
+		        </div>
+		        <div class="qk3">
+				  <a href="javascript:"><img src="$theme/images/qk03.png" width="22" height="32" /><br />推广活动</a>
+		        </div>
+		        <div class="qk4">
+				  <a href="javascript:"><img src="$theme/images/qk04.png" width="26" height="15" /><br />主播陪玩</a>
+		        </div>
+		        <div class="qk5">
+				  <a href="javascript:"><img src="$theme/images/qk05.png" width="16" height="20" /><br />密码找回</a>
+		        </div>
+		        <div class="qk6">
+				  <a href="javascript:"><img src="$theme/images/qk06.png" width="23" height="22" /><br />手机认证</a></div>
+		      </div>
+		    </div>
+			<div class="m-cen">
+			  <!--轮播图-->
+			  <div class="adv">
+			    <div id="owl-demo" class="owl-carousel">
+
+				<!--{loop $SourceList['Slide'] $key $List}-->
+			      <a  class="item"  href="$List[url]" title="$List[word]" target="_blank"><img src="$List[avatar]" /></a>
+				<!--{/loop}-->
+
+			    </div>
+			  </div>
+			  <!--新闻列表-->
+			  <div class="newsarea">
+			    <div class="newsnav">
+			      <script>
+			      function tabqh(i) {
+			        $('.tabcssa').hide();
+			        $('.tabqha'+i).show();
+			      }
+			      </script>
+			      <div class="news_s">
+			        <ul id="tab1">
+			          <li class="current"><a href="javascript:;" onmousemove="javascript:tabqh(1);">最新</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(2);">新闻</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(3);">活动</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(4);">媒体</a></li>
+			        </ul>
+			        </div>
+			      <div class="more"><a href="/html/news"></a></div>
+			    </div>
+				<div id="contentnews1">
+			      <ul style="display:block;height:288px;" class="tabqha1 tabcssa">
+				    <div class="newsmain">
+
+				        <!--{loop $DocumentList['xinshou'] $key $List}-->
+						<div class="newlists">
+							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
+							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
+							<u>[{$List[time]}]</u>
+						</div>
+				        <!--{/loop}-->
+
+				    </div>
+			      </ul>
+			      <ul style="display:none;height:288px;" class="tabqha2 tabcssa">
+				    <div class="newsmain">
+
+				        <!--{loop $DocumentList['renwu'] $key $List}-->
+						<div class="newlists">
+							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
+							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
+							<u>[{$List[time]}]</u>
+						</div>
+				        <!--{/loop}-->
+
+				    </div>
+			      </ul>
+			      <ul style="display:none;height:288px;" class="tabqha3 tabcssa">
+				    <div class="newsmain">
+
+				        <!--{loop $DocumentList['jingyan'] $key $List}-->
+						<div class="newlists">
+							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
+							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
+							<u>[{$List[time]}]</u>
+						</div>
+				        <!--{/loop}-->
+
+				    </div>
+			      </ul>
+			      <ul style="display:none;height:288px;" class="tabqha4 tabcssa">
+				    <div class="newsmain">
+
+				        <!--{loop $DocumentList['qinggan'] $key $List}-->
+						<div class="newlists">
+							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
+							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
+							<u>[{$List[time]}]</u>
+						</div>
+				        <!--{/loop}-->
+
+				    </div>
+			      </ul>
+			    </div>
+			  </div>
+			</div>
+		  </div>
+
+		  <!--视频区域-->
+		  <div class="games"><img src="$theme/images/game04.jpg" width="938" height="281" usemap="#Map" id="Image1" border="0" />
+   		    <map name="Map" id="Map">
+     		   <area shape="rect" coords="1,31,167,75" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game01.jpg',4)"> 
+      		   <area shape="rect" coords="3,94,162,140" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game02.jpg',4)">
+     		   <area shape="rect" coords="3,152,164,200" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game04.jpg',4)">
+     		   <area shape="rect" coords="4,213,164,259" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game04.jpg',4)">
+   		    </map>
+		  </div>
+
+
+
+		  <!--游戏资料-->
+		  <div class="gamezl">
+   		    <div class="hnavs">
+			  <div class="hs1">游戏资料</div>
+			  <div class="hs2">
+			    <div class="more1"><a href="#"></a></div>
+			  </div>
+   		    </div>
+
+
+			<div class="zllist">
+				<div class="zla">游戏指南</div>
+				<!--{loop $DocumentList['xinshou'] $key $List}-->
+				<div class="zlc"><a href="?document=Info&did=$key" target="_blank">$List[title]</a></div>
+				<!--{/loop}-->
+			</div>
+
+			<div class="zllist">
+				<div class="zla">任务介绍</div>
+				<!--{loop $DocumentList['renwu'] $key $List}-->
+				<div class="zlc"><a href="?document=Info&did=$key" target="_blank">$List[title]</a></div>
+				<!--{/loop}-->
+			</div>
+
+			<!--{eval $magicKind=cat('magicKind');}-->
+			<div class="zllist">
+				<div class="zla">武功介绍</div>
+				<!--{loop $magicKind $key $Kind}-->
+				<div class="zlc"><a href="?magic=List&kindid=$key" target="_blank">$Kind[name]</a></div>
+				<!--{/loop}-->
+			</div>
+
+			<div class="zllist">
+			<div class="zla">地图介绍</div>
+			<!--{loop $AlbumList['ditu'] $key $List}-->
+			<div class="zlc"><a href="?album=Info&albumid=$key" target="_blank">$List[name]</a></div>
+			<!--{/loop}-->
+			</div>
+
+			<!--{eval $equipBrand=cat('equipBrand');}-->
+			<div class="zllist">
+			<div class="zla">装备系列</div>
+			<!--{loop $equipBrand $key $Brand}-->
+			<div class="zlc"><a href="?equip=List&brandid=$key" target="_blank">$Brand[name]</a></div>
+			<!--{/loop}-->
+			</div>
+
+			<!--{eval $mapList=cat('map');}-->
+			<div class="zllist">
+			<div class="zla">怪物NPC</div>
+			<!--{loop $mapList $key $List}-->
+			<div class="zlc"><a href="?npc=List&mapid=$key" target="_blank">$List[name]</a></div>
+			<!--{/loop}-->
+			</div>
+
+			<!--{eval $daojuKind=cat('daojuKind');}-->
+			<div class="zllist">
+			<div class="zla">道具介绍</div>
+			<!--{loop $daojuKind $key $Cat}-->
+			<div class="zlc"><a href="?daoju=List&kindid=$key" target="_blank">$Cat[name]</a></div>
+			<!--{/loop}-->
+			</div>
+
+		  </div>
+
+		<!--游戏截图-->
+		<div class="gamezl">
+			<div class="hnavs">
+				<div class="hs1">游戏截图</div>
+				<div class="hs2">
+				<div class="more1"><a href="#"></a></div>
+				</div>
+			</div>
+
+			<div class="PHOTO">
+			<!--{loop $AlbumList['youxi'] $key $List}-->
+			<a href="?album=Info&albumid=$List[albumid]">
+			    <img src="$List[avatar]">
+			    <div class="txt">$List[name]</div>
+			</a>
+			<!--{/loop}-->
+			</div>
+
+		</div>
+
+		<!--玩家秀-->
+		<div class="gamezl">
+			<div class="hnavs">
+				<div class="hs1">玩家秀</div>
+				<div class="hs2">
+				<div class="more1"><a href="#"></a></div>
+				</div>
+			</div>
+
+			<div class="PHOTO">
+			<!--{loop $AlbumList['wanjia'] $key $List}-->
+			<a href="?album=Info&albumid=$List[albumid]">
+			    <img src="$List[avatar]">
+			    <div class="txt">$List[name]</div>
+			</a>
+			<!--{/loop}-->
+			</div>
+
+		</div>
+
+
+		</div>
+		<!--右侧-->
+		<div class="m-rit">
+		  <div class="yxrd"><div class="rd1">游戏热点</div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="javascript:">药材补给</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="javascript:">门派副本</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="javascript:">押运镖车</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="javascript:">追寻云游僧</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="javascript:">夺宝奇兵</a></s></div>
+		  </div>
+		  <div class="yxts"><div class="ts1">怪物介绍</div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">长城以南怪物</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">王陵怪物</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">狐狸洞怪物</a></s></div>
+		  </div>
+		  <div class="xszy">
+		    <div class="rd1 rd2">新手指引</div>
+		    <div class="content1">大侠出世，新手指引</div>
+			<div class="xs"><a href="javascript:"></a></div>
+		  </div>
+		  <div class="xszy xszy1">
+ 		   <div class="rd1 rd2">大侠成长</div>
+ 		   <div class="content1">修炼武学，大侠成长</div>
+ 		   <div class="xs"><a href="javascript:"></a></div>
+		  </div>
+		  <div class="xszy xszy2">
+ 		   <div class="rd1 rd2">门派战争</div>
+ 		   <div class="content1">门武修炼，门派大战</div>
+		   <div class="xs"><a href="javascript:"></a></div>
+		  </div>
+		  <div class="wxh">
+		    <div class="wxh1"><i>扫一扫</i><s>获取最新游戏资讯</s></div>
+			<div class="wxh2"><img src="$theme/images/wx.jpg" width="115" height="115" /></div>
+		  </div>
+		  <div class="kefu">
+ 		    <div class="ts1">客服中心</div>
+ 		    <div class="kflist">江湖行专属客服：<i>10000</i></div>
+			<div class="kflist">工作时间：12:00-24:00</div>
+			<div class="kflist">官方游戏客服：<i><a href="#" target="_blank">2853150269</a></i></div>
+			<div class="kflist">工作时间：9:30-16:00</div><div class="kflist">客服电话：4000446533  (7x24小时)</div>
+			<div class="kflist">在线QQ群：<i><a href="#" target="_blank"><IMG alt="群" src="$theme/images/qun.png" width="92" height="23"></a></i></div>
+		  </div>
+		</div>
+		<div class="links">
+		  <i><a href="#" target="_blank"><img src="$theme/images/link01.png" width="109" height="52" /></a></i>
+		  <i><a href="#" target="_blank"><img src="$theme/images/link02.png" width="168" height="52" /></a></i>
+		  <i><a href="#" target="_blank"><img src="$theme/images/link04.png" width="140" height="52" /></a></i>
+		  <i><a href="#" target="_blank"><img src="$theme/images/link03.png" width="140" height="52" /></a></i>
+		  <i><a href="#" target="_blank"><img src="$theme/images/link05.png" width="140" height="52" /></a></i>
+		  <i><a href="#" target="_blank"><img src="$theme/images/link06.png" width="140" height="52" /></a></i>
+		  <i><a href="#" target="_blank"><img src="$theme/images/link07.png" width="141" height="52" /></a></i>
+		</div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="$theme/images/script.js"></script>
+<script src="$theme/images/layer.js"></script>
+
+<script type="text/javascript" src="$theme/images/owl.carousel.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#owl-demo').owlCarousel({
+            items: 1,
+            navigation: true,
+            navigationText: ["上一个", "下一个"],
+            autoPlay: true,
+            stopOnHover: true
+        }).hover(function () {
+            $('.owl-buttons').show();
+        }, function () {
+            $('.owl-buttons').hide();
+        });
+    });
+</script>
+
+<div class="botm">
+  <div class="jiankang"><i>健康游戏公告:</i> 抵制不良游戏 <s>|</s>  拒绝盗版游戏 <s>|</s> 注意自我保护 <s>|</s> 谨防受骗上当 <s>|</s> 适度游戏益脑 <s>|</s> 沉迷游戏伤身 <s>|</s> 合理安排时间 <s>|</s> 享受健康生活 </div>
+  <div class="botmarea">
+    <div class="botmmain">
+      <div class="botmmains">
+        <div class="botm-logo"><a href="javascript:void(0)"><img src="$theme/images/logo2.png" width="172" height="73"></a></div>
+        <div class="botm-title">
+		    <i><a title="关于我们" href="http://about.zugame.com/introduce.html" target="_blank">关于我们</a></i>
+			<s>|</s>
+			<i><a title="联系我们" href="http://about.zugame.com/contactus.html" target="_blank">联系我们</a></i>
+			<s>|</s>
+			<i><a title="招贤纳士" href="http://about.zugame.com/job.html" target="_blank">招贤纳士</a></i>
+			<s>|</s>
+			<i><a title="产品介绍" href="http://about.zugame.com/product.html" target="_blank">产品介绍</a></i>
+			<s>|</s>
+			<i><a title="企业文化" href="http://about.zugame.com/culture.html" target="_blank">企业文化</a></i>
+			<s>|</s>
+			<i><a title="商务合作" href="http://about.zugame.com/contactus.html" target="_blank">商务合作</a></i>
+        </div>
+        <div class="botm-title">仙侠网络游戏平台 版权所有</div>
+        <div class="botm-title"><a href="http://www.miitbeian.gov.cn/" target="_blank">备</a><u>适龄提示：本游戏适合18岁以上玩家游戏!</u></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
