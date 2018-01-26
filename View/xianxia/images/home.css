@@ -1,4 +1,6 @@
 ﻿@charset "utf-8";
+a:link,a:visited{color:#333;}
+a:hover,a:active{color:#CA4321;}
 
 #WRAP{margin:auto;width:1264px;}
 
@@ -52,6 +54,7 @@ table .g3{width:300px;}
 .PHOTO a{float:left;margin:4px;padding:4px;border:0px;border-radius:0.5rem;}
 .PHOTO a:hover{border-color:#CA4321;box-shadow:0 0 1rem #CA4321;}
 .PHOTO img{width:220px;height:220px;}
+.PHOTO .txt{text-align:center;line-height:2rem;}
 
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, code, em, img, q, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, table, tbody, tr, th, td, input {
@@ -143,7 +146,7 @@ a:hover {
 	margin: 0 auto;
 }
 
-.subnav1{width:1094px;float:left;margin:15px 0px 245px 170px;}
+.subnav1{width:1094px;float:left;height:300px;}
 .nav{float:left;width:107px;margin:0px 12px;}
 .nav .p0 a{float:left;width:107px;color:#282828;font: 18px/24px "微软雅黑","宋体", Tahoma, Arial, sans-serif;text-align:center;font-weight:bold;}
 .nav .p0 a:hover{color:#000;}

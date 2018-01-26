@@ -178,17 +178,20 @@
 			  <div class="newsarea">
 			    <div class="newsnav">
 			      <script>
-			      function tabqh(i) {
+			      function tabqh(node,i) {
 			        $('.tabcssa').hide();
+			        $("li.current").removeClass("current");
 			        $('.tabqha'+i).show();
+			        $(node).parent().addClass("current");
+
 			      }
 			      </script>
 			      <div class="news_s">
 			        <ul id="tab1">
-			          <li class="current"><a href="javascript:;" onmousemove="javascript:tabqh(1);">最新</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(2);">新闻</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(3);">活动</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(4);">媒体</a></li>
+			          <li class="current"><a href="javascript:;" onmousemove="javascript:tabqh(this,1);">最新</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,2);">新闻</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,3);">活动</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,4);">媒体</a></li>
 			        </ul>
 			        </div>
 			      <div class="more"><a href="/html/news"></a></div>

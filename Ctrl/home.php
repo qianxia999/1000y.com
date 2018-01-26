@@ -10,7 +10,7 @@ class Home extends \core\base{
 		$SourceList['Four']=$Mcell->SourceList(161);
 		$SourceList['fuwuqi']=$Mcell->SourceList(163);
 
-		$max=8;
+		$max=7;
 		$DocumentList['xinshou']=$Mcell->DocumentList(53,$max);
 		$DocumentList['renwu']=$Mcell->DocumentList(54,$max);
 		$DocumentList['jingyan']=$Mcell->DocumentList(55,$max);
