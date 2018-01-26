@@ -1,9 +1,17 @@
 {view head}
+<!--{eval $catArray=cat($table);}-->
 
-<!--{loop $dataArray $mk $Array}-->
-	<div class="newlistsx"><s><a href="?$ctrl=Info&$primary=$mk" target="_blank">【$Array[cat]】</a><a href="?$ctrl=Info&$primary=$mk" title="$Array[title]" target="_blank">$Array[title]</a></s><u><!--{echo date('m/d',$Array[pubTime])}--></u></div>  
-<!--{/loop}-->
+	<div class="diy">
+	<!--{loop $catArray $Cat}-->
+	<a href="?$ctrl=List&catid=$Cat[catid]">$Cat[name]</a>&nbsp;
+	<!--{/loop}-->
+	</div>
 
-<div class="page">{view paging}</div>
+
+	<!--{loop $dataArray $mk $Array}-->
+		<div class="newlistsx"><s><a href="?$ctrl=Info&$primary=$mk" target="_blank">【$Array[cat]】</a><a href="?$ctrl=Info&$primary=$mk" title="$Array[title]" target="_blank">$Array[title]</a></s><u><!--{echo date('m/d',$Array[pubTime])}--></u></div>  
+	<!--{/loop}-->
+
+	<div class="page">{view paging}</div>
 
 {view foot}

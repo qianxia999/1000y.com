@@ -1,4 +1,12 @@
 {view head}
+<!--{eval $catArray=cat($table);}-->
+
+	<div class="diy">
+	<!--{loop $catArray $Cat}-->
+	<a href="?$ctrl=List&catid=$Cat[catid]">$Cat[name]</a>&nbsp;
+	<!--{/loop}-->
+	</div>
+
 
 	<div class="ct1">$Array[title]</div> 
 	<div class="ct2">
