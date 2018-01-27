@@ -69,6 +69,8 @@ class Document extends \core\base{
 
 	public function update(){
 
+		$_POST['updateTime']=TIME;
+
 		$result=$this->M->SAVE($_POST);
 
 		if($result) msg('UPDATE_SUCCESS','?document'); else msg('UPDATE_FAILD');
