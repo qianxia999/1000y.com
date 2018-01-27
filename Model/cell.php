@@ -15,11 +15,16 @@ class Cell extends \core\DB{
 		return $dataArray;
 	}
 
-	public function DocumentList($catid,$max=null){
+	public function DocumentList($catid=null,$max=null,$order=null){
 
-		$COND['AND']['catid']=$catid;
+		if($catid) $COND['AND']['catid']=$catid;
+
 		$COND['AND']['state']=true;/*1*/
-		$COND['ORDER']['seq']='DESC';
+
+		$order = $order ?? 'seq';
+
+		$COND['ORDER'][$order]='DESC';
+
 		if($max) $COND['LIMIT'] = [0,$max];
 
 		$M=new Document;

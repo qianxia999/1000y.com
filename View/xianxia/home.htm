@@ -189,18 +189,19 @@
 			      <div class="news_s">
 			        <ul id="tab1">
 			          <li class="current"><a href="javascript:;" onmousemove="javascript:tabqh(this,1);">资讯</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,2);">任务</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,3);">新手</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,2);">新手</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,3);">任务</a></li>
 			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,4);">美文</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,5);">最新</a></li>
 			        </ul>
 			        </div>
-			      <div class="more"><a href="/html/news"></a></div>
+			      <div class="more"><a href="?document=List"></a></div>
 			    </div>
 				<div id="contentnews1">
 			      <ul style="display:block;height:288px;" class="tabqha1 tabcssa">
 				    <div class="newsmain">
 
-				        <!--{loop $DocumentList['jingyan'] $key $List}-->
+				        <!--{loop $DocumentList['zixun'] $key $List}-->
 						<div class="newlists">
 							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
 							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
@@ -213,7 +214,7 @@
 			      <ul style="display:none;height:288px;" class="tabqha2 tabcssa">
 				    <div class="newsmain">
 
-				        <!--{loop $DocumentList['renwu'] $key $List}-->
+				        <!--{loop $DocumentList['xinshou'] $key $List}-->
 						<div class="newlists">
 							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
 							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
@@ -226,7 +227,7 @@
 			      <ul style="display:none;height:288px;" class="tabqha3 tabcssa">
 				    <div class="newsmain">
 
-				        <!--{loop $DocumentList['xinshou'] $key $List}-->
+				        <!--{loop $DocumentList['renwu'] $key $List}-->
 						<div class="newlists">
 							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
 							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
@@ -249,19 +250,34 @@
 
 				    </div>
 			      </ul>
+
+			      <ul style="display:none;height:288px;" class="tabqha5 tabcssa">
+				    <div class="newsmain">
+
+				        <!--{loop $DocumentList['new'] $key $List}-->
+						<div class="newlists">
+							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
+							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
+							<u>[{$List[time]}]</u>
+						</div>
+				        <!--{/loop}-->
+
+				    </div>
+			      </ul>
+
 			    </div>
 			  </div>
 			</div>
 		  </div>
 
 		  <!--视频区域-->
-		  <div class="games"><img src="$theme/images/game01.jpg" width="938" height="281" usemap="#Map" id="Image1" border="0" />
-			<map name="Map" id="Map">
+		  <div class="games"><img src="$theme/images/game04.jpg" width="938" height="281" usemap="#Map" id="Image1" border="0" />
+<!-- 			<map name="Map" id="Map">
      		   <area shape="rect" coords="1,31,167,75" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game01.jpg',4)"> 
       		   <area shape="rect" coords="3,94,162,140" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game02.jpg',4)">
      		   <area shape="rect" coords="3,152,164,200" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game03.jpg',4)">
      		   <area shape="rect" coords="4,213,164,259" href="#" onmouseover="MM_swapImage('Image1','','$theme/images/game04.jpg',4)">
-			</map>
+</map> -->
 		  </div>
 
 
@@ -278,14 +294,14 @@
 
 			<div class="zllist">
 				<div class="zla">游戏指南</div>
-				<!--{loop $DocumentList['xinshou'] $key $List}-->
+				<!--{loop $Guide['xinshou'] $key $List}-->
 				<div class="zlc"><a href="?document=Info&did=$key" target="_blank">$List[title]</a></div>
 				<!--{/loop}-->
 			</div>
 
 			<div class="zllist">
 				<div class="zla">任务介绍</div>
-				<!--{loop $DocumentList['renwu'] $key $List}-->
+				<!--{loop $Guide['renwu'] $key $List}-->
 				<div class="zlc"><a href="?document=Info&did=$key" target="_blank">$List[title]</a></div>
 				<!--{/loop}-->
 			</div>
@@ -380,12 +396,12 @@
 		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="?document=Info&did=4">装备强化</a></s></div>
 		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="?document=Info&did=32">套装属性</a></s></div>
 		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="document=Info&did=5">宝石镶嵌</a></s></div>
-		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="javascript:">#</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;" href="?document=Info&did=35">碎片兑换</a></s></div>
 		  </div>
-		  <div class="yxts"><div class="ts1">怪物介绍</div>
-		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">长城以南怪物</a></s></div>
-		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">王陵怪物</a></s></div>
-		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">狐狸洞怪物</a></s></div>
+		  <div class="yxts"><div class="ts1">装备介绍</div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">黄龙套装</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">狐狸套装</a></s></div>
+		    <div class="rdlist"><i></i><s><a style="color:#ff0000;"  href="javascript:">王陵套装</a></s></div>
 		  </div>
 		  <div class="xszy">
 		    <div class="rd1 rd2">新手指引</div>
@@ -408,14 +424,16 @@
 		  </div>
 		  <div class="kefu">
  		    <div class="ts1">客服中心</div>
- 		    <div class="kflist">江湖行专属客服：<i>10000</i></div>
+ 		    <div class="kflist">仙侠客服QQ：<i>1395732390</i></div>
 			<div class="kflist">工作时间：12:00-24:00</div>
-			<div class="kflist">官方游戏客服：<i><a href="#" target="_blank">1395732390</a></i></div>
  		    <div class="kflist kflist1">在线QQ群：699956992<i>
 	        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=75767b6020eec0d64902e66432524adb3ef2403f2161fbbb0a2dd40f12e239c3"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="仙侠千年 一群" title="仙侠千年 一群"></a>
 			</i></div>
 		  </div>
 		</div>
+
+		<p class="clear"></p>
+
 		<div class="links">
 		  <i><a href="#" target="_blank"><img src="$theme/images/link01.png" width="109" height="52" /></a></i>
 		  <i><a href="#" target="_blank"><img src="$theme/images/link02.png" width="168" height="52" /></a></i>

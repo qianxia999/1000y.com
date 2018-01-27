@@ -11,16 +11,21 @@ class Home extends \core\base{
 		$SourceList['fuwuqi']=$Mcell->SourceList(163);
 
 		$max=7;
-		$DocumentList['jingyan']=$Mcell->DocumentList(162,$max);
+		$DocumentList['new']=$Mcell->DocumentList(null,$max,'updateTime');
+		$DocumentList['zixun']=$Mcell->DocumentList(162,$max);
 		$DocumentList['xinshou']=$Mcell->DocumentList(53,$max);
 		$DocumentList['renwu']=$Mcell->DocumentList(54,$max);
 		$DocumentList['qinggan']=$Mcell->DocumentList(57,$max);
+
+		$max=10;
+		$Guide['xinshou']=$Mcell->DocumentList(53,$max);
+		$Guide['renwu']=$Mcell->DocumentList(54,$max);
 
 		$AlbumList['youxi']=$Mcell->AlbumList(151);
 		$AlbumList['wanjia']=$Mcell->AlbumList(150);
 		$AlbumList['ditu']=$Mcell->AlbumList(155);
 
 
-		return compact('DocumentList','SourceList','AlbumList');
+		return compact('Guide','DocumentList','SourceList','AlbumList');
 	}
 }
