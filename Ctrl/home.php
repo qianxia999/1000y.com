@@ -11,9 +11,9 @@ class Home extends \core\base{
 		$SourceList['fuwuqi']=$Mcell->SourceList(163);
 
 		$max=7;
+		$DocumentList['jingyan']=$Mcell->DocumentList(162,$max);
 		$DocumentList['xinshou']=$Mcell->DocumentList(53,$max);
 		$DocumentList['renwu']=$Mcell->DocumentList(54,$max);
-		$DocumentList['jingyan']=$Mcell->DocumentList(55,$max);
 		$DocumentList['qinggan']=$Mcell->DocumentList(57,$max);
 
 		$AlbumList['youxi']=$Mcell->AlbumList(151);

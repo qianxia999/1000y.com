@@ -188,10 +188,10 @@
 			      </script>
 			      <div class="news_s">
 			        <ul id="tab1">
-			          <li class="current"><a href="javascript:;" onmousemove="javascript:tabqh(this,1);">最新</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,2);">新闻</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,3);">活动</a></li>
-			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,4);">媒体</a></li>
+			          <li class="current"><a href="javascript:;" onmousemove="javascript:tabqh(this,1);">资讯</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,2);">任务</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,3);">新手</a></li>
+			          <li><a href="javascript:;" onmousemove="javascript:tabqh(this,4);">美文</a></li>
 			        </ul>
 			        </div>
 			      <div class="more"><a href="/html/news"></a></div>
@@ -200,7 +200,7 @@
 			      <ul style="display:block;height:288px;" class="tabqha1 tabcssa">
 				    <div class="newsmain">
 
-				        <!--{loop $DocumentList['xinshou'] $key $List}-->
+				        <!--{loop $DocumentList['jingyan'] $key $List}-->
 						<div class="newlists">
 							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
 							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
@@ -226,7 +226,7 @@
 			      <ul style="display:none;height:288px;" class="tabqha3 tabcssa">
 				    <div class="newsmain">
 
-				        <!--{loop $DocumentList['jingyan'] $key $List}-->
+				        <!--{loop $DocumentList['xinshou'] $key $List}-->
 						<div class="newlists">
 							<i><a href="?document=Info&did=$key" target="_blank">[{$List[cat]}]</a></i>
 							<s><a href="?document=Info&did=$key" title="$List[title]" target="_blank">$List[title]</a></s>
