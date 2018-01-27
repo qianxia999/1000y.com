@@ -4,8 +4,8 @@ a:hover,a:active{color:#CA4321;}
 
 #WRAP{margin:auto;width:1264px;}
 
-.diy{font-size:16px;padding:1rem;background:#DCDCDC;}
-.diy>a{margin:0.5rem;padding:0.5rem;color:#252f3c;background:HoneyDew;}
+.diy{font-size:16px;line-height:30px;padding:10px;background:#DCDCDC;}
+.diy>a{margin:5px;padding:5px;color:#252f3c;background:HoneyDew;}
 
 #article h1{text-align:center;font-size:2rem;line-height:4rem;color:#666;background:snow;}
 #article h3{text-align:center;font-weight:normal;}

@@ -138,30 +138,9 @@
 		  <div class="m-lef">
 		    <div class="m-lefl">
 			  <!--右侧1-->
- 			  <div class="download"><a href="/html/down/" target="_blank"></a></div>
-			  <div class="backhome"><a href="javascript:"></a></div>
-			  <div class="zc"><a href="javascript:"></a></div>
-			  <div class="cz"><a href="javascript:"></a></div>
-		      <div class="quicknav">
-		        <div class="htitle">快速导航</div>
-		        <div class="qk1">
-				  <a href="javascript:"><img src="$theme/images/qk01.png" width="33" height="17" /><br />新手指南</a>
-				</div>
-		        <div class="qk2">
-				  <a href="javascript:"><img src="$theme/images/qk02.png" width="20" height="20" /><br />修改资料</a>
-		        </div>
-		        <div class="qk3">
-				  <a href="javascript:"><img src="$theme/images/qk03.png" width="22" height="32" /><br />推广活动</a>
-		        </div>
-		        <div class="qk4">
-				  <a href="javascript:"><img src="$theme/images/qk04.png" width="26" height="15" /><br />主播陪玩</a>
-		        </div>
-		        <div class="qk5">
-				  <a href="javascript:"><img src="$theme/images/qk05.png" width="16" height="20" /><br />密码找回</a>
-		        </div>
-		        <div class="qk6">
-				  <a href="javascript:"><img src="$theme/images/qk06.png" width="23" height="22" /><br />手机认证</a></div>
-		      </div>
+
+			  {view quick}
+		      
 		    </div>
 			<div class="m-cen">
 			  <!--轮播图-->
@@ -368,25 +347,6 @@
 		</div>
 
 		<!--玩家秀-->
-		<div class="gamezl">
-			<div class="hnavs">
-				<div class="hs1">玩家秀</div>
-				<div class="hs2">
-				<div class="more1"><a href="#"></a></div>
-				</div>
-			</div>
-
-			<div class="PHOTO">
-			<!--{loop $AlbumList['wanjia'] $key $List}-->
-			<a href="?album=Info&albumid=$List[albumid]">
-			    <img src="$List[avatar]">
-			    <div class="txt">$List[name]</div>
-			</a>
-			<!--{/loop}-->
-			</div>
-
-		</div>
-
 
 		</div>
 		<!--右侧-->
