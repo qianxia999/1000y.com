@@ -17,7 +17,7 @@
 <dl>
 	<span>类型</span>
 	<span>
-	<select name="cat" title="选择分类"><option value=''>选择分类</option>
+	<select name="catid" title="选择分类"><option value=''>选择分类</option>
 	<!--{loop $catArray $key $cat}-->
 	<option value="$key"<!--{if $key==$Array[catid]}--> selected<!--{/if}-->>{$cat[name]}</option>
 	<!--{/loop}--></select>

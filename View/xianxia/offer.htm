@@ -1,6 +1,12 @@
 {view head}
 <!--{eval $mapList=cat('map');}-->
 
+<div class="diy">
+<!--{loop $mapList $key $List}-->
+<a class="zihong" href="?$ctrl=List&mapid=$key">$List[name]</a>
+<!--{/loop}-->
+</div>
+
 <!--{loop $Offer $mapid $OfferList}-->
 <table class="Sheet">
 
