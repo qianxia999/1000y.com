@@ -32,7 +32,7 @@ class Magic extends \core\DB{
 	   			$CatAvatarDefault = \core\Common::httpAvatar($CatAvatarField,$categoryDir);
 	   		}
 
-   			$dataArray[$key]['avatar'] = \core\Common::httpAvatar($Array['avatar'],$avatarDir,$CatAvatarDefault);
+   			$dataArray[$key]['avatar'] = \core\Common::httpAvatar($Array['avatar'],$avatarDir,$CatAvatarDefault ?? null);
 
    			$dataArray[$key]['kind']=\core\Common::catid2name($magicKind,$Array['kindid']);
 
