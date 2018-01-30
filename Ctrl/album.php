@@ -108,6 +108,7 @@ class Album extends \core\base{
 	}
 
 	public function update(){
+		$_POST['time']=TIME;
 
 		$catid=post('catid') or msg('CATEGORY_EMPTY',"?$this->ctrl");
 
