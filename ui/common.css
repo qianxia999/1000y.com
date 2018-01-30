@@ -92,3 +92,35 @@ figure figcaption{color:#e60012;}
 /*.A1{position:absolute;width:208px;height:144px;left:28px;top:422px;}*/
 /*#BIAO textarea{width:300px;height:120px;}
 #img{border-radius:15px;}*/
+
+
+.theme{color:#666;background:#eee;}
+.major{font-size:2rem;font-weight:bold;}
+#result font{color:yellow;background:red;}
+#TIP font{color:yellow;background:red;}
+.coin{color:#CA4312;}
+.disable,.disable:hover{color:white;background:gray;}
+.small{
+        font-size:1rem;
+        line-height:2rem;
+}
+
+
+
+.left left{text-align:left;}
+.right right{text-align:right;}
+.center center{text-align:center;margin:auto;}
+.middle{vertical-align:middle;display:table-cell;}
+.space{height:1rem;background:#f0f0f0;}
+.none{display:none;}
+.bold{font-weight:bold;}
+.normal{font-weight:normal}
+.cursor{cursor:pointer;}
+.inline-block{display:inline-block;}
+.clear{clear:both;}
+.vline{border-bottom:1px dashed #DFCDDE;}
+.tline{border-bottom:1px solid #DFCDDE;clear:both;}
+.tip{color:gray;}
+.text{padding:2em;}
+.tt{background: #feeeed;line-height: 3rem;}
+/*.middle{width:100%;margin:auto;}  margin-top:10%;*/
