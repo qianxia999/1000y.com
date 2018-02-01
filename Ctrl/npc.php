@@ -15,7 +15,9 @@ class Npc extends \core\base{
 
 		$L=new \core\Link();
 		$this->Url=$L->URL($this->primary,'name');
-		$COND=$L->COND();unset($COND['LIMIT']);
+		$COND=$L->COND();
+		$COND['AND']['state']=1;
+		unset($COND['LIMIT']);
 
 		$count=$this->M->count($this->table,$COND['AND']);
 		$this->Paging=$L->PAGING($count);
