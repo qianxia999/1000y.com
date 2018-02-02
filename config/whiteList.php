@@ -20,5 +20,5 @@ return [
 	'offer'		=>['List','offer'],
 	'equip'		=>['List'],
 	'album'		=>['List','Info'],
-	'cell'		=>['Guide'],
+	'cell'		=>[],
 ];

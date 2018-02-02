@@ -14,6 +14,7 @@ class Cell extends \core\base{
 		return compact('AlbumList','DocumentList');
 	}
 
-
-
+	public function Download(){
+	}
+	
 }
