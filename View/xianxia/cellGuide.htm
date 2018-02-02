@@ -28,6 +28,13 @@
 	</div>
 
 	<div class="zllist">
+		<div class="zla">怪物NPC</div>
+		<!--{loop $mapList $key $List}-->
+		<div class="zlc"><a class="$List[style]" href="?npc=List&mapid=$key" target="_blank">$List[name]</a></div>
+		<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
 		<div class="zla">武功介绍</div>
 		<!--{loop $magicKind $key $List}-->
 		<div class="zlc"><a class="$List[style]" href="?magic=List&kindid=$key" target="_blank">$List[name]</a></div>
@@ -35,54 +42,46 @@
 	</div>
 
 	<div class="zllist">
-		<div class="zla">真实爆率</div>
+		<div class="zla">地图介绍</div>
+		<!--{loop $AlbumList['ditu'] $key $List}-->
+		<div class="zlc"><a class="$List[style]" href="?album=Info&albumid=$key" target="_blank">$List[name]</a></div>
+		<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+		<div class="zla">装备系列</div>
+		<!--{loop $equipBrand $key $List}-->
+		<div class="zlc"><a class="$List[style]" href="?equip=List&brandid=$key" target="_blank">$List[name]</a></div>
+		<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+		<div class="zla">装备类型</div>
+		<!--{loop $equipKind $key $List}-->
+		<div class="zlc"><a class="$List[style]" href="?equip=List&kindid=$key" target="_blank">$List[name]</a></div>
+		<!--{/loop}-->
+	</div>
+
+	<div class="zllist">
+		<div class="zla">怪物爆率</div>
 		<!--{loop $mapList $key $List}-->
 		<div class="zlc"><a class="$List[style]" href="?offer=List&mapid=$key" target="_blank">$List[name]</a></div>
 		<!--{/loop}-->
 		<div class="zlc"><a href="?offer" target="_blank">完整爆率</a></div>
 	</div>
 
-
 	<div class="zllist">
-	<div class="zla">地图介绍</div>
-	<!--{loop $AlbumList['ditu'] $key $List}-->
-	<div class="zlc"><a class="$List[style]" href="?album=Info&albumid=$key" target="_blank">$List[name]</a></div>
-	<!--{/loop}-->
+		<div class="zla">道具介绍</div>
+		<!--{loop $daojuKind $key $List}-->
+		<div class="zlc"><a class="$List[style]" href="?daoju=List&kindid=$key" target="_blank">$List[name]</a></div>
+		<!--{/loop}-->
 	</div>
 
 	<div class="zllist">
-	<div class="zla">装备系列</div>
-	<!--{loop $equipBrand $key $List}-->
-	<div class="zlc"><a class="$List[style]" href="?equip=List&brandid=$key" target="_blank">$List[name]</a></div>
-	<!--{/loop}-->
-	</div>
-
-	<div class="zllist">
-	<div class="zla">装备类型</div>
-	<!--{loop $equipKind $key $List}-->
-	<div class="zlc"><a class="$List[style]" href="?equip=List&kindid=$key" target="_blank">$List[name]</a></div>
-	<!--{/loop}-->
-	</div>
-
-	<div class="zllist">
-	<div class="zla">怪物NPC</div>
-	<!--{loop $mapList $key $List}-->
-	<div class="zlc"><a class="$List[style]" href="?npc=List&mapid=$key" target="_blank">$List[name]</a></div>
-	<!--{/loop}-->
-	</div>
-
-	<div class="zllist">
-	<div class="zla">道具介绍</div>
-	<!--{loop $daojuKind $key $List}-->
-	<div class="zlc"><a class="$List[style]" href="?daoju=List&kindid=$key" target="_blank">$List[name]</a></div>
-	<!--{/loop}-->
-	</div>
-
-	<div class="zllist">
-	<div class="zla">相册</div>
-	<!--{loop $albumCat $key $List}-->
-	<div class="zlc"><a class="$List[style]" href="?album=List&catid=$key" target="_blank">$List[name]</a></div>
-	<!--{/loop}-->
+		<div class="zla">相册</div>
+		<!--{loop $albumCat $key $List}-->
+		<div class="zlc"><a class="$List[style]" href="?album=List&catid=$key" target="_blank">$List[name]</a></div>
+		<!--{/loop}-->
 	</div>
 
 </div>

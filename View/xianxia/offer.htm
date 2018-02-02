@@ -22,10 +22,13 @@
 	<td>
 	<div class="left">
 	<!--{loop $Npc[tabOfferList] $OfferList}-->
-	<!--{loop $OfferList $id $List}-->
-	<span class="$List[style]">$List[name]</span>
-	<span>$List[qty]:$List[fqcy]；</span>
-	<!--{/loop}-->
+		<!--{loop $OfferList $id $List}-->
+			<span class="$List[style]">$List[name]</span>
+			<!--{if $List[fqcy]==1}-->
+			<span>: $List[qty]</span>
+			<!--{/if}-->
+			；
+		<!--{/loop}-->
 	<!--{/loop}-->
 	</div>
 	</td>
